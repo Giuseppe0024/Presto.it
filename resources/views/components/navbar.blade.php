@@ -67,20 +67,20 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href=" {{ route('login') }} ">
                             <i class="fa-regular fa-user me-1"></i>
                             Accedi
                         </a>
                     </li>
 
                     <li class="nav-item d-none d-lg-block">
-                        <button class="btn btn-outline-success" type="submit">
+                        <a class="btn btn-outline-success" href=" {{ route('register') }} ">
                             Registrati
-                        </button>
+                        </a>
                     </li>
 
                     <li class="nav-item d-lg-none">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href=" {{ route('register') }} ">
                             Registrati
                         </a>
                     </li>
