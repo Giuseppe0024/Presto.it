@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-/* Rende categories disponibile in tutte le views con la variabile $categories */
+        /* Rende categories disponibile in tutte le views con la variabile $categories */
 
         if (Schema::hasTable('categories')) {
             View::share('categories', Category::orderBy('name')->get());

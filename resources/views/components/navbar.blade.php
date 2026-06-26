@@ -51,13 +51,16 @@
                 @guest
                     <!-- Voci visibili sia su mobile che desktop -->
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">Come funziona</a>
+                        <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">Come
+                            funziona</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('crea-annuncio') ? 'active' : '' }}" href="#">Crea un annuncio</a>
+                        <a class="nav-link {{ request()->routeIs('crea-annuncio') ? 'active' : '' }}" href="#">Crea un
+                            annuncio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('annunci') ? 'active' : '' }}" href="#">Annunci vicino a te</a>
+                        <a class="nav-link {{ request()->routeIs('annunci') ? 'active' : '' }}" href="#">Annunci vicino
+                            a te</a>
                     </li>
                     
                     <!-- Separatore visibile solo su desktop -->
@@ -147,16 +150,16 @@
                       <li class="nav-item d-md-none">
                           <form action="{{ route('logout') }}" method="POST">
                               @csrf
-                              <button type="submit" class="nav-link" style="border: none; background: none; cursor: pointer;">
+                            <button type="submit" class="nav-link"
+                                    style="border: none; background: none; cursor: pointer;">
                                   <i class="fa-solid fa-sign-out-alt me-1"></i>
                                   Logout
                               </button>
                           </form>
                       </li>
-
+                </ul>
                 @endauth
 
-            </ul>
 
         </div>
 
@@ -178,7 +181,7 @@
             <div class="vr mx-2"></div>
 
             <div class="dropdown flex-shrink-0">
-                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
                     Categorie
                 </button>
 
@@ -201,7 +204,7 @@
                 <input type="text" class="form-control border-0 w-auto" placeholder="Tutta Italia">
             </div>
 
-            <button class="btn btn-orange ms-2 px-4 rounded-5 flex-shrink-0" type="submit" >
+            <button class="btn btn-orange ms-2 px-4 rounded-5 flex-shrink-0" type="submit">
                 Cerca
             </button>
 
@@ -213,7 +216,7 @@
 <!-- MODALI MOBILE -->
 
     <!-- MODALE PROFILO -->
-    <div class="modal fade" id="profileModal" tabindex="-1" >
+<div class="modal fade" id="profileModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
 
