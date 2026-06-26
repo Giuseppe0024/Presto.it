@@ -5,7 +5,7 @@
         <h1 class="text-titlegreen">Accedi</h1>
 
         <div class="mt-5">
-            <form action="/login" method="POST">
+            <form action="{{ route('login') }}" method="POST">
                 @csrf
                 <div class="row gap-3">
 
