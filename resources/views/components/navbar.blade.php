@@ -76,83 +76,83 @@
                 @auth
 
                     <!-- DESKTOP LOGGATO -->
-                <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center">
-                    <li class="nav-item d-none d-md-block">
-                        <a class="nav-link" href="#">
-                            <i class="fa-solid fa-carrot me-1" style="color: rgb(86, 81, 75);"></i>
-                            Preferiti
-                        </a>
-                    </li>
+                  <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center">
+                      <li class="nav-item d-none d-md-block">
+                          <a class="nav-link" href="#">
+                              <i class="fa-solid fa-carrot me-1" style="color: rgb(86, 81, 75);"></i>
+                              Preferiti
+                          </a>
+                      </li>
 
-                    <li class="nav-item d-none d-md-block">
-                        <a class="nav-link" href="#">
-                            <i class="fa-solid fa-envelope me-1"></i>
-                            Messaggi
-                        </a>
-                    </li>
+                      <li class="nav-item d-none d-md-block">
+                          <a class="nav-link" href="#">
+                              <i class="fa-solid fa-envelope me-1"></i>
+                              Messaggi
+                          </a>
+                      </li>
 
-                    <li class="nav-item d-none d-md-block">
-                        <a class="nav-link" href="#">
-                            <i class="fa-solid fa-cart-shopping me-1"></i>
-                            Carrello
-                        </a>
-                    </li>
+                      <li class="nav-item d-none d-md-block">
+                          <a class="nav-link" href="#">
+                              <i class="fa-solid fa-cart-shopping me-1"></i>
+                              Carrello
+                          </a>
+                      </li>
 
-                    <li class="nav-item d-none d-md-block">
-                        <a class="nav-link" href="#">
-                            <i class="fa-regular fa-user me-1"></i>
-                            Profilo
-                        </a>
-                    </li>
+                      <li class="nav-item d-none d-md-block">
+                          <a class="nav-link" href="#">
+                              <i class="fa-regular fa-user me-1"></i>
+                              Profilo
+                          </a>
+                      </li>
 
-                    <li class="nav-item d-none d-md-block">
-                        <form method="POST" style="display: inline;">
-                            @csrf
-                            <button type="submit" class="nav-link">
-                                <i class="fa-solid fa-sign-out-alt me-1"></i>
-                                Logout
-                            </button>
-                        </form>
-                    </li>
-                </ul>
+                      <li class="nav-item d-none d-md-block">
+                          <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                              @csrf
+                              <button type="submit" class="nav-link">
+                                  <i class="fa-solid fa-sign-out-alt me-1"></i>
+                                  Logout
+                              </button>
+                          </form>
+                      </li>
+                  </ul>
 
-                    <!-- MENU MOBILE LOGGATO -->
-                <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center">
-                    <li class="nav-item d-md-none">
-                        <a class="nav-link" href="#">
-                            <i class="fa-regular fa-user me-1"></i>
-                            Profilo
-                        </a>
-                    </li>
+                      <!-- MENU MOBILE LOGGATO -->
+                  <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center">
+                      <li class="nav-item d-md-none">
+                          <a class="nav-link" href="#">
+                              <i class="fa-regular fa-user me-1"></i>
+                              Profilo
+                          </a>
+                      </li>
 
-                    <li class="nav-item d-md-none">
-                        <a class="nav-link" href="#">
-                            <i class="fa-solid fa-carrot me-1" style="color: rgb(86, 81, 75);"></i>
-                            Preferiti
-                        </a>
-                    </li>
+                      <li class="nav-item d-md-none">
+                          <a class="nav-link" href="#">
+                              <i class="fa-solid fa-carrot me-1" style="color: rgb(86, 81, 75);"></i>
+                              Preferiti
+                          </a>
+                      </li>
 
-                    <li class="nav-item d-md-none">
-                        <a class="nav-link" href="#">
-                            I miei annunci
-                        </a>
-                    </li>
+                      <li class="nav-item d-md-none">
+                          <a class="nav-link" href="#">
+                              I miei annunci
+                          </a>
+                      </li>
 
-                    <li class="nav-item d-md-none">
-                        <a class="nav-link" href="#">
-                            I miei ordini
-                        </a>
-                    </li>
+                      <li class="nav-item d-md-none">
+                          <a class="nav-link" href="#">
+                              I miei ordini
+                          </a>
+                      </li>
 
-                    <li class="nav-item d-md-none">
-                        <form action="{{ route('logout') }}" method="GET">
-                            @csrf
-                            <button type="submit" class="nav-link" style="border: none; background: none; cursor: pointer;">
-                                <i class="fa-solid fa-sign-out-alt me-1"></i>
-                                Logout
-                            </button>
-                        </form>
-                    </li>
+                      <li class="nav-item d-md-none">
+                          <form action="{{ route('logout') }}" method="POST">
+                              @csrf
+                              <button type="submit" class="nav-link" style="border: none; background: none; cursor: pointer;">
+                                  <i class="fa-solid fa-sign-out-alt me-1"></i>
+                                  Logout
+                              </button>
+                          </form>
+                      </li>
 
                 @endauth
 
