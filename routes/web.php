@@ -1,9 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\ArticleController;
->>>>>>> feat/ArticleCRUD
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
