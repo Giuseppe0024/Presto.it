@@ -1,8 +1,8 @@
 
 <x-layout title="Accedi">
     
-    <div class="col-lg-6 mx-auto">
-        <h1>Accedi</h1>
+    <div class="col-lg-6 my-5 mx-auto card-login rounded shadow p-5">
+        <h1 class="text-titlegreen">Accedi</h1>
 
         <div class="mt-5">
             <form action="/login" method="POST">
@@ -21,8 +21,8 @@
                         @error('password') <span class="text-danger small">{{$message}}</span>@enderror
                     </div>
 
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Accedi</button>
+                    <div class="col-12 mt-3">
+                        <button type="submit" class="btn btn-orange btn-orange-accedi">Accedi</button>
                     </div>
                 </div>
             </form>

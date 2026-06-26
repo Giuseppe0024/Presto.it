@@ -1,7 +1,7 @@
 <x-layout title="Registrazione">
-    <div class="col-lg-6 mx-auto">
-        <h1>Registrati</h1>
-        <p class="lead text-muted">Inserisci i tuoi dati</p>
+    <div class="col-lg-6 my-5 mx-auto card-login rounded shadow p-5">
+        <h1 class="text-titlegreen">Registrati</h1>
+        <p class="lead">Inserisci i tuoi dati</p>
 
         <div class="mt-5">
             <form action="/register" method="POST">
@@ -31,8 +31,8 @@
                         <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
                     </div>
 
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Registrati</button>
+                    <div class="col-12 mt-3">
+                        <button type="submit" class="btn btn-orange btn-orange-accedi">Registrati</button>
                     </div>
                 </div>
             </form>
