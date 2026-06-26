@@ -1,0 +1,88 @@
+:root {
+
+    /* colori principali */
+
+    --stonegreen: #668968;
+    --reflectivewhite: #F8F6F0;
+    --orange: #d97841;
+    --greymasala: #56514b;
+    --white: #ffffff;
+
+    /* colori di supporto */
+
+    --lightgreen: #a7b89a;
+    --lightbeige: #e9e1d3;
+    --yellowmustard: #e2b447;
+    --salomonpink: #f2c7b1;
+    --lightgrey: #dad7ce;
+
+    /* hover */
+    --hover-orange: #c26a38;
+
+}
+
+.navbar-brand {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem !important;
+}
+
+.orange-color {
+    color: var(--orange);
+}
+
+.stonegreen-color {
+    color: var(--stonegreen);
+}
+
+.btn-orange{ 
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.btn-orange:hover {
+    background-color: var(--hover-orange);
+    color: var(--white);
+}
+
+p,label, button, .dropdown-style{
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem;
+    color: var(--greymasala);
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+    color: var(--greymasala);
+}
+
+.card-login {
+    background-color: var(--lightbeige);
+    color: var(--greymasala);
+    
+}
+
+.btn-orange-accedi {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-orange-accedi:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-titlegreen {
+    color: var(--stonegreen);
+}
+
+.form-control:focus {
+    border-color: var(--stonegreen);
+    box-shadow: 0 0 0 0.25rem var(--lightgreen);
+}
+
+.icon-mobile {
+    font-size: 1.4rem;
+    color: var(--greymasala);
+}
