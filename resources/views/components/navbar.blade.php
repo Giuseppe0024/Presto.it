@@ -145,7 +145,7 @@
                     </li>
 
                     <li class="nav-item d-md-none">
-                        <form method="POST">
+                        <form action="{{ route('logout') }}" method="GET">
                             @csrf
                             <button type="submit" class="nav-link" style="border: none; background: none; cursor: pointer;">
                                 <i class="fa-solid fa-sign-out-alt me-1"></i>

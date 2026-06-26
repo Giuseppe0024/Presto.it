@@ -4,14 +4,14 @@
         <p class="lead">Inserisci i tuoi dati</p>
 
         <div class="mt-5">
-            <form action="/register" method="POST">
+            <form action="{{ route('register') }}" method="POST">
                 @csrf
                 <div class="row gap-3">
 
                     <div class="col-12">
                         <label for="name">Nome</label>
                         <input type="text" name="name" id="name" class="form-control">
-                        @error('email') <span class="text-danger small">{{$message}}</span>@enderror
+                        @error('name') <span class="text-danger small">{{$message}}</span>@enderror
                     </div>
 
                     <div class="col-12">
