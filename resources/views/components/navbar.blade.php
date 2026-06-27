@@ -173,7 +173,7 @@
         <form method="GET"
               class="d-flex align-items-center border rounded-5 p-2 shadow-sm">
 
-            <input type="text" class="form-control border-0" placeholder="Cosa stai cercando?">
+            <input type="text" class="form-control border-0 rounded-5" placeholder="Cosa stai cercando?">
 
             <div class="vr mx-2"></div>
 
@@ -213,7 +213,7 @@
 <!-- MODALI MOBILE -->
 
     <!-- MODALE PROFILO -->
-    <div class="modal fade" id="profileModal" tabindex="-1" >
+    <div class="modal fade" id="profileModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
 
@@ -290,7 +290,7 @@
 
 
     <!-- MODALE PREFERITI -->
-    <div class="modal fade" id="favoritesModal" tabindex="-1" aria-labelledby="favoritesModalLabel" aria-hidden="true">
+    <div class="modal fade" id="favoritesModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
 

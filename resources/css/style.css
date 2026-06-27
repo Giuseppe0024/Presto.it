@@ -2,24 +2,50 @@
 
     /* colori principali */
 
-    --stonegreen: #668968;
-    --reflectivewhite: #F8F6F0;
-    --orange: #d97841;
-    --greymasala: #56514b;
+    --stonegreen: #668968; /* text-title e buttons */
+    --reflectivewhite: #F8F6F0; 
+    --orange: #d97841; /* text-title e buttons */
+    --greymasala: #56514b; /* testi paragrafo */
     --white: #ffffff;
 
     /* colori di supporto */
 
     --lightgreen: #a7b89a;
-    --lightbeige: #e9e1d3;
+    --lightbeige: #e9e1d3; /* card */
     --yellowmustard: #e2b447;
     --salomonpink: #f2c7b1;
     --lightgrey: #dad7ce;
 
     /* hover */
     --hover-orange: #c26a38;
+    --hover-green: #5f8061;
 
 }
+
+/* --------------------------
+    font generiche su tag
+----------------------------- */
+
+p,label, button, .dropdown-style{
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem;
+    color: var(--greymasala);
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+    color: var(--greymasala);
+}
+
+.text-titlegreen {
+    color: var(--stonegreen);
+}
+
+/* CLASSI PERSONALIZZATE */
+
 
 .navbar-brand {
     font-family: 'DM Serif Display', serif;
@@ -44,19 +70,6 @@
     color: var(--white);
 }
 
-p,label, button, .dropdown-style{
-    font-family: 'Manrope', sans-serif !important;
-    font-size: 1rem;
-    color: var(--greymasala);
-}
-
-
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'DM Serif Display', serif;
-    color: var(--greymasala);
-}
 
 .card-login {
     background-color: var(--lightbeige);
@@ -73,9 +86,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.text-titlegreen {
-    color: var(--stonegreen);
-}
+
 
 .form-control:focus {
     border-color: var(--stonegreen);
