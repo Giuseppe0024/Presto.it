@@ -44,6 +44,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--stonegreen);
 }
 
+.text-orange {
+    color: var(--orange);
+}
+
 /* CLASSI PERSONALIZZATE */
 
 
@@ -55,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 .orange-color {
     color: var(--orange);
 }
+
 
 .stonegreen-color {
     color: var(--stonegreen);
@@ -88,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-.form-control:focus {
+.form-select:focus, .form-control:focus {
     border-color: var(--stonegreen);
     box-shadow: 0 0 0 0.25rem var(--lightgreen);
 }
@@ -100,4 +105,64 @@ h1, h2, h3, h4, h5, h6 {
 
 i {
     color: var(--greymasala);
+}
+
+.image-input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed var(--stonegreen);
+    border-radius: 8px;
+    padding: 10rem;
+    background-color: var(--reflectivewhite);
+}
+
+/* FOOTER */
+
+.footer-backgroundcolor {
+    background-color: var(--stonegreen);
+}
+
+.footer-text {
+    color: var(--reflectivewhite);
+}
+
+/* CARD */
+
+.article-card {
+    background-color: var(--lightbeige);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-green {
+    background-color: var(--stonegreen);
+    color: var(--white);
+}
+
+.btn-green:hover {
+    background-color: var(--hover-green);
+    color: var(--white);
+}
+
+/* CAROSELLO */
+.hero-carousel {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.hero-carousel-img {
+    width: 100%;
+    height: auto;
 }

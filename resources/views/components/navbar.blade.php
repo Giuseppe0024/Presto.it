@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md bg-body-tertiary ">
+<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top shadow-sm">
     <div class="container">
 
         <a class="navbar-brand" href="{{ route('homepage') }}">
@@ -50,6 +50,10 @@
                 <!-- Voci visibili sia su mobile che desktop -->
                 @guest
                     <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center">
+
+                         <li class="nav-item d-none d-md-block">
+                            <a class="nav-link {{ request()->routeIs('lavora-con-noi') ? 'active' : '' }}" href="#">Lavora con noi</a>
+                        </li>
                         
                         <li class="nav-item d-none d-md-block">
                             <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">Come
@@ -76,11 +80,28 @@
                     </ul>
                 @endguest
 
+                <!-- LINGUE - bisognerà installare un pacchetto per mettere le bandiere, per ora lasciamolo così -->
+
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-earth-americas" style="color: rgb(86, 81, 75);"></i>
+                        IT
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">IT</a></li>
+                        <li><a class="dropdown-item" href="#">EN</a></li>
+                        <li><a class="dropdown-item" href="#">FR</a></li>
+                    </ul>
+                    </div>
+
             
 
         <!-- DESKTOP LOGGATO -->
             @auth
                 <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center d-none d-md-flex">
+                    <li class="nav-item d-none d-md-block">
+                            <a class="nav-link {{ request()->routeIs('lavora-con-noi') ? 'active' : '' }}" href="#">Lavora con noi</a>
+                        </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="fa-solid fa-carrot me-1" style="color: rgb(86, 81, 75);"></i>
@@ -116,7 +137,7 @@
                             Profilo
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item dropdown-style" href="#">I miei annunci</a></li>
+                            <li><a class="dropdown-item dropdown-style" href="{{ route('article.myArticles') }}">I miei annunci</a></li>
                             <li><a class="dropdown-item dropdown-style" href="#">I miei ordini</a></li>
                             <li><a class="dropdown-item dropdown-style" href="#">Impostazioni</a></li>
                             <li class="nav-item"style="display: inline;">
@@ -166,7 +187,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ route('article.myArticles') }}">
                             I miei annunci
                         </a>
                     </li>
