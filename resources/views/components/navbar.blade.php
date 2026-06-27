@@ -30,7 +30,6 @@
         </div>
 
         <!-- MENU MOBILE -->
-
         <button class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
@@ -46,108 +45,137 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <!-- MENU DESKTOP E MOBILE -->
-            <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center">
 
+             <!-- GUEST MENU -->
+                <!-- Voci visibili sia su mobile che desktop -->
                 @guest
-                    <!-- Voci visibili sia su mobile che desktop -->
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">Come
-                            funziona</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('crea-annuncio') ? 'active' : '' }}" href="#">Crea un
-                            annuncio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('annunci') ? 'active' : '' }}" href="#">Annunci vicino
-                            a te</a>
-                    </li>
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center">
+                        
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">Come
+                                funziona</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link {{ request()->routeIs('crea-annuncio') ? 'active' : '' }}" href="#">Crea un
+                                annuncio</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link {{ request()->routeIs('annunci') ? 'active' : '' }}" href="#">Annunci vicino
+                                a te</a>
+                        </li>
 
-                    <!-- Separatore visibile solo su desktop -->
-                    <li class="nav-item d-none d-md-block px-2">|</li>
+                        <!-- Separatore visibile solo su desktop -->
+                        <li class="nav-item d-none d-md-block px-2">|</li>
 
-                    <li class="nav-item d-none d-md-block">
-                        <a class="nav-link" href="{{ route('login') }}">Accedi</a>
-                    </li>
-                    <li class="nav-item d-none d-md-block">
-                        <a class="btn btn-outline-success" href="{{ route('register') }}">Registrati</a>
-                    </li>
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="{{ route('login') }}">Accedi</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                            <a class="btn btn-outline-success" href="{{ route('register') }}">Registrati</a>
+                        </li>
+                    </ul>
                 @endguest
 
-            </ul>
+            
 
+        <!-- DESKTOP LOGGATO -->
             @auth
-
-                <!-- DESKTOP LOGGATO -->
-                <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center">
-                    <li class="nav-item d-none d-md-block">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center d-none d-md-flex">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="fa-solid fa-carrot me-1" style="color: rgb(86, 81, 75);"></i>
                             Preferiti
                         </a>
                     </li>
 
-                    <li class="nav-item d-none d-md-block">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="fa-solid fa-envelope me-1"></i>
+                            <i class="fa-regular fa-comment-dots" style="color: rgb(86, 81, 75);"></i>
                             Messaggi
                         </a>
                     </li>
 
-                    <li class="nav-item d-none d-md-block">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="fa-solid fa-cart-shopping me-1"></i>
                             Carrello
                         </a>
                     </li>
 
-                    <li class="nav-item d-none d-md-block">
-                        <a class="nav-link" href="#">
-                            <i class="fa-regular fa-user me-1"></i>
-                            Profilo
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('article.create') }}">
+                            <i class="fa-solid fa-plus"></i>
+                            Crea annuncio
                         </a>
                     </li>
 
-                    <li class="nav-item d-none d-md-block">
-                        <form action="{{ route('logout') }}" method="POST" style="display: inline;">
-                            @csrf
-                            <button type="submit" class="nav-link">
-                                <i class="fa-solid fa-sign-out-alt me-1"></i>
-                                Logout
-                            </button>
-                        </form>
+                    <li class="nav-item px-2">|</li>
+
+                    <li class="nav-item dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-user me-1"></i>
+                            Profilo
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item dropdown-style" href="#">I miei annunci</a></li>
+                            <li><a class="dropdown-item dropdown-style" href="#">I miei ordini</a></li>
+                            <li><a class="dropdown-item dropdown-style" href="#">Impostazioni</a></li>
+                            <li class="nav-item"style="display: inline;">
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">
+                                        Logout
+                                        <i class="fa-solid fa-sign-out-alt me-1"></i>
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            @endauth
+
+        <!-- MENU MOBILE GUEST -->
+            @guest
+                <ul class="navbar-nav d-md-none mb-2 align-items-start">
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">Come funziona</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('crea-annuncio') ? 'active' : '' }}" href="#">Crea un annuncio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('annunci') ? 'active' : '' }}" href="#">Annunci vicino a te</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Accedi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success mt-1" href="{{ route('register') }}">Registrati</a>
                     </li>
                 </ul>
+            @endguest
 
-                <!-- MENU MOBILE LOGGATO -->
-                <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center">
-                    <li class="nav-item d-md-none">
-                        <a class="nav-link" href="#">
-                            <i class="fa-regular fa-user me-1"></i>
-                            Profilo
+        <!-- MENU MOBILE LOGGATO -->
+            @auth
+                <ul class="navbar-nav d-md-none mb-2 align-items-start">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('article.create') }}">
+                            Crea annuncio
                         </a>
                     </li>
 
-                    <li class="nav-item d-md-none">
-                        <a class="nav-link" href="#">
-                            <i class="fa-solid fa-carrot me-1" style="color: rgb(86, 81, 75);"></i>
-                            Preferiti
-                        </a>
-                    </li>
-
-                    <li class="nav-item d-md-none">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">
                             I miei annunci
                         </a>
                     </li>
-
-                    <li class="nav-item d-md-none">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">
-                            I miei ordini
+                            Carrello
                         </a>
                     </li>
-
-                    <li class="nav-item d-md-none">
+                    <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button type="submit" class="nav-link"
@@ -159,6 +187,7 @@
                     </li>
                 </ul>
             @endauth
+                
         </div>
     </div>
 </nav>
@@ -166,48 +195,50 @@
 
 <!-- BARRA DI RICERCA -->
 
-@if (!request()->routeIs('login', 'register'))
 
-    <div class="container d-none d-md-block my-3">
-        <form method="GET"
-              class="d-flex align-items-center border rounded-5 p-2 shadow-sm">
+     <!-- if qui serve per visualizzare o meno la barra di ricerca in determinate pagine -->
+    @if (!request()->routeIs('login', 'register', 'article.create'))
 
-            <input type="text" class="form-control border-0 rounded-5" placeholder="Cosa stai cercando?">
+        <div class="container d-none d-md-block">
+            <form method="GET"
+                class="d-flex align-items-center border rounded-5 p-2 shadow-sm">
 
-            <div class="vr mx-2"></div>
+                <input type="text" class="form-control border-0 rounded-5" placeholder="Cosa stai cercando?">
 
-            <div class="dropdown flex-shrink-0">
-                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                    Categorie
+                <div class="vr mx-2"></div>
+
+                <div class="dropdown flex-shrink-0">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        Categorie
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        @foreach ($categories as $category)
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    {{ $category->name }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+
+                <div class="vr mx-2"></div>
+
+                <div class="d-flex align-items-center px-2 flex-shrink-0">
+                    <i class="fa-solid fa-location-dot me-2"></i>
+
+                    <input type="text" class="form-control border-0 w-auto" placeholder="Tutta Italia">
+                </div>
+
+                <button class="btn btn-orange ms-2 px-4 rounded-5 flex-shrink-0" type="submit">
+                    Cerca
                 </button>
 
-                <ul class="dropdown-menu">
-                    @foreach ($categories as $category)
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                {{ $category->name }}
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
+            </form>
+        </div>
 
-            <div class="vr mx-2"></div>
-
-            <div class="d-flex align-items-center px-2 flex-shrink-0">
-                <i class="fa-solid fa-location-dot me-2"></i>
-
-                <input type="text" class="form-control border-0 w-auto" placeholder="Tutta Italia">
-            </div>
-
-            <button class="btn btn-orange ms-2 px-4 rounded-5 flex-shrink-0" type="submit">
-                Cerca
-            </button>
-
-        </form>
-    </div>
-
-@endif
+    @endif
 
 <!-- MODALI MOBILE -->
 

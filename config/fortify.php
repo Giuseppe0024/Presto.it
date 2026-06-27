@@ -73,7 +73,8 @@ return [
     |
     */
 
-    'home' => '/',
+    'home' => '/create/article', 
+    // gli utenti vengono reindirizzati a questa pagina dopo il login o la registrazione, precedentemente c'era solo lo slash.
 
     /*
     |--------------------------------------------------------------------------

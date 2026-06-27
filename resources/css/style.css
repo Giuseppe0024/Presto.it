@@ -26,7 +26,7 @@
     font generiche su tag
 ----------------------------- */
 
-p,label, button, .dropdown-style{
+p,label, button, li, a .dropdown-style{
     font-family: 'Manrope', sans-serif !important;
     font-size: 1rem;
     color: var(--greymasala);
@@ -95,5 +95,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .icon-mobile {
     font-size: 1.4rem;
+    color: var(--greymasala);
+}
+
+i {
     color: var(--greymasala);
 }
