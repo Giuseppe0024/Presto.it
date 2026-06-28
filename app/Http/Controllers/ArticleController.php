@@ -27,6 +27,11 @@ class ArticleController extends Controller
         return Article::create($data);
     }
 
+    public function create()
+    {
+        return view('article.create');
+    }
+
     public function show(Article $article)
     {
         return $article;
@@ -56,8 +61,14 @@ class ArticleController extends Controller
         return response()->json();
     }
 
-    public function create()
+    public function myArticles()
     {
-        return view('article.create');
+        return view('article.myArticles');
+    }
+
+    public function article()
+    {
+        return view('article.article');
+
     }
 }

@@ -46,62 +46,51 @@
 
             <!-- MENU DESKTOP E MOBILE -->
 
-             <!-- GUEST MENU -->
-                <!-- Voci visibili sia su mobile che desktop -->
-                @guest
-                    <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center">
+            <!-- GUEST MENU -->
+            <!-- Voci visibili sia su mobile che desktop -->
+            @guest
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center">
 
-                         <li class="nav-item d-none d-md-block">
-                            <a class="nav-link {{ request()->routeIs('lavora-con-noi') ? 'active' : '' }}" href="#">Lavora con noi</a>
-                        </li>
-                        
-                        <li class="nav-item d-none d-md-block">
-                            <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">Come
-                                funziona</a>
-                        </li>
-                        <li class="nav-item d-none d-md-block">
-                            <a class="nav-link {{ request()->routeIs('crea-annuncio') ? 'active' : '' }}" href="#">Crea un
-                                annuncio</a>
-                        </li>
-                        <li class="nav-item d-none d-md-block">
-                            <a class="nav-link {{ request()->routeIs('annunci') ? 'active' : '' }}" href="#">Annunci vicino
-                                a te</a>
-                        </li>
+                    {{--                    da spostare nel footer --}}
 
-                        <!-- Separatore visibile solo su desktop -->
-                        <li class="nav-item d-none d-md-block px-2">|</li>
+                    {{--                 <li class="nav-item d-none d-md-block">
+                                         <a class="nav-link {{ request()->routeIs('lavora-con-noi') ? 'active' : '' }}" href="#">Lavora
+                                             con noi</a>
+                                     </li>--}}
 
-                        <li class="nav-item d-none d-md-block">
-                            <a class="nav-link" href="{{ route('login') }}">Accedi</a>
-                        </li>
-                        <li class="nav-item d-none d-md-block">
-                            <a class="btn btn-outline-success" href="{{ route('register') }}">Registrati</a>
-                        </li>
-                    </ul>
-                @endguest
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">Come
+                            funziona</a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link {{ request()->routeIs('crea-annuncio') ? 'active' : '' }}" href="#">Crea un
+                            annuncio</a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link {{ request()->routeIs('annunci') ? 'active' : '' }}" href="#">Annunci vicino
+                            a te</a>
+                    </li>
 
-                <!-- LINGUE - bisognerà installare un pacchetto per mettere le bandiere, per ora lasciamolo così -->
+                    <!-- Separatore visibile solo su desktop -->
+                    <li class="nav-item d-none d-md-block px-2">|</li>
 
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-earth-americas" style="color: rgb(86, 81, 75);"></i>
-                        IT
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">IT</a></li>
-                        <li><a class="dropdown-item" href="#">EN</a></li>
-                        <li><a class="dropdown-item" href="#">FR</a></li>
-                    </ul>
-                    </div>
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link" href="{{ route('login') }}">Accedi</a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a class="btn btn-outline-success" href="{{ route('register') }}">Registrati</a>
+                    </li>
+                </ul>
+            @endguest
 
-            
-
-        <!-- DESKTOP LOGGATO -->
+            <!-- DESKTOP LOGGATO -->
             @auth
                 <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center d-none d-md-flex">
-                    <li class="nav-item d-none d-md-block">
-                            <a class="nav-link {{ request()->routeIs('lavora-con-noi') ? 'active' : '' }}" href="#">Lavora con noi</a>
-                        </li>
+                    {{--                    spostare in footer--}}
+                    {{--                    <li class="nav-item d-none d-md-block">
+                                            <a class="nav-link {{ request()->routeIs('lavora-con-noi') ? 'active' : '' }}" href="#">Lavora
+                                                con noi</a>
+                                        </li>--}}
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="fa-solid fa-carrot me-1" style="color: rgb(86, 81, 75);"></i>
@@ -130,30 +119,32 @@
                         </a>
                     </li>
 
-<!-- REVISOR -->
+                    <!-- REVISOR -->
 
-                                @if(auth()->user()->is_revisor)
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('revisor.index') }}">
-                                            <i class="fa-solid fa-user-check me-1"></i>
-                                            Area Revisore
-                                        </a>
-                                    </li>
-                                @endif
-<!-- end revisor -->
+                    @if(auth()->user()->is_revisor)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('revisor.index') }}">
+                                <i class="fa-solid fa-user-check me-1"></i>
+                                Area Revisore
+                            </a>
+                        </li>
+                    @endif
+                    <!-- end revisor -->
 
 
                     <li class="nav-item px-2">|</li>
 
                     <li class="nav-item dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-user me-1"></i>
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"><i class="fa-regular fa-user me-1"></i>
                             Profilo
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item dropdown-style" href="{{ route('article.myArticles') }}">I miei annunci</a></li>
+                            <li><a class="dropdown-item dropdown-style" href="{{ route('article.myArticles') }}">I miei
+                                    annunci</a></li>
                             <li><a class="dropdown-item dropdown-style" href="#">I miei ordini</a></li>
                             <li><a class="dropdown-item dropdown-style" href="#">Impostazioni</a></li>
-                            <li class="nav-item"style="display: inline;">
+                            <li class="nav-item" style="display: inline;">
                                 <form action="{{ route('logout') }}" method="POST">
                                     @csrf
                                     <button type="submit" class="dropdown-item">
@@ -169,17 +160,35 @@
                 </ul>
             @endauth
 
-        <!-- MENU MOBILE GUEST -->
+            <!-- LINGUE - bisognerà installare un pacchetto per mettere le bandiere, per ora lasciamolo così -->
+
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-earth-americas" style="color: rgb(86, 81, 75);"></i>
+                    IT
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">IT</a></li>
+                    <li><a class="dropdown-item" href="#">EN</a></li>
+                    <li><a class="dropdown-item" href="#">FR</a></li>
+                </ul>
+            </div>
+
+
+            <!-- MENU MOBILE GUEST -->
             @guest
                 <ul class="navbar-nav d-md-none mb-2 align-items-start">
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">Come funziona</a>
+                        <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">Come
+                            funziona</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('crea-annuncio') ? 'active' : '' }}" href="#">Crea un annuncio</a>
+                        <a class="nav-link {{ request()->routeIs('crea-annuncio') ? 'active' : '' }}" href="#">Crea un
+                            annuncio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('annunci') ? 'active' : '' }}" href="#">Annunci vicino a te</a>
+                        <a class="nav-link {{ request()->routeIs('annunci') ? 'active' : '' }}" href="#">Annunci vicino
+                            a te</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">Accedi</a>
@@ -190,7 +199,7 @@
                 </ul>
             @endguest
 
-        <!-- MENU MOBILE LOGGATO -->
+            <!-- MENU MOBILE LOGGATO -->
             @auth
                 <ul class="navbar-nav d-md-none mb-2 align-items-start">
                     <li class="nav-item">
@@ -210,18 +219,18 @@
                         </a>
                     </li>
 
-<!-- REVISOR -->
+                    <!-- REVISOR -->
 
-                                    @if(auth()->user()->is_revisor)
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="{{ route('revisor.index') }}">
-                                                    <i class="fa-solid fa-user-check me-1"></i>
-                                                    Area Revisore
-                                                </a>
-                                            </li>
-                                    @endif
+                    @if(auth()->user()->is_revisor)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('revisor.index') }}">
+                                <i class="fa-solid fa-user-check me-1"></i>
+                                Area Revisore
+                            </a>
+                        </li>
+                    @endif
 
-<!-- end revisor -->
+                    <!-- end revisor -->
 
 
                     <li class="nav-item">
@@ -236,7 +245,7 @@
                     </li>
                 </ul>
             @endauth
-                
+
         </div>
     </div>
 </nav>
@@ -245,49 +254,48 @@
 <!-- BARRA DI RICERCA -->
 
 
-     <!-- if qui serve per visualizzare o meno la barra di ricerca in determinate pagine -->
-    @if (!request()->routeIs('login', 'register', 'article.create'))
+<!-- if qui serve per visualizzare o meno la barra di ricerca in determinate pagine -->
+@if (!request()->routeIs('login', 'register', 'article.create'))
 
-        <div class="container d-none d-md-block">
-            <form method="GET"
-                class="d-flex align-items-center border rounded-5 p-2 shadow-sm">
+    <div class="container d-none d-md-block mt-5">
+        <form method="GET"
+              class="d-flex align-items-center border rounded-5 p-2 shadow-sm">
 
-                <input type="text" class="form-control border-0 rounded-5" placeholder="Cosa stai cercando?">
+            <input type="text" class="form-control border-0 rounded-5" placeholder="Cosa stai cercando?">
 
-                <div class="vr mx-2"></div>
+            <div class="vr mx-2"></div>
 
-                <div class="dropdown flex-shrink-0">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                        Categorie
-                    </button>
-
-                    <ul class="dropdown-menu">
-                        @foreach ($categories as $category)
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    {{ $category->name }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-
-                <div class="vr mx-2"></div>
-
-                <div class="d-flex align-items-center px-2 flex-shrink-0">
-                    <i class="fa-solid fa-location-dot me-2"></i>
-
-                    <input type="text" class="form-control border-0 w-auto" placeholder="Tutta Italia">
-                </div>
-
-                <button class="btn btn-orange ms-2 px-4 rounded-5 flex-shrink-0" type="submit">
-                    Cerca
+            <div class="dropdown flex-shrink-0">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Categorie
                 </button>
 
-            </form>
-        </div>
+                <ul class="dropdown-menu">
+                    @foreach ($categories as $category)
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                {{ $category->name }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
 
-    @endif
+            <div class="vr mx-2"></div>
+
+            <div class="d-flex align-items-center px-2 flex-shrink-0">
+                <i class="fa-solid fa-location-dot me-2"></i>
+                <input type="text" class="form-control border-0 w-auto" placeholder="Tutta Italia">
+            </div>
+
+            <button class="btn btn-orange ms-2 px-4 rounded-5 flex-shrink-0" type="submit">
+                Cerca
+            </button>
+
+        </form>
+    </div>
+
+@endif
 
 <!-- MODALI MOBILE -->
 

@@ -3,7 +3,7 @@
     /* colori principali */
 
     --stonegreen: #668968; /* text-title e buttons */
-    --reflectivewhite: #F8F6F0; 
+    --reflectivewhite: #F8F6F0;
     --orange: #d97841; /* text-title e buttons */
     --greymasala: #56514b; /* testi paragrafo */
     --white: #ffffff;
@@ -26,13 +26,11 @@
     font generiche su tag
 ----------------------------- */
 
-p,label, button, li, a .dropdown-style{
+p, label, button, li, a .dropdown-style {
     font-family: 'Manrope', sans-serif !important;
     font-size: 1rem;
     color: var(--greymasala);
 }
-
-
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--stonegreen);
 }
 
-.btn-orange{ 
+.btn-orange {
     background-color: var(--orange);
     color: var(--white);
 }
@@ -79,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 .card-login {
     background-color: var(--lightbeige);
     color: var(--greymasala);
-    
+
 }
 
 .btn-orange-accedi {
@@ -90,7 +88,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-1px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 
 .form-select:focus, .form-control:focus {
@@ -125,6 +122,7 @@ i {
 
 .footer-text {
     color: var(--reflectivewhite);
+    margin-bottom: 0;
 }
 
 /* CARD */
@@ -142,7 +140,7 @@ i {
 
 .article-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
 }
 
 .btn-green {

@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
 class PublicController extends Controller
 {
-
-
     public function homepage()
     {
         return view('welcome');
@@ -15,10 +12,5 @@ class PublicController extends Controller
     public function myArticles()
     {
         return view('article.myArticles');
-    }
-
-    public function article()
-    {
-        return view('article.article');
     }
 }
