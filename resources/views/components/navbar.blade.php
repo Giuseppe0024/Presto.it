@@ -130,6 +130,19 @@
                         </a>
                     </li>
 
+<!-- REVISOR -->
+
+                                @if(auth()->user()->is_revisor)
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('revisor.index') }}">
+                                            <i class="fa-solid fa-user-check me-1"></i>
+                                            Area Revisore
+                                        </a>
+                                    </li>
+                                @endif
+<!-- end revisor -->
+
+
                     <li class="nav-item px-2">|</li>
 
                     <li class="nav-item dropdown">
@@ -196,6 +209,21 @@
                             Carrello
                         </a>
                     </li>
+
+<!-- REVISOR -->
+
+                                    @if(auth()->user()->is_revisor)
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ route('revisor.index') }}">
+                                                    <i class="fa-solid fa-user-check me-1"></i>
+                                                    Area Revisore
+                                                </a>
+                                            </li>
+                                    @endif
+
+<!-- end revisor -->
+
+
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
