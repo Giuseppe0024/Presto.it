@@ -62,10 +62,7 @@
                         <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">Come
                             funziona</a>
                     </li>
-                    <li class="nav-item d-none d-md-block">
-                        <a class="nav-link {{ request()->routeIs('crea-annuncio') ? 'active' : '' }}" href="#">Crea un
-                            annuncio</a>
-                    </li>
+                    
                     <li class="nav-item d-none d-md-block">
                         <a class="nav-link {{ request()->routeIs('annunci') ? 'active' : '' }}" href="#">Annunci vicino
                             a te</a>

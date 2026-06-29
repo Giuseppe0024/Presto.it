@@ -11,3 +11,8 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
 Route::get('/i-miei-articoli', [ArticleController::class, 'myArticles'])->name('article.myArticles');
 Route::get('/articolo', [ArticleController::class, 'article'])->name('article');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
+        
+});
