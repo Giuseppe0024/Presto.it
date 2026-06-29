@@ -1,3 +1,3 @@
-<x-layout>
-    <livewire:create-article />
+<x-layout title="Crea Annuncio">
+    <livewire:article-create/>
 </x-layout>
