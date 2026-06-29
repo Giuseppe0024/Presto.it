@@ -71,25 +71,26 @@
                     <h6 class="text-uppercase fw-bold footer-text">Contacts</h6>
 
                     <div class="col-5 col-md-12 d-flex flex-column gap-2">
-                        <div class="row align-items-center">
-                            <i class="fas fa-home footer-text col-1"></i>
-                            <p class="footer-text text-start ps-3 pe-0 col-7">New York, NY 10012, US</p>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-home fa-fw footer-text"></i>
+                            <p class="footer-text text-start mb-0">New York, NY 10012, US</p>
                         </div>
 
-                        <div class="row align-items-center">
-                            <i class="fas fa-envelope footer-text col-1"></i>
-                            <p class="footer-text text-start ps-3 pe-0 col">info@example.com</p>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-envelope fa-fw footer-text"></i>
+                            <p class="footer-text text-start mb-0">info@example.com</p>
                         </div>
 
-                        <div class="row align-items-center">
-                            <i class="fas fa-phone footer-text col-1"></i>
-                            <p class="footer-text text-start ps-3 pe-0 col">+ 01 234 567 88</p>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-phone fa-fw footer-text"></i>
+                            <p class="footer-text text-start mb-0">+ 01 234 567 88</p>
                         </div>
 
-                        <div class="row align-items-center">
-                            <i class="fas fa-print footer-text col-1 "></i>
-                            <p class="footer-text text-start ps-3 pe-0 col">+ 01 234 567 89</p>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-print fa-fw footer-text"></i>
+                            <p class="footer-text text-start mb-0">+ 01 234 567 89</p>
                         </div>
+
                     </div>
                 </div>
                 <!-- Grid column -->
