@@ -1,48 +1,76 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm {{ $showSearch ? 'search-attached' : '' }}">
     <div class="container">
 
+        {{-- mobile hamburger di navigazione (sinistra) --}}
+        <button class="navbar-toggler border-0 d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#browseOffcanvas"
+                aria-controls="browseOffcanvas"
+                aria-label="Apri il menu di navigazione">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
         <a class="navbar-brand" href="{{ route('homepage') }}">
             <span class="stonegreen-color">Presto</span><span class="orange-color">.it</span>
         </a>
 
-        <button class="navbar-toggler border-0"
+        {{-- mobile menu utente (destra) --}}
+        <button class="navbar-toggler border-0 d-lg-none ms-auto"
                 type="button"
                 data-bs-toggle="offcanvas"
-                data-bs-target="#mainOffcanvas"
-                aria-controls="mainOffcanvas"
-                aria-label="Apri il menu">
-            <span class="navbar-toggler-icon"></span>
+                data-bs-target="#userOffcanvas"
+                aria-controls="userOffcanvas"
+                aria-label="Apri il menu utente">
+            <i class="fa-regular fa-user fs-5"></i>
         </button>
 
-        {{-- Menu --}}
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="mainOffcanvas" aria-labelledby="mainOffcanvasLabel">
+        {{-- sinistra --}}
+        <div class="offcanvas offcanvas-start flex-lg-grow-0" tabindex="-1" id="browseOffcanvas"
+             aria-labelledby="browseOffcanvasLabel">
             <div class="offcanvas-header">
-                <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas"
-                        aria-label="Chiudi"></button>
+                <h5 class="offcanvas-title" id="browseOffcanvasLabel">Sfoglia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Chiudi"></button>
             </div>
-
             <div class="offcanvas-body">
-                @auth
-                    <x-navbar.menu-auth/>
-                @else
-                    <x-navbar.menu-guest/>
-                @endauth
+                <x-navbar.menu-browse/>
+            </div>
+        </div>
 
-                {{-- Selettore lingua --}}
-                <div class="dropdown ms-lg-2 mt-3 mt-lg-0 ps-1 ps-lg-0">
-                    <button class="btn dropdown-toggle px-0 px-lg-2" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                        <i class="fa-solid fa-earth-americas text-greymasala me-1"></i>
-                        IT
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">IT</a></li>
-                        <li><a class="dropdown-item" href="#">EN</a></li>
-                        <li><a class="dropdown-item" href="#">FR</a></li>
+        {{-- destra --}}
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="userOffcanvas" aria-labelledby="userOffcanvasLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="userOffcanvasLabel">Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Chiudi"></button>
+            </div>
+            <div class="offcanvas-body justify-content-lg-end">
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3">
+
+                    @auth
+                        <x-navbar.menu-auth/>
+                    @else
+                        <x-navbar.menu-guest/>
+                    @endauth
+
+                    {{-- Selettore lingua --}}
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown ps-1 ps-lg-0">
+                            <button class="btn nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                <i class="fa-solid fa-earth-americas text-greymasala me-1"></i>
+                                IT
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">IT</a></li>
+                                <li><a class="dropdown-item" href="#">EN</a></li>
+                                <li><a class="dropdown-item" href="#">FR</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
+
     </div>
 </nav>
 

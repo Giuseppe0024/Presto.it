@@ -1,0 +1,58 @@
+{{-- desktop --}}
+<ul class="navbar-nav d-none d-lg-flex align-items-lg-center">
+
+    <li class="nav-item ps-1 ps-lg-0">
+        <a class="nav-link text-nowrap {{ request()->routeIs('article.index') ? 'active' : '' }}"
+           href="{{ route('article.index') }}">
+            <i class="fa-solid fa-list text-greymasala me-1"></i>
+            Tutti gli annunci
+        </a>
+    </li>
+
+    <li class="nav-item dropdown ps-1 ps-lg-0">
+        <button class="btn nav-link dropdown-toggle text-nowrap" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+            <i class="fa-solid fa-grip text-greymasala me-1"></i>
+            Categorie
+        </button>
+        <ul class="dropdown-menu">
+            @foreach($categories as $category)
+                <li>
+                    <a class="dropdown-item" href="{{ route('article.byCategory', $category) }}">
+                        {{ $category->name }}
+                    </a>
+                </li>
+                @if(!$loop->last)
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                @endif
+            @endforeach
+        </ul>
+    </li>
+
+</ul>
+
+{{-- mobile --}}
+<div class="d-lg-none">
+
+    <a class="nav-link {{ request()->routeIs('article.index') ? 'active' : '' }}"
+       href="{{ route('article.index') }}">
+        <i class="fa-solid fa-list text-greymasala me-2"></i>
+        Tutti gli annunci
+    </a>
+
+    <hr class="my-3">
+
+    <h6 class="text-greymasala text-uppercase small fw-semibold mb-2">Categorie</h6>
+    <ul class="navbar-nav">
+        @foreach($categories as $category)
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('article.byCategory', $category) }}">
+                    {{ $category->name }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
+
+</div>

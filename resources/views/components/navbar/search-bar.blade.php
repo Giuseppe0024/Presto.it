@@ -46,6 +46,8 @@
                     <i class="fa-solid fa-magnifying-glass me-2"></i>
                     <input type="text" name="q" value="{{ old('q') }}"
                            class="form-control border-0 bg-transparent p-0" placeholder="Cosa stai cercando?">
+                    {{-- cerca --}}
+                    <button class="btn btn-orange rounded-5 px-4 align-self-end search-btn" type="submit">Cerca</button>
                 </div>
 
                 {{-- categoria e città --}}
@@ -69,8 +71,6 @@
                     </div>
                 </div>
 
-                {{-- cerca --}}
-                <button class="btn btn-orange rounded-5 px-4 align-self-end search-btn" type="submit">Cerca</button>
 
             </form>
         </div>

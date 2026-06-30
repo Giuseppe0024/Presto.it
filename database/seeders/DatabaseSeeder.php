@@ -2,10 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Seeder;
-use Database\Seeders\CategoriesSeeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,7 +15,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-//    Seeding categorie fatto a migration, usare solo per aggiungere altre categorie se necessario in locale
-//        $this->call(CategoriesSeeder::class);
+        //    Seeding categorie fatto a migration, usare solo per aggiungere altre categorie se necessario in locale
+        //        $this->call(CategoriesSeeder::class);
+
+        $this->call(DemoArticlesSeeder::class);
     }
 }

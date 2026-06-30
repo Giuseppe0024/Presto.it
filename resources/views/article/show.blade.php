@@ -1,87 +1,93 @@
 <x-layouts.app>
 
 
-    <div class="container my-5 p-4 p-md-5 card-login rounded-5 stonegreen-color">
-        <div class="text-center">
-            <h1 class="mt-4 text-center">Articolo</h1>
-            <p class="mb-1 fst-italic fs-6">Categoria</p>
-        </div>
+    <div class="container">
+        <div class="my-5 p-4 p-md-5 card-login rounded-5">
+            <div class="text-center">
+                {{--  user  --}}
+                <p class="d-inline">Pubblicato da</p>
+                <address class="fw-bolder d-inline">{{ $article->user->name }}</address>
+            </div>
 
-        <x-success/>
+            <x-success/>
 
-        <div class="row g-5 mt-2">
+            <div class="row g-5 mt-1">
 
-            <!-- COLONNA SINISTRA / CAROSELLO -->
+                <!-- COLONNA SINISTRA / CAROSELLO -->
 
-            <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start ">
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start ">
 
-                <div id="carouselExampleIndicators" class="carousel slide hero-carousel " data-bs-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide hero-carousel " data-bs-ride="carousel">
 
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="2"></button>
+                        </div>
+
+                        <div class="carousel-inner rounded-4 overflow-hidden">
+                            <div class="carousel-item active">
+                                <img src="https://picsum.photos/300/300" class="d-block hero-carousel-img" alt="">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/300/300" class="d-block hero-carousel-img" alt="">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/300/300" class="d-block hero-carousel-img" alt="">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
                     </div>
 
-                    <div class="carousel-inner rounded-4 overflow-hidden">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/300/300" class="d-block hero-carousel-img" alt="">
-                        </div>
+                </div>
 
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/300/300" class="d-block hero-carousel-img" alt="">
-                        </div>
+                <!-- COLONNA DESTRA -->
 
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/300/300" class="d-block hero-carousel-img" alt="">
-                        </div>
-                    </div>
+                <div class="col-12 col-md-6">
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
+                    <h1 class="">{{ $article->title }}</h1>
+                    <p class="fst-italic fs-6">{{ $article->category->name }}</p>
 
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
+                    <!-- descrizione -->
+
+
+                    <p class="my-2">{{ $article->description }}</p>
+
+                    <!-- condizioni -->
+
+                    <p class="mt-3">
+                        <span class="fw-bold">Disponibile alla consegna:</span>
+                        @if($article->delivery_shipping)
+                            Sì
+                        @else
+                            No
+                        @endif
+                    </p>
+
+                    <!-- prezzo -->
+
+                    <p class="fw-bold text-orange fs-4 mt-3">{{ $article->price }} €</p>
+
 
                 </div>
 
             </div>
-
-            <!-- COLONNA DESTRA -->
-
-            <div class="col-12 col-md-6">
-
-
-                <!-- descrizione -->
-
-
-                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, nisi. Aperiam voluptate in
-                    veritatis alias, facere non libero repudiandae animi rem labore deleniti quidem reiciendis earum.
-                    Sequi maiores officia eaque repellendus, ab voluptas vero sint consequatur dolorum magni harum nemo
-                    explicabo placeat, error at deserunt recusandae necessitatibus atque incidunt reprehenderit est
-                    nisi? Animi doloremque, reprehenderit tempore eum cupiditate sequi maxime incidunt odit? Expedita
-                    laudantium, eligendi quaerat necessitatibus dolorem, autem vel repellat a odit assumenda, at illum
-                    iste inventore voluptas modi! Suscipit laboriosam quo non quas, voluptas quibusdam! Enim dolorem
-                    omnis cum a, eum velit nesciunt laboriosam veniam suscipit ducimus minima.</p>
-
-                <!-- condizioni -->
-
-                <p class="mt-3"><span class="fw-bold">Condizioni:</span> Nuovo</p>
-
-                <!-- prezzo -->
-
-                <p class="fw-bold text-orange fs-4 mt-3">120 €</p>
-
-
-            </div>
-
         </div>
-
     </div>
 
 </x-layouts.app>

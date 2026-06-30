@@ -8,9 +8,15 @@
                     <span class="text-titlegreen">Dai nuova vita alle tue cose.</span>
                 </h2>
                 <p>Compra e vendi di persona o con spedizione in tutta Italia.</p>
-                <a href="{{ route('article.create') }}" class="btn btn-orange rounded-pill">
-                    Crea un annuncio
-                </a>
+                @auth
+                    <a href="{{ route('article.create') }}" class="btn btn-orange rounded-pill">
+                        Crea un annuncio
+                    </a>
+                @else
+                    <a href="{{ route('register') }}" class="btn btn-orange rounded-pill">
+                        Registrati e vendi
+                    </a>
+                @endauth
             </div>
 
             <div class="col-12 col-md-8">
@@ -26,11 +32,13 @@
                             <img src="img/hero_img_03.png" class="d-block w-100" alt="">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                            data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                            data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>

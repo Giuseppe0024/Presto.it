@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 // Articoli
-Route::get('/articolo', [ArticleController::class, 'show'])->name('article');
+Route::get('/articoli', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/articolo/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/categoria/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
 
 Route::middleware('auth')->group(function () {
     Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
