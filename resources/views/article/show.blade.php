@@ -1,7 +1,7 @@
-<x-layout>
+<x-layouts.app>
 
 
-    <div class="container mt-5 py-5 card-login rounded-5 stonegreen-color">
+    <div class="container my-5 p-4 p-md-5 card-login rounded-5 stonegreen-color">
         <div class="text-center">
             <h1 class="mt-4 text-center">Articolo</h1>
             <p class="mb-1 fst-italic fs-6">Categoria</p>
@@ -9,7 +9,7 @@
 
         <x-success/>
 
-        <div class="row g-5 m-4">
+        <div class="row g-5 mt-2">
 
             <!-- COLONNA SINISTRA / CAROSELLO -->
 
@@ -84,4 +84,4 @@
 
     </div>
 
-</x-layout>
+</x-layouts.app>

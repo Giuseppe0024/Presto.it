@@ -16,10 +16,9 @@ class ArticleController extends Controller
         return view('article.myArticles');
     }
 
-    public function show_test()
+    public function show()
     {
-        return view('article.show_test');
-
+        return view('article.show');
     }
     /*    public function index()
         {

@@ -1,5 +1,5 @@
-<x-layout>
-    <div class="container py-5">
+<x-layouts.app>
+    <div class="container my-5">
 
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
@@ -27,8 +27,7 @@
                 </div>
         </div>
         </div>
-    </div>
-
         </div>
+
     </div>
-</x-layout>
+</x-layouts.app>

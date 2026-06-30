@@ -1,17 +1,13 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start footer-backgroundcolor mt-5">
 
-    <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-
     <!-- Section: Links  -->
     <section class="d-flex justify-content-center justify-content-lg-between border-bottom">
-        <div class="container text-center text-md-start">
+        <div class="container text-center text-md-start py-5">
             <!-- Grid row -->
-            <div class="row mt-3">
+            <div class="row">
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mb-md-0">
                     <!-- Content -->
                     <h4 class="fw-bold mb-4">
                         <span class="text-white">Presto</span><span class="text-orange">.it</span>
@@ -24,7 +20,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-5 mb-md-3 d-flex flex-column gap-2">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 mb-md-0 d-flex flex-column gap-2">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold footer-text">
                         Products
@@ -45,7 +41,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-5 mb-md-3 d-flex flex-column gap-2">
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 mb-md-0 d-flex flex-column gap-2">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold footer-text">
                         Useful links
@@ -66,11 +62,11 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-5 mb-md-3 d-flex flex-column align-items-center align-items-md-start gap-2">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start gap-2">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold footer-text">Contacts</h6>
 
-                    <div class="col-5 col-md-12 d-flex flex-column gap-2">
+                    <div class="d-flex flex-column gap-2">
                         <div class="d-flex align-items-center gap-2">
                             <i class="fas fa-home fa-fw footer-text"></i>
                             <p class="footer-text text-start mb-0">New York, NY 10012, US</p>
@@ -103,7 +99,7 @@
     <!-- Section: Social media -->
     <section class="container">
         <div class="row p-4 border-bottom gap-2 gap-md-0">
-            <!-- Left -->
+
             <div class="col-md-6 d-flex flex-column justify-content-center">
                 <span class="footer-text text-center">Get connected with us on social networks:</span>
                 <div class=" d-flex gap-3 justify-content-center">
@@ -127,9 +123,7 @@
                     </a>
                 </div>
             </div>
-            <!-- Left -->
 
-            <!-- Right -->
 
             <!-- Copyright -->
             <div class="col-md-6 d-flex align-items-center justify-content-center text-center footer-text">
@@ -139,5 +133,7 @@
             </div>
             <!-- Copyright -->
         </div>
+    </section>
+    <!-- Section: Social media -->
 </footer>
 <!-- Footer -->

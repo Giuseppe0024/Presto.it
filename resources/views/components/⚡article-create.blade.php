@@ -41,13 +41,13 @@ new class extends Component {
 };
 ?>
 
-<div class="container mt-5 py-5 card-login rounded-5 stonegreen-color">
+<div class="container my-5 p-4 p-md-5 card-login rounded-5 stonegreen-color">
 
 
-    <div class="g-5 mx-3">
+    <div>
         <h1 class="mb-4">Crea il tuo annuncio</h1>
 
-        <form class="row @if(!session()->has('success')) mb-5  @endif" wire:submit="store">
+        <form class="row g-5 @if(!session()->has('success')) mb-5 @endif" wire:submit="store">
 
 
             <!-- COLONNA SINISTRA -->
@@ -125,8 +125,8 @@ new class extends Component {
             <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
                 <label for="image" class="form-label">Carica le immagini del tuo articolo</label>
 
-                <div class="image-input-box d-block align-items-center justify-content-center">
-                    <i class="fa-regular fa-images" style="font-size: 5rem;"></i>
+                <div class="image-input-box d-flex align-items-center justify-content-center">
+                    <i class="fa-regular fa-images upload-icon"></i>
                 </div>
 
 

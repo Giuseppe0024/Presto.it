@@ -46,6 +46,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--orange);
 }
 
+.text-greymasala {
+    color: var(--greymasala);
+}
+
 /* CLASSI PERSONALIZZATE */
 
 
@@ -95,6 +99,43 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 0 0.25rem var(--lightgreen);
 }
 
+/* highlight della pill ricerca di ricerca*/
+.search-pill {
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-pill:focus-within {
+    border-color: var(--stonegreen);
+    box-shadow: 0 0 0 0.25rem var(--lightgreen) !important;
+}
+
+.search-pill .form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* focus su categorie e cerca in mobile */
+.search-btn:focus-visible {
+    border-color: var(--stonegreen);
+    box-shadow: 0 0 0 0.25rem var(--lightgreen) !important;
+    outline: 0;
+}
+
+/* da lg focus è lo standard outline di bootstrap */
+@media (min-width: 992px) {
+    .search-btn:focus-visible {
+        box-shadow: none !important;
+        outline: auto;
+    }
+}
+
+/* mobile ricerca è visualmente attaccata alla navbar ed eredita l'ombra */
+@media (max-width: 991.98px) {
+    .navbar.search-attached {
+        box-shadow: none !important;
+    }
+}
+
 .icon-mobile {
     font-size: 1.4rem;
     color: var(--greymasala);
@@ -105,12 +146,12 @@ i {
 }
 
 .image-input-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    max-width: 28rem;
+    aspect-ratio: 1 / 1;
+    padding: 2rem;
     border: 2px dashed var(--stonegreen);
     border-radius: 8px;
-    padding: 10rem;
     background-color: var(--reflectivewhite);
 }
 
@@ -130,6 +171,14 @@ i {
 .article-card {
     background-color: var(--lightbeige);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card-fixed {
+    width: 280px;
+}
+
+.upload-icon {
+    font-size: 5rem;
 }
 
 .article-card-img {

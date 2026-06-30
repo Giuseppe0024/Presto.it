@@ -1,11 +1,14 @@
-<x-layouts.app title="Registrazione">
+<x-layouts.app title="Diventa Revisore">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 my-5 mx-auto card-login rounded shadow p-5">
-                <h1 class="text-titlegreen">Registrati</h1>
-                <p class="lead">Inserisci i tuoi dati</p>
+                <h1 class="text-titlegreen">Diventa Revisore</h1>
+                <p class="lead">
+                    Ti piacerebbe contribuire alla qualità degli annunci pubblicati su Presto.it?
+                    Invia la tua richiesta e un amministratore la valuterà.
+                </p>
 
-                <form action="{{ route('register') }}" method="POST" class="mt-5">
+                <form action="" method="POST" class="mt-5">
                     @csrf
                     <div class="d-flex flex-column gap-3">
 
@@ -22,18 +25,19 @@
                         </div>
 
                         <div>
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password" class="form-control">
-                            @error('password') <span class="text-danger small">{{ $message }}</span>@enderror
+                            <label for="motivo">Perchè vuoi diventare revisore?</label>
+                            <textarea name="motivo" id="motivo" class="form-control"></textarea>
+                            @error('motivo') <span class="text-danger small">{{ $message }}</span>@enderror
                         </div>
 
                         <div>
-                            <label for="password_confirmation">Conferma Password</label>
-                            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
+                            <label for="esperienze">Esperienze e competenze</label>
+                            <textarea name="esperienze" id="esperienze" class="form-control"></textarea>
+                            @error('esperienze') <span class="text-danger small">{{ $message }}</span>@enderror
                         </div>
 
                         <div class="mt-3">
-                            <button type="submit" class="btn btn-orange btn-orange-accedi">Registrati</button>
+                            <button type="submit" class="btn btn-orange btn-orange-accedi">Invia richiesta</button>
                         </div>
                     </div>
                 </form>
