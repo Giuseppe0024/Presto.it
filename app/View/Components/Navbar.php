@@ -9,7 +9,9 @@ class Navbar extends Component
     // Rotte in cui è visibile la barra di ricerca
     public array $searchRoutes = [
         'homepage',
-        'article',
+        'article.show',
+        'article.index',
+        'article.byCategory',
     ];
 
     public bool $showSearch;
