@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 my-5 mx-auto card-login rounded shadow p-5">
-                <h1 class="text-titlegreen">Diventa Revisore</h1>
+                <h1 class="text-secondary">Diventa Revisore</h1>
                 <p class="lead">
                     Ti piacerebbe contribuire alla qualità degli annunci pubblicati su Presto.it?
                     Invia la tua richiesta e un amministratore la valuterà.
@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="mt-3">
-                            <button type="submit" class="btn btn-orange btn-orange-accedi">Invia richiesta</button>
+                            <button type="submit" class="btn btn-primary btn-orange-accedi">Invia richiesta</button>
                         </div>
                     </div>
                 </form>

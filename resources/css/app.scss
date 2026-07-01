@@ -1,0 +1,11 @@
+@import "bootstrap/scss/functions";
+
+$primary: #d97841;
+$secondary: #668968;
+$secondary-bg-subtle: #e2e3e5;
+
+@import "bootstrap/scss/bootstrap";
+
+@import "style";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@200..800&display=swap');

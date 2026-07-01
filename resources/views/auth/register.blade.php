@@ -2,38 +2,23 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 my-5 mx-auto card-login rounded shadow p-5">
-                <h1 class="text-titlegreen">Registrati</h1>
+                <h1 class="text-secondary">Registrati</h1>
                 <p class="lead">Inserisci i tuoi dati</p>
 
                 <form action="{{ route('register') }}" method="POST" class="mt-5">
                     @csrf
                     <div class="d-flex flex-column gap-3">
 
-                        <div>
-                            <label for="name">Nome</label>
-                            <input type="text" name="name" id="name" class="form-control">
-                            @error('name') <span class="text-danger small">{{ $message }}</span>@enderror
-                        </div>
+                        <x-form-field name="name" label="Nome"/>
 
-                        <div>
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" class="form-control">
-                            @error('email') <span class="text-danger small">{{ $message }}</span>@enderror
-                        </div>
+                        <x-form-field name="email" label="Email" type="email"/>
 
-                        <div>
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password" class="form-control">
-                            @error('password') <span class="text-danger small">{{ $message }}</span>@enderror
-                        </div>
+                        <x-form-field name="password" label="Password" type="password"/>
 
-                        <div>
-                            <label for="password_confirmation">Conferma Password</label>
-                            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
-                        </div>
+                        <x-form-field name="password_confirmation" label="Conferma Password" type="password" :show-error="false"/>
 
                         <div class="mt-3">
-                            <button type="submit" class="btn btn-orange btn-orange-accedi">Registrati</button>
+                            <button type="submit" class="btn btn-primary btn-orange-accedi">Registrati</button>
                         </div>
                     </div>
                 </form>

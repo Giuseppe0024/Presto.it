@@ -68,7 +68,7 @@
 
                     <p class="my-2">{{ $article->description }}</p>
 
-                    <!-- condizioni -->
+                    {{--  delivery --}}
 
                     <p class="mt-3">
                         <span class="fw-bold">Disponibile alla consegna:</span>
@@ -81,7 +81,7 @@
 
                     <!-- prezzo -->
 
-                    <p class="fw-bold text-orange fs-4 mt-3">{{ $article->price }} €</p>
+                    <p class="fw-bold text-primary fs-4 mt-3">{{ $article->price }} €</p>
 
 
                 </div>

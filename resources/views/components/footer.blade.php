@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start footer-backgroundcolor mt-5">
+<footer class="text-center text-lg-start bg-secondary mt-5">
 
     <!-- Section: Links  -->
     <section class="d-flex justify-content-center justify-content-lg-between border-bottom">
@@ -10,7 +10,7 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mb-md-0">
                     <!-- Content -->
                     <h4 class="fw-bold mb-4">
-                        <span class="text-white">Presto</span><span class="text-orange">.it</span>
+                        <span class="text-white">Presto</span><span class="text-primary">.it</span>
                     </h4>
                     <p class="footer-text">
                         Here you can use rows and columns to organize your footer content. Lorem ipsum

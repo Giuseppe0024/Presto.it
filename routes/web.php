@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\Route;
 
 // Homepage
@@ -15,4 +16,6 @@ Route::get('/categoria/{category}', [ArticleController::class, 'byCategory'])->n
 Route::middleware('auth')->group(function () {
     Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
     Route::get('/i-miei-articoli', [ArticleController::class, 'myArticles'])->name('article.myArticles');
+
+    Route::get('revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
 });

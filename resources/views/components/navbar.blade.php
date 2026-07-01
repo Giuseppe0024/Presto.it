@@ -12,7 +12,7 @@
         </button>
 
         <a class="navbar-brand" href="{{ route('homepage') }}">
-            <span class="stonegreen-color">Presto</span><span class="orange-color">.it</span>
+            <span class="text-secondary">Presto</span><span class="text-primary">.it</span>
         </a>
 
         {{-- mobile menu utente (destra) --}}

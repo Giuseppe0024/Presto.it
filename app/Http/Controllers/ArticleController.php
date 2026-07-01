@@ -14,7 +14,11 @@ class ArticleController extends Controller
 
     public function myArticles()
     {
-        return view('article.myArticles');
+        $articles = auth()->user()->articles()->latest()->get();
+
+        return view('article.myArticles', [
+            'articles' => $articles,
+        ]);
     }
 
     public function show(int $article)

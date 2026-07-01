@@ -7,8 +7,8 @@
             <h5 class="card-title article-card-title">{{ $article->title }}</h5>
             <a href="{{ route('article.byCategory', $article->category) }}"
                class="d-block mb-1 fst-italic text-decoration-none text-reset">{{ $article->category->name }}</a>
-            <p class="fw-bold text-orange mb-3">{{ number_format($article->price, 2, ',', '.') }} €</p>
-            <a href="{{ route('article.show', $article) }}" class="btn btn-orange btn-sm rounded-pill mt-auto align-self-start">
+            <p class="fw-bold text-primary mb-3">{{ number_format($article->price, 2, ',', '.') }} €</p>
+            <a href="{{ route('article.show', $article) }}" class="btn btn-primary btn-sm rounded-pill mt-auto align-self-start">
                 Vai all'annuncio
             </a>
         </div>

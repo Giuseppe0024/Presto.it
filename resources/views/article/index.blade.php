@@ -13,11 +13,7 @@
                 </div>
             @empty
                 <div class="col-12">
-                    <div class="card bg-secondary-subtle border-0 rounded-4 overflow-hidden">
-                        <div class="card-body">
-                            <p class="text-muted mb-0">Oops! <br> Sembra non ci siano ancora annunci... Crea il primo!</p>
-                        </div>
-                    </div>
+                    <x-empty-state>Sembra non ci siano ancora annunci... Crea il primo!</x-empty-state>
                 </div>
             @endforelse
         </div>

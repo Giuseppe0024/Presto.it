@@ -1,58 +1,379 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Componenti Blade
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Piccola guida ai componenti del progetto, così da poter gestire la grafica in maniera unificata.
 
-## About Laravel
+Dopo aver pullato fare npm install. Bootstrap ora ha il saas.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Layout
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## `x-layouts.app`
 
-## Learning Laravel
+Layout di base del sito, con navbar e footer integrati. `{{ $slot }}` nel body (ovviamente).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+`resources/views/components/layouts/app.blade.php`
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Props / input:**
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- `title` — opzionale, default = nome dell'app
+- slot — contenuto della pagina
 
-## Agentic Development
+**Uso:**
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+```blade
+<x-layouts.app title="Accedi">
+    ...
+</x-layouts.app>
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+![x-layouts.app](screenshots/layout.png)
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Globali
 
-## Code of Conduct
+## `x-navbar`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Navbar sticky top con diverse variazioni per desktop/mobile, generalmente gestite con `display: none` sui breakpoint.
 
-## Security Vulnerabilities
+`resources/views/components/navbar.blade.php`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**Props / input:**
 
-## License
+- `showSearch` — flag interno per lo stile della searchbar agganciata
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Uso:**
+
+```blade
+<x-navbar/>
+```
+
+![x-navbar](screenshots/navbar.png)
+
+---
+
+## `x-footer`
+
+Footer template preso da MDN e poi personalizzato leggermente. _(da rivedere)_
+
+`resources/views/components/footer.blade.php`
+
+**Props / input:**
+
+- nessuna
+
+**Uso:**
+
+```blade
+<x-footer/>
+```
+
+![x-footer](screenshots/footer.png)
+
+---
+
+## `x-success`
+
+Alert (verde) per i messaggi di successo.
+
+`resources/views/components/success.blade.php`
+
+**Props / input:**
+
+- nessuna
+
+**Uso:**
+
+```blade
+<x-success/>
+```
+
+![x-success](screenshots/success.png)
+
+---
+
+# Navbar (parti interne)
+
+## `x-navbar.menu-browse`
+
+Porzione sinistra della navbar. Contiene la principale navigazione degli annunci, senza filtri o per categoria.
+
+`resources/views/components/navbar/menu-browse.blade.php`
+
+**Props / input:**
+
+- nessuna
+
+**Uso:**
+
+```blade
+<x-navbar.menu-browse/>
+```
+
+![x-navbar.menu-browse](screenshots/menu-browse.png)
+
+---
+
+## `x-navbar.menu-auth`
+
+Porzione destra della navbar. In desktop è un dropdown con icona `fa-user`, su mobile diventa un offcanvas da destra.
+Include le principali interazioni di un utente loggato.
+
+`resources/views/components/navbar/menu-auth.blade.php`
+
+**Props / input:**
+
+- nessuna
+
+**Uso:**
+
+```blade
+<x-navbar.menu-auth/>
+```
+
+![x-navbar.menu-auth](screenshots/menu-auth.png)
+
+---
+
+## `x-navbar.menu-guest`
+
+Porzione destra della navbar. Simile per stile al `menu-auth`, invita l'utente ad accedere o registrarsi, con azioni
+secondarie come cambiare lingua.
+
+`resources/views/components/navbar/menu-guest.blade.php`
+
+**Props / input:**
+
+- nessuna
+
+**Uso:**
+
+```blade
+<x-navbar.menu-guest/>
+```
+
+![x-navbar.menu-guest](screenshots/menu-guest.png)
+
+---
+
+## `x-navbar.search-bar`
+
+Barra di ricerca con campi _(ancora non funzionante)_. I campi sono il termine di query, un dropdown per le categorie (
+vedi [`x-navbar.category-options`](#x-navbarcategory-options)) e la città dell'annuncio.
+
+`resources/views/components/navbar/search-bar.blade.php`
+
+**Props / input:**
+
+- `show` — default `false`; renderizza la barra solo se `true`
+- richiede `$categories` (passato al dropdown categorie)
+
+**Uso:**
+
+```blade
+<x-navbar.search-bar :show="$showSearch"/>
+```
+
+![x-navbar.search-bar](screenshots/search-bar.png)
+
+---
+
+## `x-navbar.category-options`
+
+Lista delle `<option>` condivise della searchbar in modalità desktop e mobile.
+
+`resources/views/components/navbar/category-options.blade.php`
+
+**Props / input:**
+
+- `categories` *(obbligatorio)* — collezione delle categorie
+
+**Uso:**
+
+```blade
+<select name="category" class="form-select ...">
+    <x-navbar.category-options :categories="$categories"/>
+</select>
+```
+
+![x-navbar.category-options](screenshots/category-options.png)
+
+---
+
+# Homepage
+
+## `x-home.hero`
+
+La hero della homepage. Contiene una piccola call to action ed un carosello.
+
+`resources/views/components/home/hero.blade.php`
+
+**Props / input:**
+
+- nessuna
+
+**Uso:**
+
+```blade
+<x-home.hero/>
+```
+
+![x-home.hero](screenshots/hero.png)
+
+---
+
+## `x-home.latest-articles`
+
+Secondo modulo della homepage. Mostra gli ultimi articoli caricati. Appena possibile sarà sostituito da un altro modulo
+che consiglia gli articoli all'utente in base alle sue ricerche passate, suddivise per generi.
+
+`resources/views/components/home/latest-articles.blade.php`
+
+**Props / input:**
+
+- `articles` — collezione degli articoli da mostrare
+
+**Uso:**
+
+```blade
+<x-home.latest-articles :articles="$articles"/>
+```
+
+![x-home.latest-articles](screenshots/latest-articles.png)
+
+---
+
+# Annunci (card & form)
+
+## `x-article-card`
+
+La card di preview degli articoli standard.
+
+`resources/views/components/article-card.blade.php`
+
+**Props / input:**
+
+- `article` *(obbligatorio)* — il modello `Article`
+- `fluid` — default `false`; a `true` la card è a larghezza piena (altrimenti fissa 280px)
+
+**Uso:**
+
+```blade
+<x-article-card :article="$article" fluid/>
+```
+
+![x-article-card](screenshots/article-card.png)
+
+---
+
+## `x-my-article-card`
+
+Card preview annuncio specifica per la gestione dell'utente. Rispetto alla card preview normale ha un bottone Modifica
+ed uno Elimina.
+
+`resources/views/components/my-article-card.blade.php`
+
+**Props / input:**
+
+- `article` *(obbligatorio)* — il modello `Article` da mostrare
+
+**Uso:**
+
+```blade
+<x-my-article-card :article="$article"/>
+```
+
+![x-my-article-card](screenshots/my-article-card.png)
+
+---
+
+## `<livewire:article-create>`
+
+Form di creazione articoli fatto con Livewire in single component. La validazione viene quindi gestita direttamente
+dentro la vista con `#[Validate]`.
+
+`resources/views/components/⚡article-create.blade.php`
+
+**Props / input:**
+
+- nessuna (componente Livewire; usa `x-input-error` e `x-success`)
+
+**Uso:**
+
+```blade
+<livewire:article-create/>
+```
+
+![livewire:article-create](screenshots/article-create.png)
+
+---
+
+# Form & stati (helper UI)
+
+## `x-form-field`
+
+Form input con validazione integrata nello stile del sito.
+
+`resources/views/components/form-field.blade.php`
+
+**Props / input:**
+
+- `name` *(obbligatorio)* — nome del campo; usato per `name`, `id` e per recuperare l'errore
+- `label` *(obbligatorio)* — testo dell'etichetta
+- `type` — tipo di input, default `text` (es. `email`, `password`)
+- `show-error` — default `true`; a `false` nasconde l'errore inline
+- attributi extra (es. `wire:model`, `placeholder`) → inoltrati all'`<input>`
+
+**Uso:**
+
+```blade
+<x-form-field name="email" label="Email" type="email"/>
+```
+
+![x-form-field](screenshots/form-field.png)
+
+---
+
+## `x-input-error`
+
+Mini componente che mostra il testo degli errori di validazione dentro di un campo.
+
+`resources/views/components/input-error.blade.php`
+
+**Props / input:**
+
+- `field` *(obbligatorio)* — nome del campo di cui mostrare l'errore
+
+**Uso:**
+
+```blade
+<x-input-error field="title"/>
+```
+
+![x-input-error](screenshots/input-error.png)
+
+---
+
+## `x-empty-state`
+
+Card per gli stati vuoti, quando un array non ha contenuti. I messaggi "Oops, sembra che non ci siano risultati". _(da
+rivedere il design)_
+
+`resources/views/components/empty-state.blade.php`
+
+**Props / input:**
+
+- `fixed` — default `false`; a `true` usa la variante a larghezza fissa (280px) per il carosello in homepage
+- slot — testo del messaggio
+
+**Uso:**
+
+```blade
+<x-empty-state>Non hai ancora pubblicato nessun annuncio.</x-empty-state>
+
+{{-- variante a larghezza fissa per il carosello in homepage --}}
+<x-empty-state fixed>Sembra non ci siano ancora annunci...</x-empty-state>
+```
+
+![x-empty-state](screenshots/empty-state.png)

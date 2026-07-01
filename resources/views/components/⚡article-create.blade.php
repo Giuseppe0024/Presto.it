@@ -17,7 +17,7 @@ new class extends Component {
     public $price;
 
     #[Validate('required')]
-    public string $category;
+    public string $category = '';
 
     public bool $delivery_shipping;
 
@@ -41,7 +41,7 @@ new class extends Component {
 };
 ?>
 
-<div class="container my-5 p-4 p-md-5 card-login rounded-5 stonegreen-color">
+<div class="container my-5 p-4 p-md-5 card-login rounded-5 text-secondary">
 
 
     <div>
@@ -59,24 +59,19 @@ new class extends Component {
                 <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title"
                        placeholder="Inserisci il titolo"
                        wire:model.blur="title">
-                @error('title')
-                <p class="small text-danger">{{ $message }}</p>
-                @enderror
+                <x-input-error field="title"/>
 
                 <!-- categoria -->
 
-                {{--                non funziona il selected su seleziona categoria !!!--}}
                 <label for="category" class="form-label mt-3">Categoria</label>
                 <select class="form-select @error('category') is-invalid @enderror" id="category" name="category"
                         wire:model.blur="category">
-                    <option selected disabled>Seleziona una categoria</option>
+                    <option value="" selected disabled>Seleziona una categoria</option>
                     @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
-                @error('category')
-                <p class="small text-danger">{{ $message }}</p>
-                @enderror
+                <x-input-error field="category"/>
 
 
                 <!-- descrizione -->
@@ -85,18 +80,14 @@ new class extends Component {
                 <textarea class="form-control @error('description') is-invalid @enderror" id="description"
                           name="description" rows="5"
                           placeholder="Inserisci la descrizione" wire:model.blur="description"></textarea>
-                @error('description')
-                <p class="small text-danger">{{ $message }}</p>
-                @enderror
+                <x-input-error field="description"/>
 
                 <label for="price" class="form-label mt-3">Prezzo</label>
                 <input type="number" min="0" step="any" class="form-control @error('price') is-invalid @enderror"
                        id="price" name="price"
                        placeholder="Inserisci il prezzo"
                        wire:model.blur="price">
-                @error('price')
-                <p class="small text-danger">{{ $message }}</p>
-                @enderror
+                <x-input-error field="price"/>
 
 
                 <div class="mt-4">
@@ -130,7 +121,7 @@ new class extends Component {
                 </div>
 
 
-                <button type="submit" class="btn btn-orange mt-3">Pubblica</button>
+                <button type="submit" class="btn btn-primary mt-3">Pubblica</button>
             </div>
         </form>
         <x-success/>

@@ -5,15 +5,15 @@
             <div class="col-12 col-md-4 mb-4 mb-lg-0 d-flex flex-column align-items-start justify-content-center">
                 <h2>
                     Trova occasioni. <br>
-                    <span class="text-titlegreen">Dai nuova vita alle tue cose.</span>
+                    <span class="text-secondary">Dai nuova vita alle tue cose.</span>
                 </h2>
                 <p>Compra e vendi di persona o con spedizione in tutta Italia.</p>
                 @auth
-                    <a href="{{ route('article.create') }}" class="btn btn-orange rounded-pill">
+                    <a href="{{ route('article.create') }}" class="btn btn-primary rounded-pill">
                         Crea un annuncio
                     </a>
                 @else
-                    <a href="{{ route('register') }}" class="btn btn-orange rounded-pill">
+                    <a href="{{ route('register') }}" class="btn btn-primary rounded-pill">
                         Registrati e vendi
                     </a>
                 @endauth

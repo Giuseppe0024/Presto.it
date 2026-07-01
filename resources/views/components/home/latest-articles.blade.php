@@ -4,7 +4,7 @@
         <div class="col-12 col-lg-3 mb-4 mb-lg-0 pe-lg-3 ">
             <h3>Scopri gli ultimi annunci</h3>
             <p>Sfoglia le occasioni più recenti pubblicate su Presto.it.</p>
-            <a href="{{ route('article.index') }}" class="btn btn-green rounded-pill">Vedi tutti</a>
+            <a href="{{ route('article.index') }}" class="btn btn-secondary rounded-pill">Vedi tutti</a>
         </div>
 
         {{-- "overflow-auto" permette lo scroll orizzontale degli annunci --}}
@@ -14,13 +14,7 @@
                     <x-article-card :article="$article"/>
                 @empty
                     <div>
-                        <div class="card bg-secondary-subtle flex-shrink-0 border-0 rounded-4 overflow-hidden"
-                             style="width: 280px;">
-                            <div class="card-body">
-                                <p class="text-muted  mb-0">Oops! <br> Sembra non ci siano ancora annunci... Crea il
-                                    primo!</p>
-                            </div>
-                        </div>
+                        <x-empty-state fixed>Sembra non ci siano ancora annunci... Crea il primo!</x-empty-state>
                     </div>
                 @endforelse
             </div>

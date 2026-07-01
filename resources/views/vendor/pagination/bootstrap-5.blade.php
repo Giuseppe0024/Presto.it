@@ -1,5 +1,5 @@
 {{--paginator template--}}
-{{--probabilmente si può cambiare più facilmente in un'altra maniera ma per il momento usiamo questo template--}}
+{{--per rimuovere le scritte extra "page 1 of 125" dobbiamo usare questo template per paginator - purtroppo non c'é un modo più semplice --}}
 @if ($paginator->hasPages())
     <nav class="d-flex justify-content-center" aria-label="Navigazione pagine">
         <ul class="pagination justify-content-center mb-0">

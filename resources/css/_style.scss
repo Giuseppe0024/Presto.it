@@ -35,14 +35,6 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--greymasala);
 }
 
-.text-titlegreen {
-    color: var(--stonegreen);
-}
-
-.text-orange {
-    color: var(--orange);
-}
-
 .text-greymasala {
     color: var(--greymasala);
 }
@@ -55,23 +47,20 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem !important;
 }
 
-.orange-color {
-    color: var(--orange);
+.btn-primary {
+    --bs-btn-color: var(--white);
+    --bs-btn-hover-color: var(--white);
+    --bs-btn-active-color: var(--white);
+    --bs-btn-hover-bg: var(--hover-orange);
+    --bs-btn-hover-border-color: var(--hover-orange);
 }
 
-
-.stonegreen-color {
-    color: var(--stonegreen);
-}
-
-.btn-orange {
-    background-color: var(--orange);
-    color: var(--white);
-}
-
-.btn-orange:hover {
-    background-color: var(--hover-orange);
-    color: var(--white);
+.btn-secondary {
+    --bs-btn-color: var(--white);
+    --bs-btn-hover-color: var(--white);
+    --bs-btn-active-color: var(--white);
+    --bs-btn-hover-bg: var(--hover-green);
+    --bs-btn-hover-border-color: var(--hover-green);
 }
 
 
@@ -96,6 +85,10 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 0 0.25rem var(--lightgreen);
 }
 
+
+.search-pill {
+    background-color: var(--bs-body-bg);
+}
 
 .search-pill {
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
@@ -127,10 +120,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-@media (max-width: 991.98px) {
-    .navbar.search-attached {
-        box-shadow: none !important;
-    }
+.navbar {
+    transition: box-shadow .25s ease;
+}
+
+.navbar.search-attached {
+    box-shadow: none !important;
 }
 
 .icon-mobile {
@@ -153,10 +148,6 @@ i {
 }
 
 /* FOOTER */
-
-.footer-backgroundcolor {
-    background-color: var(--stonegreen);
-}
 
 .footer-text {
     color: var(--reflectivewhite);
@@ -198,17 +189,6 @@ i {
     overflow: hidden;
     min-height: 2.6em;
 }
-
-.btn-green {
-    background-color: var(--stonegreen);
-    color: var(--white);
-}
-
-.btn-green:hover {
-    background-color: var(--hover-green);
-    color: var(--white);
-}
-
 
 .navbar .navbar-nav .nav-link {
     color: var(--greymasala);
