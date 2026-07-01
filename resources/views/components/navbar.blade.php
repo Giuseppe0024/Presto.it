@@ -2,7 +2,7 @@
     <div class="container">
 
         {{-- mobile hamburger di navigazione (sinistra) --}}
-        <button class="navbar-toggler border-0 d-lg-none"
+        <button class="navbar-toggler border-0 d-lg-none me-1"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#browseOffcanvas"

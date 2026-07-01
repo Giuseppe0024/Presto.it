@@ -18,7 +18,6 @@
 
 {{-- mobile --}}
 <div class="d-lg-none">
-
     <ul class="navbar-nav mb-3">
         <li class="nav-item">
             <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">
@@ -29,8 +28,10 @@
 
     <hr class="my-3">
 
-    <a class="nav-link mb-2" href="{{ route('login') }}">
+
+    <a class="btn btn-outline-success" href="{{ route('register') }}">Registrati</a>
+
+    <a class="nav-link mt-3" href="{{ route('login') }}">
         <i class="fa-solid fa-right-to-bracket text-greymasala me-2"></i> Accedi
     </a>
-    <a class="btn btn-outline-success w-100" href="{{ route('register') }}">Registrati</a>
 </div>

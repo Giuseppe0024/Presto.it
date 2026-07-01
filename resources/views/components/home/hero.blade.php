@@ -1,4 +1,4 @@
-<section class="mb-5 mt-0 mt-lg-5 card-login shadow py-5">
+<section class="mb-5 mt-0 card-login shadow py-5">
     <div class="container">
         <div class="row align-items-center">
 

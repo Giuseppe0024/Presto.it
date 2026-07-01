@@ -41,7 +41,7 @@ Navbar sticky top con diverse variazioni per desktop/mobile, generalmente gestit
 
 **Props / input:**
 
-- `showSearch` — flag interno per lo stile della searchbar agganciata
+- `showSearch` — flag interno per agganciarci la searchbar
 
 **Uso:**
 
