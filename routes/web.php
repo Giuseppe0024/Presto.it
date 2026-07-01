@@ -18,4 +18,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/i-miei-articoli', [ArticleController::class, 'myArticles'])->name('article.myArticles');
 
     Route::get('revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+    Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('revisor.accept');
+    Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('revisor.reject');
 });

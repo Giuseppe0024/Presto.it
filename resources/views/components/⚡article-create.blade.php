@@ -124,6 +124,6 @@ new class extends Component {
                 <button type="submit" class="btn btn-primary mt-3">Pubblica</button>
             </div>
         </form>
-        <x-success/>
+        <x-alerts/>
     </div>
 </div>

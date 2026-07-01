@@ -73,9 +73,7 @@ return [
     |
     */
 
-    'home' => '/create/article',
-    // gli utenti vengono reindirizzati a questa pagina dopo il login o la registrazione, precedentemente c'era solo lo slash.
-    // Io propongo di riportarlo alla homepage, tanto era solo consigliato nella doc ma non credo facesse parte della user story di per se ~matt
+    'home' => '/',
 
     /*
     |--------------------------------------------------------------------------

@@ -27,6 +27,14 @@ class Article extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function setAccepted($value)
+    {
+        $this->is_accepted = $value;
+        $this->save();
+
+        return true;
+    }
+
     protected function casts(): array
     {
         return [
