@@ -121,7 +121,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('revisor.index') }}">
                     <i class="fa-solid fa-user-check text-greymasala me-2"></i> Area Revisore
-                    <span class="badge rounded-pill bg-danger text-white ms-1">
+                    <span class="small rounded-pill bg-danger text-white">
                             {{ \App\Models\Article::toBeRevisedCount() }}
                     </span>
                 </a>
