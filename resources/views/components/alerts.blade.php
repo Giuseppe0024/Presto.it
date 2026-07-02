@@ -5,7 +5,7 @@
         </div>
     @elseif(session()->has('error'))
         <div class="alert alert-danger">
-            {{ session('message') }}
+            {{ session('error') }}
         </div>
     @elseif(session()->has('message'))
         <div class="alert alert-info">

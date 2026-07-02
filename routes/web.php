@@ -16,8 +16,15 @@ Route::get('/categoria/{category}', [ArticleController::class, 'byCategory'])->n
 Route::middleware('auth')->group(function () {
     Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
     Route::get('/i-miei-articoli', [ArticleController::class, 'myArticles'])->name('article.myArticles');
+    Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 
+});
+
+Route::middleware('isRevisor')->group(function (){
     Route::get('revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
     Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('revisor.accept');
     Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('revisor.reject');
 });
+
+Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor'); // Attenzione: rotta in chiaro
+
