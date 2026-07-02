@@ -4,8 +4,14 @@
         {{--  user  --}}
         <p class="d-inline">Pubblicato da</p>
         <address class="fw-bolder d-inline">{{ $article->user->name }}</address>
+
     </div>
 
+    @if($article->is_accepted === null)
+        <div class="d-flex  justify-content-center ">
+            <p class="bg-info-subtle px-3 py-2 rounded-2">Articolo in stato di verifica</p>
+        </div>
+    @endif
 
     <div class="row g-5 mt-1">
 

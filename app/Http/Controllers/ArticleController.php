@@ -23,7 +23,7 @@ class ArticleController extends Controller
 
     public function show(int $article)
     {
-        Article::findOrFail($article);
+        Article::findOrFail($article)::where('is_accepted', true);
 
         $article = Article::find($article);
 
@@ -34,7 +34,7 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $articles = Article::orderBy('created_at', 'desc')->paginate(8);
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(12);
 
         return view('article.index', [
             'articles' => $articles,
@@ -43,7 +43,7 @@ class ArticleController extends Controller
 
     public function byCategory(Category $category)
     {
-        $articles = $category->articles()->orderBy('created_at', 'desc')->paginate(8);
+        $articles = $category->articles()->where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(8);
 
         return view('article.byCategory', [
             'articles' => $articles,

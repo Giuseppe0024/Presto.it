@@ -7,12 +7,12 @@
 
     @vite(['resources/js/app.js', 'resources/css/app.scss'])
 </head>
-<body>
+<body class="bg-body-tertiary">
 <x-navbar/>
 
-    <div>
-        {{  $slot  }}
-    </div>
+<div>
+    {{  $slot  }}
+</div>
 
 <x-footer/>
 </body>

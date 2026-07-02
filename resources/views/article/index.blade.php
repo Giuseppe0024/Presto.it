@@ -8,7 +8,7 @@
 
         <div class="row g-4">
             @forelse($articles as $article)
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-6 col-md-4">
                     <x-article-card :article="$article" fluid/>
                 </div>
             @empty

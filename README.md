@@ -73,9 +73,9 @@ Footer template preso da MDN e poi personalizzato leggermente. _(da rivedere)_
 
 ---
 
-## `x-success`
+## `x-alerts`
 
-Alert (verde) per i messaggi di successo.
+Alerts per i messaggi di success, error e message. Rispettivamente verde, rosso, blu.
 
 `resources/views/components/success.blade.php`
 
@@ -86,7 +86,7 @@ Alert (verde) per i messaggi di successo.
 **Uso:**
 
 ```blade
-<x-success/>
+<x-alerts/>
 ```
 
 ![x-success](screenshots/success.png)

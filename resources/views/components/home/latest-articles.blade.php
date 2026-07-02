@@ -2,9 +2,17 @@
     <div class="row align-items-center">
 
         <div class="col-12 col-lg-3 mb-4 mb-lg-0 pe-lg-3 ">
-            <h3>Scopri gli ultimi annunci</h3>
-            <p>Sfoglia le occasioni più recenti pubblicate su Presto.it.</p>
-            <a href="{{ route('article.index') }}" class="btn btn-secondary rounded-pill">Vedi tutti</a>
+            <div class="row">
+                <div class="col-8 col-lg-12 d-flex flex-column justify-content-end">
+                    <h3>Scopri gli ultimi annunci</h3>
+                    <p class="mb-0 mb-lg-3">Sfoglia le occasioni più recenti pubblicate su Presto.it.</p>
+                </div>
+                <div class="col-4 col-lg-12 d-flex justify-content-end align-items-end d-lg-block">
+                    <span>
+                    <a href="{{ route('article.index') }}" class="btn btn-sm btn-outline-secondary">Vedi tutti</a>
+                    </span>
+                </div>
+            </div>
         </div>
 
         {{-- "overflow-auto" permette lo scroll orizzontale degli annunci --}}
@@ -19,6 +27,5 @@
                 @endforelse
             </div>
         </div>
-
     </div>
 </section>
