@@ -17,6 +17,11 @@ class Article extends Model
         'delivery_shipping',
     ];
 
+    public static function toBeRevisedCount(): int
+    {
+        return Article::where('is_accepted', null)->count();
+    }
+
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);

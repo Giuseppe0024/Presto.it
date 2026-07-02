@@ -9,10 +9,19 @@
     </li>
 
     <li class="nav-item dropdown">
-        <button class="btn nav-link dropdown-toggle text-nowrap" type="button" data-bs-toggle="dropdown"
+        <button class="btn nav-link dropdown-toggle text-nowrap position-relative" type="button"
+                data-bs-toggle="dropdown"
                 aria-expanded="false">
             <i class="fa-regular fa-user text-greymasala me-1"></i>
             Profilo
+            {{--
+                        @if(\App\Models\Article::toBeRevisedCount() > 0)
+                            <span class="position-absolute top-0 start-100 badge translate-middle rounded-pill bg-danger text-white">
+
+                            </span>
+                        @endif
+            --}}
+
         </button>
         <ul class="dropdown-menu dropdown-menu-end">
             <li>
@@ -46,7 +55,10 @@
             @if(auth()->user()->is_revisor)
                 <li>
                     <a class="dropdown-item dropdown-style" href="{{ route('revisor.index') }}">
-                        <i class="fa-solid fa-user-check text-greymasala me-2"></i> Area Revisore
+                        <i class="fa-solid fa-user-check text-greymasala me-2"></i>Revisore
+                        <span class="badge rounded-pill bg-danger text-white ms-1">
+                            {{ \App\Models\Article::toBeRevisedCount() }}
+                        </span>
                     </a>
                 </li>
             @endif
@@ -109,6 +121,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('revisor.index') }}">
                     <i class="fa-solid fa-user-check text-greymasala me-2"></i> Area Revisore
+                    <span class="badge rounded-pill bg-danger text-white ms-1">
+                            {{ \App\Models\Article::toBeRevisedCount() }}
+                    </span>
                 </a>
             </li>
         @endif
