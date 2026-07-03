@@ -20,11 +20,10 @@ Route::middleware('auth')->group(function () {
 
 });
 
-Route::middleware('isRevisor')->group(function (){
+Route::middleware('isRevisor')->group(function () {
     Route::get('revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
     Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('revisor.accept');
     Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('revisor.reject');
 });
 
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor'); // Attenzione: rotta in chiaro
-
