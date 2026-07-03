@@ -4,9 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
+    use Searchable;
+
     protected $fillable = [
         'title',
         'description',
@@ -40,6 +43,24 @@ class Article extends Model
         return true;
     }
 
+    // Quando aggiungiamo le città al modello bisogna aggiungere qui 'city' => $this->>city
+    public function toSearchableArray(): array
+    {
+        return [
+            'id' => $this->id,
+            'is_accepted' => $this->is_accepted,
+            'title' => $this->title,
+            'description' => $this->description,
+            'category' => $this->category_id,
+            'created_at' => $this->created_at,
+        ];
+    }
+
+    /*
+    Onestamente ancora non capisco a pieno come funzionino i cast, ma di base servono
+    per definire da quale e in quale tipo di dato gli attributi debbano essere trasformati.
+    In questo caso ci stiamo assicurando che delivery_shipping e delivery_pickup vengano definiti sempre come booleani.
+    */
     protected function casts(): array
     {
         return [

@@ -9,10 +9,11 @@
 
         {{-- Desktop --}}
         <div class="container d-none d-lg-block py-4">
-            <form method="GET" action="#" class="search-pill d-flex align-items-center border rounded-5 p-2 shadow-sm">
+            <form method="GET" role="search" action="{{ route('article.search') }}"
+                  class="search-pill d-flex align-items-center border rounded-5 p-2 shadow-sm">
 
                 <i class="fa-solid fa-magnifying-glass ms-3"></i>
-                <input type="text" name="q" value="{{ old('q') }}"
+                <input type="text" name="query" value="{{ old('q') }}"
                        class="form-control border-0 rounded-5" placeholder="Cosa stai cercando?">
 
                 <div class="vr mx-2"></div>

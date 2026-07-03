@@ -9,11 +9,11 @@
                 </h2>
                 <p>Compra e vendi di persona o con spedizione in tutta Italia.</p>
                 @auth
-                    <a href="{{ route('article.create') }}" class="btn btn-primary rounded-pill">
+                    <a href="{{ route('article.create') }}" class="btn btn-secondary">
                         Crea un annuncio
                     </a>
                 @else
-                    <a href="{{ route('register') }}" class="btn btn-primary rounded-pill">
+                    <a href="{{ route('register') }}" class="btn btn-secondary">
                         Registrati e vendi
                     </a>
                 @endauth

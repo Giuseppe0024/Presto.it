@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
@@ -13,8 +14,22 @@ class PublicController extends Controller
         return view('welcome', compact('articles'));
     }
 
-    public function myArticles()
+    public function searchArticles(Request $request)
     {
-        return view('article.myArticles');
+
+        $query = $request->input('query');
+        //        dd($query);
+        $category = $request->input('category');
+
+        $articles = Article::search($query)->where('is_accepted', true);
+
+        if ($category) {
+            $articles = $articles->where('category_id', $category);
+        }
+
+        $articles = $articles->orderBy('created_at', 'desc')->paginate(12);
+
+        return view('article.index', compact('articles'));
+
     }
 }
