@@ -53,20 +53,9 @@
                     @endauth
 
                     {{-- Selettore lingua --}}
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown ps-1 ps-lg-0">
-                            <button class="btn nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                <i class="fa-solid fa-earth-americas text-greymasala me-1"></i>
-                                IT
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">IT</a></li>
-                                <li><a class="dropdown-item" href="#">EN</a></li>
-                                <li><a class="dropdown-item" href="#">FR</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                        <x-flags lang="it"/>
+                        <x-flags lang="en"/>
+                        <x-flags lang="es"/>
                 </div>
             </div>
         </div>
