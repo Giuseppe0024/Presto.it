@@ -54,7 +54,7 @@
 
                     {{-- Selettore lingua --}}
                         <x-flags lang="it"/>
-                        <x-flags lang="en"/>
+                        <x-flags lang="uk"/>
                         <x-flags lang="es"/>
                 </div>
             </div>

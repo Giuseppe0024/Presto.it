@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\SetLocaleMiddleware;
+
 use App\Http\Middleware\IsRevisor;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
