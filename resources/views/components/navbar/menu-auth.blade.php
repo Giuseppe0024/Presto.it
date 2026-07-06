@@ -4,7 +4,7 @@
     <li class="nav-item">
         <a class="nav-link text-nowrap" href="{{ route('article.create') }}">
             <i class="fa-solid fa-plus text-greymasala me-1"></i>
-            Crea annuncio
+            {{ __('ui.createAnnouncement')}}
         </a>
     </li>
 
@@ -13,7 +13,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false">
             <i class="fa-regular fa-user text-greymasala me-1"></i>
-            Profilo
+            {{ __('ui.profile')}}
             {{--
                         @if(\App\Models\Article::toBeRevisedCount() > 0)
                             <span class="position-absolute top-0 start-100 badge translate-middle rounded-pill bg-danger text-white">
@@ -84,7 +84,7 @@
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="{{ route('article.create') }}">
-                <i class="fa-solid fa-plus text-greymasala me-2"></i> Crea annuncio
+                <i class="fa-solid fa-plus text-greymasala me-2"></i> {{ __('ui.createAnnouncement')}}
             </a>
         </li>
         <li class="nav-item">

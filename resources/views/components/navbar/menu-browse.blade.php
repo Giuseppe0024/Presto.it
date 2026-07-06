@@ -13,13 +13,13 @@
         <button class="btn nav-link dropdown-toggle text-nowrap" type="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
             <i class="fa-solid fa-grip text-greymasala me-1"></i>
-            Categorie
+            {{ __( 'ui.categories' )}}
         </button>
         <ul class="dropdown-menu">
             @foreach($categories as $category)
                 <li>
                     <a class="dropdown-item" href="{{ route('article.byCategory', $category) }}">
-                        {{ $category->name }}
+                        {{ __("ui.{$category->name}") }}
                     </a>
                 </li>
                 @if(!$loop->last)
@@ -49,8 +49,8 @@
         @foreach($categories as $category)
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('article.byCategory', $category) }}">
-                    {{ $category->name }}
-                </a>
+                    </a>
+                    {{ __("ui.{$category->name}") }}
             </li>
         @endforeach
     </ul>
