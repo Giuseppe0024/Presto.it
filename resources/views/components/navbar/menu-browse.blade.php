@@ -5,7 +5,7 @@
         <a class="nav-link text-nowrap {{ request()->routeIs('article.index') ? 'active' : '' }}"
            href="{{ route('article.index') }}">
             <i class="fa-solid fa-list text-greymasala me-1"></i>
-            Tutti gli annunci
+            {{ __(ui.allArticles) }}
         </a>
     </li>
 
@@ -39,7 +39,7 @@
     <a class="nav-link {{ request()->routeIs('article.index') ? 'active' : '' }}"
        href="{{ route('article.index') }}">
         <i class="fa-solid fa-list text-greymasala me-2"></i>
-        Tutti gli annunci
+        {{ __(ui.allArticles) }}
     </a>
 
     <hr class="my-3">

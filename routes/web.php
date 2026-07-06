@@ -28,3 +28,5 @@ Route::middleware('isRevisor')->group(function () {
 });
 
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor'); // Attenzione: rotta in chiaro
+
+Route::post('lang/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
