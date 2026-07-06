@@ -156,14 +156,57 @@ i {
   color: inherit;
 }
 
-.image-input-box {
-  width: 100%;
+[x-cloak] {
+  display: none !important;
+}
+
+.image-uploader {
   max-width: 28rem;
+}
+
+.image-drop-box {
   aspect-ratio: 1 / 1;
-  padding: 2rem;
   border: 2px dashed var(--stonegreen);
-  border-radius: 8px;
   background-color: var(--reflectivewhite);
+  color: var(--greymasala);
+  transition: border-color 0.2s, background-color 0.2s;
+
+  &:hover {
+    border-color: var(--orange);
+    background-color: rgba(217, 120, 65, 0.06);
+  }
+
+  &.is-invalid {
+    border-color: var(--bs-danger);
+  }
+}
+
+.image-drop-area {
+  cursor: pointer;
+
+  .upload-icon {
+    font-size: 3.5rem;
+    color: var(--stonegreen);
+  }
+}
+
+.image-drop-input {
+  cursor: pointer;
+}
+
+.image-preview {
+  width: 120px;
+  height: 120px;
+}
+
+.image-preview-remove {
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1;
+
+  i {
+    font-size: 0.72rem;
+  }
 }
 
 /* FOOTER */
@@ -183,10 +226,6 @@ i {
 .article-card-fixed {
   width: 280px;
   flex-shrink: 0;
-}
-
-.upload-icon {
-  font-size: 5rem;
 }
 
 .article-card-img {
@@ -229,9 +268,6 @@ i {
 }
 
 /* CAROSELLO */
-
-
-
 
 .hero-carousel {
   width: 100%;

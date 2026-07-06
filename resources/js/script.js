@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observer = new IntersectionObserver(
         ([entry]) => navbar.classList.toggle('search-attached', entry.isIntersecting),
-        { rootMargin: `-${navbar.offsetHeight}px 0px 0px 0px` }
+        {rootMargin: `-${navbar.offsetHeight}px 0px 0px 0px`}
     );
 
     observer.observe(sentinel);

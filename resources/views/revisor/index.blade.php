@@ -4,8 +4,12 @@
             <h1>Revisor Dashboard</h1>
         </div>
 
-        <x-article-show :article="$article_to_check"/>
-        
+        @if($article_to_check)
+            <x-article-show :article="$article_to_check"/>
+        @else
+            <x-empty-state>Non ci sono articoli da revisionare.</x-empty-state>
+        @endif
+
     </div>
 
 </x-layouts.app>

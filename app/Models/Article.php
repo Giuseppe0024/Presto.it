@@ -16,7 +16,6 @@ class Article extends Model
         'price',
         'category_id',
         'user_id',
-        'delivery_pickup',
         'delivery_shipping',
     ];
 
@@ -33,6 +32,11 @@ class Article extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
     }
 
     public function setAccepted($value)

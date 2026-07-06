@@ -57,9 +57,11 @@
                     <a class="dropdown-item dropdown-style d-flex align-items-center"
                        href="{{ route('revisor.index') }}">
                         <i class="fa-solid fa-user-check text-greymasala me-2"></i>Revisioni
-                        <span class="badge rounded-pill bg-danger text-white ms-1">
+                        @if(\App\Models\Article::toBeRevisedCount())
+                            <span class="small badge rounded-pill bg-danger text-white ms-1">
                             {{ \App\Models\Article::toBeRevisedCount() }}
                         </span>
+                        @endif
                     </a>
                 </li>
             @endif
@@ -122,9 +124,11 @@
             <li class="nav-item">
                 <a class="nav-link d-flex align-items-center" href="{{ route('revisor.index') }}">
                     <i class="fa-solid fa-user-check text-greymasala me-2"></i> Revisioni
-                    <span class="small badge rounded-pill bg-danger text-white ms-1">
+                    @if(\App\Models\Article::toBeRevisedCount())
+                        <span class="small badge rounded-pill bg-danger text-white ms-1">
                             {{ \App\Models\Article::toBeRevisedCount() }}
-                    </span>
+                        </span>
+                    @endif
                 </a>
             </li>
         @endif
