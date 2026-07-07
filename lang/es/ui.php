@@ -43,6 +43,8 @@ return [
     'createTitle' => 'Crea tu anuncio',
     'formTitle' => 'Título',
     'formTitlePlaceholder' => 'Introduce el título',
+    'formCity' => 'Ciudad',
+    'formCityPlaceholder' => 'Introduce la ciudad',
     'formCategory' => 'Categoría',
     'formCategoryPlaceholder' => 'Selecciona una categoría',
     'formDescription' => 'Descripción',

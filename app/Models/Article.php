@@ -12,6 +12,7 @@ class Article extends Model
 
     protected $fillable = [
         'title',
+        'city',
         'description',
         'price',
         'category_id',
@@ -47,7 +48,6 @@ class Article extends Model
         return true;
     }
 
-    // Quando aggiungiamo le città al modello bisogna aggiungere qui 'city' => $this->>city
     public function toSearchableArray(): array
     {
         return [
@@ -56,6 +56,7 @@ class Article extends Model
             'title' => $this->title,
             'description' => $this->description,
             'category' => $this->category_id,
+            'city' => $this->city,
             'created_at' => $this->created_at,
         ];
     }

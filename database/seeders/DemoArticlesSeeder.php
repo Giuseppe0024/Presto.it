@@ -84,6 +84,21 @@ class DemoArticlesSeeder extends Seeder
         ],
     ];
 
+    protected array $cities = [
+        'Roma',
+        'Milano',
+        'Napoli',
+        'Torino',
+        'Palermo',
+        'Genova',
+        'Bologna',
+        'Firenze',
+        'Bari',
+        'Catania',
+        'Venezia',
+        'Verona',
+    ];
+
     /**
      * Fascia di prezzo [min, max] in euro per categoria.
      *
@@ -130,6 +145,7 @@ class DemoArticlesSeeder extends Seeder
 
                 Article::create([
                     'title' => $title,
+                    'city' => fake()->randomElement($this->cities),
                     'description' => "{$title}. Ottime condizioni, usato pochissimo. Vendo per fare spazio. Disponibile a rispondere a domande e a inviare altre foto.",
                     'price' => fake()->numberBetween($min, $max) + 0.99,
                     'category_id' => $category->id,

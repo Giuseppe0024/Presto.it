@@ -7,12 +7,6 @@
 
     </div>
 
-    @if($article->is_accepted === null)
-        <div class="d-flex  justify-content-center ">
-            <p class="bg-info-subtle px-3 py-2 rounded-2">Articolo in stato di verifica</p>
-        </div>
-    @endif
-
     <div class="row g-5 mt-1">
 
         <!-- COLONNA SINISTRA / CAROSELLO -->
@@ -68,8 +62,15 @@
 
         <div class="col-12 col-md-6">
 
+
             <h1 class="">{{ $article->title }}</h1>
-            <p class="fst-italic fs-6">{{ $article->category->name }}</p>
+            <div class="d-flex gap-3">
+                <p class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-location-dot"></i>{{ $article->city }}
+                </p>
+                <p>|</p>
+                <p class="fst-italic fw-bold fs-6">{{ $article->category->name }}</p>
+            </div>
 
             <!-- descrizione -->
 

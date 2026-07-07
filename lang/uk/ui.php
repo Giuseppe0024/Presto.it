@@ -45,6 +45,8 @@ return [
     'createTitle' => 'Create your listing',
     'formTitle' => 'Title',
     'formTitlePlaceholder' => 'Enter the title',
+    'formCity' => 'City',
+    'formCityPlaceholder' => 'Enter the city',
     'formCategory' => 'Category',
     'formCategoryPlaceholder' => 'Select a category',
     'formDescription' => 'Description',

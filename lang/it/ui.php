@@ -45,6 +45,8 @@ return
         'createTitle' => 'Crea il tuo annuncio',
         'formTitle' => 'Titolo',
         'formTitlePlaceholder' => 'Inserisci il titolo',
+        'formCity' => 'Città',
+        'formCityPlaceholder' => 'Inserisci la città',
         'formCategory' => 'Categoria',
         'formCategoryPlaceholder' => 'Seleziona una categoria',
         'formDescription' => 'Descrizione',

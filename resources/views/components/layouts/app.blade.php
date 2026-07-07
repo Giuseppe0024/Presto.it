@@ -7,10 +7,10 @@
 
     @vite(['resources/js/app.js', 'resources/css/app.scss'])
 </head>
-<body class="bg-body-tertiary">
+<body class="bg-body-tertiary min-vh-100 m-0 d-flex flex-column">
 <x-navbar/>
 
-<div>
+<div class="flex-grow-1">
     {{  $slot  }}
 </div>
 

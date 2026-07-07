@@ -20,6 +20,7 @@ class PublicController extends Controller
         $query = $request->input('query');
         //        dd($query);
         $category = $request->input('category');
+        $city = $request->input('city');
 
         if ($query) {
             $articles = Article::search($query)->where('is_accepted', true)
@@ -30,6 +31,10 @@ class PublicController extends Controller
 
         if ($category) {
             $articles = $articles->where('category_id', $category);
+        }
+
+        if ($city) {
+            $articles = $articles->where('city', $city);
         }
 
         $articles = $articles->orderBy('created_at', 'desc')->paginate(12);

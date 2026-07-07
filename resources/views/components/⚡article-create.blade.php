@@ -16,6 +16,9 @@ new class extends Component {
     #[Validate('required|min:10')]
     public string $description;
 
+    #[Validate('required|min:2')]
+    public string $city;
+
     #[Validate('required|numeric')]
     public $price;
 
@@ -58,6 +61,7 @@ new class extends Component {
 
         $this->article = Article::create([
             'title' => $this->title,
+            'city' => $this->city,
             'description' => $this->description,
             'price' => $this->price,
             'delivery_shipping' => $this->delivery_shipping,
@@ -129,6 +133,12 @@ new class extends Component {
                        placeholder="{{ __('ui.formPricePlaceholder') }}"
                        wire:model.blur="price">
                 <x-input-error field="price"/>
+
+                <label for="city" class="form-label mt-3">{{ __('ui.formCity') }}</label>
+                <input type="text" class="form-control @error('city') is-invalid @enderror" id="city" name="city"
+                       placeholder="{{ __('ui.formCityPlaceholder') }}"
+                       wire:model.blur="city">
+                <x-input-error field="city"/>
 
 
                 <div class="mt-4">
