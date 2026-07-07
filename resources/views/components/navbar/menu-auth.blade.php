@@ -26,12 +26,12 @@
         <ul class="dropdown-menu dropdown-menu-end">
             <li>
                 <a class="dropdown-item dropdown-style" href="#">
-                    <i class="fa-solid fa-carrot text-greymasala me-2"></i> Preferiti
+                    <i class="fa-solid fa-carrot text-greymasala me-2"></i> {{ __('ui.favorites') }}
                 </a>
             </li>
             <li>
                 <a class="dropdown-item dropdown-style" href="#">
-                    <i class="fa-regular fa-comment-dots text-greymasala me-2"></i> Messaggi
+                    <i class="fa-regular fa-comment-dots text-greymasala me-2"></i> {{ __('ui.messages') }}
                 </a>
             </li>
             <li>
@@ -39,24 +39,24 @@
             </li>
             <li>
                 <a class="dropdown-item dropdown-style" href="{{ route('article.myArticles') }}">
-                    <i class="fa-solid fa-rectangle-list text-greymasala me-2"></i> I miei annunci
+                    <i class="fa-solid fa-rectangle-list text-greymasala me-2"></i> {{ __('ui.myListings') }}
                 </a>
             </li>
             <li>
                 <a class="dropdown-item dropdown-style" href="#">
-                    <i class="fa-solid fa-bag-shopping text-greymasala me-2"></i> I miei ordini
+                    <i class="fa-solid fa-bag-shopping text-greymasala me-2"></i> {{ __('ui.myOrders') }}
                 </a>
             </li>
             <li>
                 <a class="dropdown-item dropdown-style" href="#">
-                    <i class="fa-solid fa-gear text-greymasala me-2"></i> Impostazioni
+                    <i class="fa-solid fa-gear text-greymasala me-2"></i> {{ __('ui.settings') }}
                 </a>
             </li>
             @if(auth()->user()->is_revisor)
                 <li>
                     <a class="dropdown-item dropdown-style d-flex align-items-center"
                        href="{{ route('revisor.index') }}">
-                        <i class="fa-solid fa-user-check text-greymasala me-2"></i>Revisioni
+                        <i class="fa-solid fa-user-check text-greymasala me-2"></i> {{ __('ui.reviews') }}
                         @if(\App\Models\Article::toBeRevisedCount())
                             <span class="small badge rounded-pill bg-danger text-white ms-1">
                             {{ \App\Models\Article::toBeRevisedCount() }}
@@ -91,39 +91,39 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="fa-solid fa-carrot text-greymasala me-2"></i> Preferiti
+                <i class="fa-solid fa-carrot text-greymasala me-2"></i> {{ __('ui.favorites') }}
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="fa-regular fa-comment-dots text-greymasala me-2"></i> Messaggi
+                <i class="fa-regular fa-comment-dots text-greymasala me-2"></i> {{ __('ui.messages') }}
             </a>
         </li>
     </ul>
 
     <hr class="my-3">
 
-    <h6 class="text-greymasala text-uppercase small fw-semibold mb-2">Profilo</h6>
+    <h6 class="text-greymasala text-uppercase small fw-semibold mb-2"> {{ __('ui.profile')}} </h6>
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="{{ route('article.myArticles') }}">
-                <i class="fa-solid fa-rectangle-list text-greymasala me-2"></i> I miei annunci
+                <i class="fa-solid fa-rectangle-list text-greymasala me-2"></i> {{ __('ui.myListings') }}
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="fa-solid fa-bag-shopping text-greymasala me-2"></i> I miei ordini
+                <i class="fa-solid fa-bag-shopping text-greymasala me-2"></i> {{ __('ui.myOrders') }}
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="fa-solid fa-gear text-greymasala me-2"></i> Impostazioni
+                <i class="fa-solid fa-gear text-greymasala me-2"></i> {{ __('ui.settings') }}
             </a>
         </li>
         @if(auth()->user()->is_revisor)
             <li class="nav-item">
                 <a class="nav-link d-flex align-items-center" href="{{ route('revisor.index') }}">
-                    <i class="fa-solid fa-user-check text-greymasala me-2"></i> Revisioni
+                    <i class="fa-solid fa-user-check text-greymasala me-2"></i> {{ __('ui.reviews') }}
                     @if(\App\Models\Article::toBeRevisedCount())
                         <span class="small badge rounded-pill bg-danger text-white ms-1">
                             {{ \App\Models\Article::toBeRevisedCount() }}

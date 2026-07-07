@@ -7,6 +7,26 @@ return [
     'categories' => 'Categories',
     'createArticle' => 'Create listing',
     'profile' => 'Profile',
+    'browse' => 'Browse',
+
+
+    // guest menu
+    'howItWorks' => 'How it works',
+    'login' => 'Log in',
+    'signUp' => 'Sign up',
+
+    // profile menu
+    'favorites' => 'Favorites',
+    'messages' => 'Messages',
+    'myListings' => 'My Listings',
+    'myOrders' => 'My Orders',
+    'settings' => 'Settings',
+    'reviews' => 'Reviews',
+
+    // searchbar
+    'whatAreYouLookingFor' => 'What are you looking for?',
+    'italy' => 'All of Italy',
+    'search' => 'Search',
 
     // categories
     'allCategories' => 'All categories',

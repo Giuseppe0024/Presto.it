@@ -29,7 +29,7 @@
         <div class="offcanvas offcanvas-start flex-lg-grow-0" tabindex="-1" id="browseOffcanvas"
              aria-labelledby="browseOffcanvasLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="browseOffcanvasLabel">Sfoglia</h5>
+                <h5 class="offcanvas-title" id="browseOffcanvasLabel"> {{ __('ui.browse') }}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Chiudi"></button>
             </div>
             <div class="offcanvas-body">

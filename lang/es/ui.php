@@ -7,6 +7,25 @@ return [
     'categories' => 'Categorías',
     'createArticle' => 'Crear anuncio',
     'profile' => 'Perfil',
+    'browse' => 'Explorar',
+
+    // guest menu
+    'howItWorks' => 'Cómo funciona',
+    'login' => 'Iniciar sesión',
+    'signUp' => 'Registrarse',
+
+    // profile menu
+    'favorites' => 'Favoritos',
+    'messages' => 'Mensajes',
+    'myListings' => 'Mis anuncios',
+    'myOrders' => 'Mis pedidos',
+    'settings' => 'Ajustes',
+    'reviews' => 'Reseñas',
+
+    // searchbar
+    'whatAreYouLookingFor' => 'Qué estás buscando?',
+    'italy' => 'Toda Italia',
+    'search' => 'Buscar',
 
     'allCategories' => 'Todas las categorias',
     'Elettronica' => 'Electrónica',

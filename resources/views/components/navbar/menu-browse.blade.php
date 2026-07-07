@@ -44,7 +44,7 @@
 
     <hr class="my-3">
 
-    <h6 class="text-greymasala text-uppercase small fw-semibold mb-2">Categorie</h6>
+    <h6 class="text-greymasala text-uppercase small fw-semibold mb-2">{{ __('ui.categories')}}</h6>
     <ul class="navbar-nav">
         @foreach($categories as $category)
             <li class="nav-item">

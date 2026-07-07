@@ -8,6 +8,25 @@ return
         'categories' => 'Categorie',
         'createArticle' => 'Crea annuncio',
         'profile' => 'Profilo',
+        'browse' => 'Sfoglia',
+
+        // guest menu
+        'howItWorks' => 'Come funziona',
+        'login' => 'Accedi',
+        'signUp'=> 'Registrati',
+
+        // profile menu
+        'favorites' => 'Preferiti',
+        'messages' => 'Messaggi',
+        'myListings' => 'I miei annunci',
+        'myOrders' => 'I miei ordini',
+        'settings' => 'Impostazioni',
+        'reviews' => 'Revisioni',
+
+        // searchbar
+        'whatAreYouLookingFor' => 'Cosa stai cercando?',
+        'italy' => 'Tutta Italia',
+        'search' => 'Cerca',
 
         // categorie
         'allCategories' => 'Tutte le categorie',

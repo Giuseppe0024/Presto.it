@@ -14,7 +14,7 @@
 
                 <i class="fa-solid fa-magnifying-glass ms-3"></i>
                 <input type="text" name="query" value="{{ old('q') }}"
-                       class="form-control border-0 rounded-5" placeholder="Cosa stai cercando?">
+                       class="form-control border-0 rounded-5" placeholder="{{ __('ui.whatAreYouLookingFor')}}">
 
                 <div class="vr mx-2"></div>
 
@@ -28,10 +28,10 @@
                 <div class="d-flex align-items-center px-2 flex-shrink-0">
                     <i class="fa-solid fa-location-dot me-2"></i>
                     <input type="text" name="city" value="{{ old('city') }}"
-                           class="form-control border-0 w-auto" placeholder="Tutta Italia">
+                           class="form-control border-0 w-auto" placeholder="{{ __('ui.italy') }}">
                 </div>
 
-                <button class="btn btn-primary ms-2 px-4 rounded-5 flex-shrink-0 search-btn" type="submit">Cerca
+                <button class="btn btn-primary ms-2 px-4 rounded-5 flex-shrink-0 search-btn" type="submit">{{ __('ui.search') }}
                 </button>
 
             </form>
@@ -46,9 +46,9 @@
                     <div class="search-pill d-flex align-items-center border rounded-5 px-3 py-2">
                         <i class="fa-solid fa-magnifying-glass me-2"></i>
                         <input type="text" name="q" value="{{ old('q') }}"
-                               class="form-control border-0 bg-transparent p-0" placeholder="Cosa stai cercando?">
+                               class="form-control border-0 bg-transparent p-0" placeholder="C{{ __('ui.whatAreYouLookingFor')}}">
                         {{-- cerca --}}
-                        <button class="btn btn-primary rounded-5 px-4 align-self-end search-btn" type="submit">Cerca
+                        <button class="btn btn-primary rounded-5 px-4 align-self-end search-btn" type="submit">{{ __('ui.search') }}
                         </button>
                     </div>
 
@@ -65,7 +65,7 @@
                         <div class="search-pill d-flex align-items-center flex-fill border rounded-5 px-3 py-2">
                             <i class="fa-solid fa-location-dot me-2"></i>
                             <input type="text" name="city" value="{{ old('city') }}"
-                                   class="form-control border-0 bg-transparent p-0" placeholder="Tutta Italia">
+                                   class="form-control border-0 bg-transparent p-0" placeholder="{{ __('ui.italy') }}">
                         </div>
                     </div>
 
