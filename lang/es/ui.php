@@ -3,11 +3,12 @@
 return [
 
     'hello' => 'Hola',
-    'allArticles' => 'Todos los artículos',
+    'allArticles' => 'Todos los anuncios',
     'categories' => 'Categorías',
-    'createAnnouncement' => 'Crear anuncio',
+    'createArticle' => 'Crear anuncio',
     'profile' => 'Perfil',
 
+    'allCategories' => 'Todas las categorias',
     'Elettronica' => 'Electrónica',
     'Abbigliamento' => 'Ropa',
     'Salute e Bellezza' => 'Salud y Belleza',

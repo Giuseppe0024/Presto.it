@@ -21,7 +21,11 @@ class PublicController extends Controller
         //        dd($query);
         $category = $request->input('category');
 
-        $articles = Article::search($query)->where('is_accepted', true);
+        if ($query) {
+            $articles = Article::search($query)->where('is_accepted', true);
+        } else {
+            $articles = Article::where('is_accepted', true);
+        }
 
         if ($category) {
             $articles = $articles->where('category_id', $category);

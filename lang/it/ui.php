@@ -4,10 +4,13 @@ return
     [
 
         'hello' => 'Ciao',
-        'allArticles' => 'Tutti gli articoli',
+        'allArticles' => 'Tutti gli annunci',
         'categories' => 'Categorie',
-        'createAnnouncement' => 'Crea annuncio',
+        'createArticle' => 'Crea annuncio',
         'profile' => 'Profilo',
+
+        // categorie
+        'allCategories' => 'Tutte le categorie',
         'Elettronica' => 'Elettronica',
         'Abbigliamento' => 'Abbigliamento',
         'Salute e Bellezza' => 'Salute e Bellezza',

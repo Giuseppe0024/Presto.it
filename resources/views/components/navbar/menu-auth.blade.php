@@ -4,7 +4,7 @@
     <li class="nav-item">
         <a class="nav-link text-nowrap" href="{{ route('article.create') }}">
             <i class="fa-solid fa-plus text-greymasala me-1"></i>
-            {{ __('ui.createAnnouncement')}}
+            {{ __('ui.createArticle')}}
         </a>
     </li>
 
@@ -86,7 +86,7 @@
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="{{ route('article.create') }}">
-                <i class="fa-solid fa-plus text-greymasala me-2"></i> {{ __('ui.createAnnouncement')}}
+                <i class="fa-solid fa-plus text-greymasala me-2"></i> {{ __('ui.createArticle')}}
             </a>
         </li>
         <li class="nav-item">

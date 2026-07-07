@@ -19,6 +19,7 @@
 
         <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start ">
 
+
             <div id="carouselExampleIndicators" class="carousel slide hero-carousel " data-bs-ride="carousel">
 
                 <div class="carousel-indicators">
