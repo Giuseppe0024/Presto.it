@@ -14,6 +14,9 @@
             @endif
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title article-card-title text-greymasala">{{ $article->title }}</h5>
+                {{--                <p class="d-flex align-items-center gap-2">--}}
+                {{--                    <i class="fa-solid fa-location-dot small"></i>{{ $article->city }}--}}
+                {{--                </p>--}}
                 <div class="d-flex">
                     <a href="{{ route('article.byCategory', $article->category) }}"
                        class="d-block mb-1 fst-italic text-decoration-none text-greymasala">{{ $article->category->name }}</a>

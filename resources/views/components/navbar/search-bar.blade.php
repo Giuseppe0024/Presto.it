@@ -31,7 +31,8 @@
                            class="form-control border-0 w-auto" placeholder="{{ __('ui.italy') }}">
                 </div>
 
-                <button class="btn btn-primary ms-2 px-4 rounded-5 flex-shrink-0 search-btn" type="submit">{{ __('ui.search') }}
+                <button class="btn btn-primary ms-2 px-4 rounded-5 flex-shrink-0 search-btn"
+                        type="submit">{{ __('ui.search') }}
                 </button>
 
             </form>
@@ -40,15 +41,17 @@
         {{-- Mobile --}}
         <div class="d-lg-none">
             <div class="container pt-2 pb-3">
-                <form method="GET" action="#" class="d-flex flex-column gap-2">
+                <form method="GET" action="{{ route('article.search') }}" class="d-flex flex-column gap-2">
 
                     {{-- ricerca --}}
                     <div class="search-pill d-flex align-items-center border rounded-5 px-3 py-2">
                         <i class="fa-solid fa-magnifying-glass me-2"></i>
-                        <input type="text" name="q" value="{{ old('q') }}"
-                               class="form-control border-0 bg-transparent p-0" placeholder="C{{ __('ui.whatAreYouLookingFor')}}">
+                        <input type="text" name="query" value="{{ old('query') }}"
+                               class="form-control border-0 bg-transparent p-0"
+                               placeholder="{{ __('ui.whatAreYouLookingFor')}}">
                         {{-- cerca --}}
-                        <button class="btn btn-primary rounded-5 px-4 align-self-end search-btn" type="submit">{{ __('ui.search') }}
+                        <button class="btn btn-primary rounded-5 px-4 align-self-end search-btn"
+                                type="submit">{{ __('ui.search') }}
                         </button>
                     </div>
 

@@ -9,7 +9,6 @@ return [
     'profile' => 'Profile',
     'browse' => 'Browse',
 
-
     // guest menu
     'howItWorks' => 'How it works',
     'login' => 'Log in',
@@ -65,24 +64,23 @@ return [
 
     // Home page
 
-        // Hero
+    // Hero
 
-        'heroTitle' => 'Find deals.',
-        'heroSubtitle' => 'Give new life to your things.',
-        'heroDescription' => 'Buy and sell in person or with shipping across the UK.',
-        'registerAndSell' => 'Register and sell',
+    'heroTitle' => 'Find deals.',
+    'heroSubtitle' => 'Give new life to your things.',
+    'heroDescription' => 'Buy and sell in person or with shipping across the UK.',
+    'registerAndSell' => 'Register and sell',
 
+    // latest articles
 
-       // latest articles
-
-       'latestArticles' => 'Discover the latest articles',
-       'browseLatestArticles' => 'Browse the latest articles posted on Presto.it.',
-       'viewAll' => 'View all',
-       'noArticlesYet' => 'It seems there are no articles yet... Create the first one!',
+    'latestArticles' => 'Discover the latest articles',
+    'browseLatestArticles' => 'Browse the latest articles posted on Presto.it.',
+    'viewAll' => 'View all',
+    'noArticlesYet' => 'It seems there are no articles yet... Create the first one!',
 
     // footer
     'footerDescription' => 'Buy and sell new or used items easily and quickly. Find deals near you and give new life to the items you no longer use.',
-    
+
     'support' => 'Support',
     'help' => 'Help',
     'contactUs' => 'Contact Us',
