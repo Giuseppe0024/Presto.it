@@ -14,7 +14,7 @@ class ArticleController extends Controller
 
     public function myArticles()
     {
-        $articles = auth()->user()->articles()->latest()->get();
+        $articles = auth()->user()->articles()->with(['category', 'images'])->latest()->get();
 
         return view('article.myArticles', [
             'articles' => $articles,
@@ -34,7 +34,7 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(12);
+        $articles = Article::where('is_accepted', true)->with(['category', 'images'])->orderBy('created_at', 'desc')->paginate(12);
 
         return view('article.index', [
             'articles' => $articles,
@@ -43,7 +43,7 @@ class ArticleController extends Controller
 
     public function byCategory(Category $category)
     {
-        $articles = $category->articles()->where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(8);
+        $articles = $category->articles()->where('is_accepted', true)->with(['category', 'images'])->orderBy('created_at', 'desc')->paginate(8);
 
         return view('article.byCategory', [
             'articles' => $articles,

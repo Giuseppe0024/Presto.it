@@ -57,24 +57,27 @@
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown ps-1 ps-lg-0">
 
-                            <button class="btn nav-link dropdown-toggle" 
-                            type="button" 
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                            <button class="btn nav-link dropdown-toggle"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false">
 
                                 <i class="fa-solid fa-earth-americas text-greymasala me-1"></i>
 
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end text-end" style="min-width: 0;">
-                                <li><x-flags lang="it"/></li>
-                                <li><x-flags lang="uk"/></li>
-                                <li><x-flags lang="es"/></li>
+                                <li>
+                                    <x-flags lang="it"/>
+                                </li>
+                                <li>
+                                    <x-flags lang="uk"/>
+                                </li>
+                                <li>
+                                    <x-flags lang="es"/>
+                                </li>
                             </ul>
                         </li>
                     </ul>
-                        
-                        
-                        
                 </div>
             </div>
         </div>

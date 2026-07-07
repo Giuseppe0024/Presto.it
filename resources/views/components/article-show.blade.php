@@ -17,46 +17,51 @@
 
         <!-- COLONNA SINISTRA / CAROSELLO -->
 
-        <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start ">
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start align-items-md-center ">
+
+            @if($article->images->count())
+                <div id="carouselExampleIndicators" class="carousel slide hero-carousel " data-bs-ride="carousel">
+
+                    @if($article->images->count() > 1)
+                        <div class="carousel-indicators">
+                            @foreach($article->images as $image)
+                                <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="{{ $loop->index }}"
+                                        @if($loop->first) class="active" @endif>
+
+                                </button>
+                            @endforeach
+                        </div>
+                    @endif
 
 
-            <div id="carouselExampleIndicators" class="carousel slide hero-carousel " data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-4 overflow-hidden">
+                        @foreach($article->images as $key => $image)
+                            <div class="carousel-item @if($loop->first) active @endif">
+                                <img src="{{ Storage::url($image->path) }}" class="d-block hero-carousel-img"
+                                     alt="Immagine {{$key + 1}} dell'articolo {{$article->title}}">
+                            </div>
+                        @endforeach
+                    </div>
 
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="2"></button>
+
+                    @if($article->images->count() > 1)
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    @endif
                 </div>
-
-                <div class="carousel-inner rounded-4 overflow-hidden">
-                    <div class="carousel-item active">
-                        <img src="https://picsum.photos/300/300" class="d-block hero-carousel-img" alt="">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="https://picsum.photos/300/300" class="d-block hero-carousel-img" alt="">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="https://picsum.photos/300/300" class="d-block hero-carousel-img" alt="">
-                    </div>
+            @else
+                <div class="w-100 h-100 rounded-4 bg-body-secondary d-flex align-items-center justify-content-center p-5">
+                    <i class="fa-solid fa-thumbtack-slash fs-5"></i>
                 </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-
-            </div>
-
+            @endif
         </div>
 
         <!-- COLONNA DESTRA -->
