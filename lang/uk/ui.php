@@ -41,4 +41,38 @@ return [
     'uploadDrag' => 'Drag images here or click to select them',
     'uploadMaxSize' => 'Max 2MB',
 
+    // Home page
+
+        // Hero
+
+        'heroTitle' => 'Find deals.',
+        'heroSubtitle' => 'Give new life to your things.',
+        'heroDescription' => 'Buy and sell in person or with shipping across the UK.',
+        'registerAndSell' => 'Register and sell',
+
+
+       // latest articles
+
+       'latestArticles' => 'Discover the latest articles',
+       'browseLatestArticles' => 'Browse the latest articles posted on Presto.it.',
+       'viewAll' => 'View all',
+       'noArticlesYet' => 'It seems there are no articles yet... Create the first one!',
+
+    // footer
+    'footerDescription' => 'Buy and sell new or used items easily and quickly. Find deals near you and give new life to the items you no longer use.',
+    
+    'support' => 'Support',
+    'help' => 'Help',
+    'contactUs' => 'Contact Us',
+    'terms' => 'Terms and Conditions',
+    'privacy' => 'Privacy',
+
+    'usefulLinks' => 'Useful links',
+    'becomeRevisor' => 'Become a reviewer',
+    'settings' => 'Settings',
+    'orders' => 'Orders',
+    'feedback' => 'Feedback',
+
+    'contacts' => 'Contacts',
+
 ];

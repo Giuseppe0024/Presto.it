@@ -40,4 +40,40 @@ return [
     'uploadDrag' => 'Arrastra aquí las imágenes o haz clic para seleccionarlas',
     'uploadMaxSize' => 'Máx 2MB',
 
+
+    // Home page
+
+        // Hero
+
+        'heroTitle' => 'Encuentra ofertas.',
+        'heroSubtitle' => 'Dale nueva vida a tus cosas.',
+        'heroDescription' => 'Compra y vende en persona o con envío a toda España.',
+        'registerAndSell' => 'Regístrate y vende',
+
+
+       // latest articles
+
+       'latestArticles' => 'Descubre los últimos anuncios',
+       'browseLatestArticles' => 'Explora las ofertas más recientes publicadas en Presto.it.',
+       'viewAll' => 'Ver todos',
+       'noArticlesYet' => 'Parece que aún no hay anuncios... ¡Crea el primero!',
+
+
+    // footer
+    'footerDescription' => 'Compra y vende artículos nuevos o usados de manera fácil y rápida. Encuentra ofertas cerca de ti y da nueva vida a los artículos que ya no usas.',
+
+    'support' => 'Asistencia',
+    'help' => 'Ayuda',
+    'contactUs' => 'Contáctanos',
+    'terms' => 'Términos y Condiciones',
+    'privacy' => 'Privacidad',
+
+
+    'usefulLinks' => 'Enlaces útiles',
+    'becomeRevisor' => 'Conviértete en Revisor',
+    'settings' => 'Configuración',
+    'orders' => 'Pedidos',
+    'feedback' => 'Comentarios',
+
+    'contacts' => 'Contactos',
 ];

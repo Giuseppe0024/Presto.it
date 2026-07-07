@@ -13,8 +13,7 @@
                         <span class="text-white">Presto</span><span class="text-primary">.it</span>
                     </h4>
                     <p class="footer-text">
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
+                        {{ __('ui.footerDescription') }}
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -23,19 +22,19 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 mb-md-0 d-flex flex-column gap-2">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold footer-text">
-                        Products
+                        {{ __('ui.support') }}
                     </h6>
                     <p class="footer-text">
-                        <a href="#!" class="text-reset ">Angular</a>
+                        <a href="#!" class="text-reset ">{{ __('ui.help') }}</a>
                     </p>
                     <p class="footer-text">
-                        <a href="#!" class="text-reset ">React</a>
+                        <a href="#!" class="text-reset ">{{ __('ui.contactUs') }}</a>
                     </p>
                     <p class="footer-text">
-                        <a href="#!" class="text-reset ">Vue</a>
+                        <a href="#!" class="text-reset ">{{ __('ui.terms') }}</a>
                     </p>
                     <p class="footer-text">
-                        <a href="#!" class="text-reset ">Laravel</a>
+                        <a href="#!" class="text-reset ">{{ __('ui.privacy') }}</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -44,19 +43,19 @@
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 mb-md-0 d-flex flex-column gap-2">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold footer-text">
-                        Useful links
+                        {{ __('ui.usefulLinks') }}
                     </h6>
                     <p class="footer-text">
-                        <a href="{{ route('become.revisor') }}" class="text-reset">Diventa Revisore</a>
+                        <a href="{{ route('become.revisor') }}" class="text-reset">{{ __('ui.becomeRevisor') }}</a>
                     </p>
                     <p class="footer-text">
-                        <a href="#!" class="text-reset">Settings</a>
+                        <a href="#!" class="text-reset">{{ __('ui.settings')}}</a>
                     </p>
                     <p class="footer-text">
-                        <a href="#!" class="text-reset">Orders</a>
+                        <a href="#!" class="text-reset">{{ __('ui.orders')}}</a>
                     </p>
                     <p class="footer-text">
-                        <a href="#!" class="text-reset">Help</a>
+                        <a href="#!" class="text-reset">{{ __('ui.feedback')}}</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -64,7 +63,7 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start gap-2">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold footer-text">Contacts</h6>
+                    <h6 class="text-uppercase fw-bold footer-text">{{ __('ui.contacts') }}</h6>
 
                     <div class="d-flex flex-column gap-2">
                         <div class="d-flex align-items-center gap-2">

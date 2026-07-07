@@ -42,4 +42,42 @@ return
         'uploadDrag' => 'Trascina qui le immagini o clicca per selezionarle',
         'uploadMaxSize' => 'Max 2MB',
 
+
+        // Home page
+
+            // Hero
+
+            'heroTitle' => 'Trova occasioni.',
+            'heroSubtitle' => 'Dai nuova vita alle tue cose.',
+            'heroDescription' => 'Compra e vendi di persona o con spedizione in tutta Italia.',
+            'registerAndSell' => 'Registrati e vendi',
+
+
+           // latest articles
+
+           'latestArticles' => 'Scopri gli ultimi annunci',
+           'browseLatestArticles' => 'Sfoglia le occasioni più recenti pubblicate su Presto.it.',
+           'viewAll' => 'Vedi tutti',
+           'noArticlesYet' => 'Sembra non ci siano ancora annunci... Crea il primo!',
+
+
+        // footer
+        'footerDescription' => 'Compra e vendi articoli nuovi o usati in modo semplice e veloce. Trova occasioni vicino a te e dai nuova vita agli oggetti che non usi più.',
+
+        'support' => 'Assistenza',
+        'help' => 'Aiuto',
+        'contactUs' => 'Contattaci',
+        'terms' => 'Termini e Condizioni',
+        'privacy' => 'Privacy',
+
+
+        'usefulLinks' => 'Link Utili',
+        'becomeRevisor' => 'Diventa Revisore',
+        'settings' => 'Impostazioni',
+        'orders' => 'Ordini',
+        'feedback' => 'Feedback',
+
+
+        'contacts' => 'Contatti',
+
     ];

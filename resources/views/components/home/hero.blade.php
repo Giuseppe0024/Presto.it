@@ -4,17 +4,17 @@
 
             <div class="col-12 col-md-4  mb-lg-0  d-flex flex-column align-items-start">
                 <h2>
-                    Trova occasioni. <br>
-                    <span class="text-secondary">Dai nuova vita alle tue cose.</span>
+                    {{ __('ui.heroTitle') }} <br>
+                    <span class="text-secondary">{{ __('ui.heroSubtitle') }}</span>
                 </h2>
-                <p>Compra e vendi di persona o con spedizione in tutta Italia.</p>
+                <p>{{ __('ui.heroDescription') }}</p>
                 @auth
                     <a href="{{ route('article.create') }}" class="btn btn-secondary">
-                        Crea un annuncio
+                        {{ __('ui.createArticle') }}
                     </a>
                 @else
                     <a href="{{ route('register') }}" class="btn btn-secondary">
-                        Registrati e vendi
+                        {{ __('ui.registerAndSell') }}
                     </a>
                 @endauth
             </div>
