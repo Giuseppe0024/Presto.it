@@ -19,9 +19,9 @@ class RevisorController extends Controller
 
     public function accept(Article $article)
     {
-        if ($article->user_id = auth()->id()) {
-            return redirect()->back()->with('error', "Non puoi approvare l'annuncio".$article->title."perché ne sei l'autore");
-        }
+        //        if ($article->user_id = auth()->id()) {
+        //            return redirect()->back()->with('error', "Non puoi approvare l'annuncio".$article->title."perché ne sei l'autore");
+        //        }
 
         $article->setAccepted(true);
 
@@ -30,9 +30,9 @@ class RevisorController extends Controller
 
     public function reject(Article $article)
     {
-        if ($article->user_id = auth()->id()) {
-            return redirect()->back()->with('error', "Non puoi rifiutare l'annuncio".$article->title."perché ne sei l'autore");
-        }
+        //        if ($article->user_id = auth()->id()) {
+        //            return redirect()->back()->with('error', "Non puoi rifiutare l'annuncio".$article->title."perché ne sei l'autore");
+        //        }
 
         $article->setAccepted(false);
 
