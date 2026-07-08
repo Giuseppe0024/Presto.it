@@ -2,6 +2,7 @@
 <ul class="navbar-nav d-none d-lg-flex align-items-lg-center">
 
     <li class="nav-item ps-1 ps-lg-0">
+        {{--    sarebbe meglio spostare la logica di active nel controller della navbar // anche perché al momento lo usiamo solo per l'index degli articoli O_O"    --}}
         <a class="nav-link text-nowrap {{ request()->routeIs('article.index') ? 'active' : '' }}"
            href="{{ route('article.index') }}">
             <i class="fa-solid fa-list text-greymasala me-1"></i>
@@ -49,8 +50,8 @@
         @foreach($categories as $category)
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('article.byCategory', $category) }}">
-                    </a>
-                    {{ __("ui.{$category->name}") }}
+                </a>
+                {{ __("ui.{$category->name}") }}
             </li>
         @endforeach
     </ul>

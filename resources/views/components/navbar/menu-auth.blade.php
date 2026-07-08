@@ -1,3 +1,4 @@
+@php use App\Models\Article; @endphp
 {{-- desktop --}}
 <ul class="navbar-nav d-none d-lg-flex align-items-lg-center">
 
@@ -57,9 +58,9 @@
                     <a class="dropdown-item dropdown-style d-flex align-items-center"
                        href="{{ route('revisor.index') }}">
                         <i class="fa-solid fa-user-check text-greymasala me-2"></i> {{ __('ui.reviews') }}
-                        @if(\App\Models\Article::toBeRevisedCount())
+                        @if(Article::toBeRevisedCount())
                             <span class="small badge rounded-pill bg-danger text-white ms-1">
-                            {{ \App\Models\Article::toBeRevisedCount() }}
+                            {{ Article::toBeRevisedCount() }}
                         </span>
                         @endif
                     </a>
@@ -124,9 +125,9 @@
             <li class="nav-item">
                 <a class="nav-link d-flex align-items-center" href="{{ route('revisor.index') }}">
                     <i class="fa-solid fa-user-check text-greymasala me-2"></i> {{ __('ui.reviews') }}
-                    @if(\App\Models\Article::toBeRevisedCount())
+                    @if(Article::toBeRevisedCount())
                         <span class="small badge rounded-pill bg-danger text-white ms-1">
-                            {{ \App\Models\Article::toBeRevisedCount() }}
+                            {{ Article::toBeRevisedCount() }}
                         </span>
                     @endif
                 </a>

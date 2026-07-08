@@ -12,8 +12,9 @@
 
                         <x-form-field name="password" label="Password" type="password"/>
 
-                        <div class="mt-3">
+                        <div class="mt-3 d-flex justify-content-between align-items-center">
                             <button type="submit" class="btn btn-primary btn-orange-accedi">Accedi</button>
+                            <p class="m-0">Non hai un account? <a href="{{route('register')}}">Registrati</a></p>
                         </div>
                     </div>
                 </form>

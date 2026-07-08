@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\becomeMailRequest;
 use App\Mail\BecomeRevisor;
 use App\Models\Article;
-use App\Models\User;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
@@ -13,13 +12,17 @@ class RevisorController extends Controller
 {
     public function index()
     {
-        $article_to_check = Article::where('is_accepted', null)->first();
+        $article_to_check = Article::where('is_accepted', null)->where('user_id', '!=', auth()->id())->first();
 
         return view('revisor.index', compact('article_to_check'));
     }
 
     public function accept(Article $article)
     {
+        if ($article->user_id = auth()->id()) {
+            return redirect()->back()->with('error', "Non puoi approvare l'annuncio".$article->title."perché ne sei l'autore");
+        }
+
         $article->setAccepted(true);
 
         return redirect()->back()->with('message', "Hai accettato l'articolo ".$article->title);
@@ -27,22 +30,29 @@ class RevisorController extends Controller
 
     public function reject(Article $article)
     {
+        if ($article->user_id = auth()->id()) {
+            return redirect()->back()->with('error', "Non puoi rifiutare l'annuncio".$article->title."perché ne sei l'autore");
+        }
+
         $article->setAccepted(false);
 
         return redirect()->back()->with('message', "Hai rifiutato l'articolo ".$article->title);
     }
 
-    public function becomeRevisor()
+    public function become()
     {
-        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-
-        return redirect()->route('homepage')->with('message', 'Richiesta per diventare revisor inviata');
+        return view('revisor.become');
     }
 
-    public function makeRevisor(User $user)
+    public function becomeMail(becomeMailRequest $request)
     {
-        Artisan::call('app:make-user-revisor', ['email' => $user->email]);
+        Mail::to('admin@presto.it')->send(new BecomeRevisor(
+            Auth::user(),
+            $request->validated('why'),
+            $request->validated('pastExperience'),
+            $request->file('curriculum'),
+        ));
 
-        return redirect()->back();
+        return redirect()->route('homepage')->with('message', 'Richiesta per diventare revisor inviata');
     }
 }

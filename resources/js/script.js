@@ -11,3 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     observer.observe(sentinel);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('become-revisor-form');
+    const button = document.getElementById('become-revisor-submit');
+
+    if (!form || !button) return;
+
+    form.addEventListener('submit', () => {
+        button.disabled = true;
+        button.textContent = 'Invio in corso...';
+    });
+});

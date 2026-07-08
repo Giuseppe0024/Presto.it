@@ -46,7 +46,7 @@
                         {{ __('ui.usefulLinks') }}
                     </h6>
                     <p class="footer-text">
-                        <a href="{{ route('become.revisor') }}" class="text-reset">{{ __('ui.becomeRevisor') }}</a>
+                        <a href="{{ route('revisor.become') }}" class="text-reset">{{ __('ui.becomeRevisor') }}</a>
                     </p>
                     <p class="footer-text">
                         <a href="#!" class="text-reset">{{ __('ui.settings')}}</a>

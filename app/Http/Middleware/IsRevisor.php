@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class IsRevisor
+class IsReviser
 {
     /**
      * Handle an incoming request.
@@ -22,6 +22,10 @@ class IsRevisor
         }
 
         return redirect()->route('homepage')->with('error', 'Zona riservata ai revisori');
-        // return abort(404);
+
+        /*
+        per evitare enumeration attack sarebbe meglio abort(404) o al massimo abort(403), ma abbiamo iniziato con questo standard di feedback ui, quindi l'ho tenuto pure nel middleware isAdmin
+        */
+
     }
 }

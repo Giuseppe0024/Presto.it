@@ -4,6 +4,7 @@ namespace App\Mail;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
@@ -14,11 +15,20 @@ class BecomeRevisor extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $user;
+    public User $user;
 
-    public function __construct(User $user)
+    public string $why;
+
+    public ?string $pastExperience;
+
+    public UploadedFile $curriculum;
+
+    public function __construct(User $user, string $why, ?string $pastExperience, UploadedFile $curriculum)
     {
         $this->user = $user;
+        $this->why = $why;
+        $this->pastExperience = $pastExperience;
+        $this->curriculum = $curriculum;
     }
 
     /**
@@ -48,6 +58,10 @@ class BecomeRevisor extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        return [
+            Attachment::fromPath($this->curriculum->getRealPath())
+                ->as($this->curriculum->getClientOriginalName())
+                ->withMime($this->curriculum->getClientMimeType()),
+        ];
     }
 }
