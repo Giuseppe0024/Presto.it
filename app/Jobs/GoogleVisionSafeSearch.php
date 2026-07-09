@@ -3,7 +3,9 @@
 namespace App\Jobs;
 
 use App\Models\Image;
+use Google\ApiCore\ApiException;
 use Google\Cloud\Vision\V1\AnnotateImageRequest;
+use Google\Cloud\Vision\V1\BatchAnnotateImagesRequest;
 use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
 use Google\Cloud\Vision\V1\Feature;
 use Google\Cloud\Vision\V1\Feature\Type;
@@ -11,11 +13,11 @@ use Google\Cloud\Vision\V1\Image as VisionImage;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 
-class GoogleVisionSafeSeearch implements ShouldQueue
+class GoogleVisionSafeSearch implements ShouldQueue
 {
     use Queueable;
 
-    private $article_image_id;
+    private int $article_image_id;
 
     /**
      * Create a new job instance.
@@ -27,6 +29,8 @@ class GoogleVisionSafeSeearch implements ShouldQueue
 
     /**
      * Execute the job.
+     *
+     * @throws ApiException
      */
     public function handle(): void
     {
@@ -50,9 +54,9 @@ class GoogleVisionSafeSeearch implements ShouldQueue
 
         $request = new AnnotateImageRequest;
         $request->setImage($google_image);
-        $request->setFeature([$googleFeature]);
+        $request->setFeatures([$googleFeature]);
 
-        $batchRequest = new BatchAnnotateImageRequest;
+        $batchRequest = new BatchAnnotateImagesRequest;
         $batchRequest->setRequests([$request]);
 
         $responseBatch = $googleVisionClient->batchAnnotateImages($batchRequest);
@@ -68,7 +72,7 @@ class GoogleVisionSafeSeearch implements ShouldQueue
         $racy = $safeSearchAnnotation->getRacy();
 
         $likeliHoodName = [
-            'text-bg-tertiary fa-solid fa-circle',
+            'text-body-tertiary fa-solid fa-circle',
             'text-secondary fa-solid fa-circle-check',
             'text-secondary fa-solid fa-circle-check',
             'text-warning fa-solid fa-circle-exclamation',

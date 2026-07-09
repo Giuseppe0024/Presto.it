@@ -67,13 +67,13 @@
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end text-end" style="min-width: 0;">
                                 <li>
-                                    <x-flags lang="it"/>
+                                    <x-navbar.flags lang="it"/>
                                 </li>
                                 <li>
-                                    <x-flags lang="uk"/>
+                                    <x-navbar.flags lang="uk"/>
                                 </li>
                                 <li>
-                                    <x-flags lang="es"/>
+                                    <x-navbar.flags lang="es"/>
                                 </li>
                             </ul>
                         </li>
