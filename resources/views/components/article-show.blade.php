@@ -11,52 +11,7 @@
 
         <!-- COLONNA SINISTRA / CAROSELLO -->
 
-        <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start align-items-md-center ">
-
-            @if($article->images->count())
-                <div id="carouselExampleIndicators" class="carousel slide hero-carousel " data-bs-ride="carousel">
-
-                    @if($article->images->count() > 1)
-                        <div class="carousel-indicators">
-                            @foreach($article->images as $image)
-                                <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="{{ $loop->index }}"
-                                        @if($loop->first) class="active" @endif>
-
-                                </button>
-                            @endforeach
-                        </div>
-                    @endif
-
-
-                    <div class="carousel-inner rounded-4 overflow-hidden">
-                        @foreach($article->images as $key => $image)
-                            <div class="carousel-item @if($loop->first) active @endif">
-                                <img src="{{ $image->getUrl(400, 300) }}" class="d-block hero-carousel-img"
-                                     alt="Immagine {{$key + 1}} dell'articolo {{$article->title}}">
-                            </div>
-                        @endforeach
-                    </div>
-
-
-                    @if($article->images->count() > 1)
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                                data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                                data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    @endif
-                </div>
-            @else
-                <div class="w-100 h-100 rounded-4 bg-body-secondary d-flex align-items-center justify-content-center p-5">
-                    <i class="fa-solid fa-thumbtack-slash fs-5"></i>
-                </div>
-            @endif
-        </div>
+        <x-revisor-carousel :article="$article"/>
 
         <!-- COLONNA DESTRA -->
 
@@ -71,6 +26,10 @@
                 <p>|</p>
                 <p class="fst-italic fw-bold fs-6">{{ $article->category->name }}</p>
             </div>
+
+            
+
+
 
             <!-- descrizione -->
 
@@ -93,6 +52,8 @@
             <p class="fw-bold text-primary fs-4 mt-3">{{ $article->price }} €</p>
         </div>
 
+        {{-- Buttons --}}
+
         @if(@auth()->user()->is_revisor && $article->is_accepted === null)
             <div class="col mt-5 d-flex justify-content-center gap-4">
                 <form action="{{ route('revisor.reject', $article) }}" method="POST">
@@ -112,3 +73,60 @@
 
 
 </div>
+
+@if(@auth()->user()->is_revisor && $article->is_accepted === null)
+                                @if($image->lables)
+                                    <div class="d-flex flex-wrap gap-2 mt-2">
+                                    @foreach($image->lables as $label)
+                                        <span class="badge rounded-pill text-bg-secondary m-1">#{{ $label }}</span>
+                                    @endforeach
+                                    </div>
+                                @else
+                                <span class="badge rounded-pill text-bg-secondary m-1">Nessuna etichetta</span>
+
+                                @endif
+
+                                <div class="row mt-2">
+                                    <div class="col-md-3">
+                                        <div class="card-body p-2">
+                                            <h5 class="card-title">Ratings</h5>
+                                            <div class="row justify-content-center">
+                                                <div class="col-2">
+                                                    <p class="text-center mx-auto">{{ $image->adult }}</p>
+                                                </div>
+                                                 <p class="col-10">Adult</p>
+                                            </div>
+
+                                            <div class="row justify-content-center">
+                                                <div class="col-2">
+                                                    <p class="text-center mx-auto">{{ $image->violence }}</p>
+                                                </div>
+                                                 <p class="col-10">Violence</p>
+                                            </div>
+
+                                            <div class="row justify-content-center">
+                                                <div class="col-2">
+                                                    <p class="text-center mx-auto">{{ $image->spoof }}</p>
+                                                </div>
+                                                 <p class="col-10">Spoof</p>
+                                            </div>
+
+                                            <div class="row justify-content-center">
+                                                <div class="col-2">
+                                                    <p class="text-center mx-auto">{{ $image->racy }}</p>
+                                                </div>
+                                                 <p class="col-10">Racy</p>
+                                            </div>
+
+                                            <div class="row justify-content-center">
+                                                <div class="col-2">
+                                                    <p class="text-center mx-auto">{{ $image->medical }}</p>
+                                                </div>
+                                                 <p class="col-10">Medical</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                             @endif
