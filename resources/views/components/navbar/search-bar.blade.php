@@ -13,7 +13,7 @@
                   class="search-pill d-flex align-items-center border rounded-5 p-2 shadow-sm">
 
                 <i class="fa-solid fa-magnifying-glass ms-3"></i>
-                <input type="text" name="query" value="{{ old('q') }}"
+                <input type="text" name="query" value="{{ request()->query('query') }}"
                        class="form-control border-0 rounded-5" placeholder="{{ __('ui.whatAreYouLookingFor')}}">
 
                 <div class="vr mx-2"></div>
@@ -27,7 +27,7 @@
 
                 <div class="d-flex align-items-center px-2 flex-shrink-0">
                     <i class="fa-solid fa-location-dot me-2"></i>
-                    <input type="text" name="city" value="{{ old('city') }}"
+                    <input type="text" name="city" value="{{ request()->query('city') }}"
                            class="form-control border-0 w-auto" placeholder="{{ __('ui.italy') }}">
                 </div>
 
@@ -46,28 +46,28 @@
                     {{-- ricerca --}}
                     <div class="search-pill d-flex align-items-center border rounded-5 px-3 py-2">
                         <i class="fa-solid fa-magnifying-glass me-2"></i>
-                        <input type="text" name="query" value="{{ old('query') }}"
+                        <input type="text" name="query" value="{{ request()->query('query') }}"
                                class="form-control border-0 bg-transparent p-0"
                                placeholder="{{ __('ui.whatAreYouLookingFor')}}">
                         {{-- cerca --}}
-                        <button class="btn btn-primary rounded-5 px-4 align-self-end search-btn"
+                        <button class="btn btn-primary rounded-5 px-4 flex-shrink-0 search-btn"
                                 type="submit">{{ __('ui.search') }}
                         </button>
                     </div>
 
                     {{-- categoria e città --}}
                     <div class="d-flex gap-2">
-                        <div class="search-pill d-flex align-items-center flex-fill border rounded-5 px-3 py-2">
-                            <i class="fa-solid fa-list-ul me-2"></i>
-                            <select name="category" class="form-select border-0 bg-transparent p-0"
+                        <div class="search-pill search-pill-half d-flex align-items-center border rounded-5 px-3 py-2">
+                            <i class="fa-solid fa-list-ul me-2 flex-shrink-0"></i>
+                            <select name="category" class="form-select border-0 bg-transparent py-0 ps-0 text-truncate"
                                     aria-label="Categorie">
                                 <x-navbar.category-options :categories="$categories"/>
                             </select>
                         </div>
 
-                        <div class="search-pill d-flex align-items-center flex-fill border rounded-5 px-3 py-2">
-                            <i class="fa-solid fa-location-dot me-2"></i>
-                            <input type="text" name="city" value="{{ old('city') }}"
+                        <div class="search-pill search-pill-half d-flex align-items-center border rounded-5 px-3 py-2">
+                            <i class="fa-solid fa-location-dot me-2 flex-shrink-0"></i>
+                            <input type="text" name="city" value="{{ request()->query('city') }}"
                                    class="form-control border-0 bg-transparent p-0" placeholder="{{ __('ui.italy') }}">
                         </div>
                     </div>

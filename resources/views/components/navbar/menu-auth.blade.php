@@ -4,7 +4,7 @@
 
     <li class="nav-item">
         <a class="nav-link text-nowrap" href="{{ route('article.create') }}">
-            <i class="fa-solid fa-plus text-greymasala me-1"></i>
+            <i class="fa-solid fa-plus me-1"></i>
             {{ __('ui.createArticle')}}
         </a>
     </li>
@@ -13,7 +13,7 @@
         <button class="btn nav-link dropdown-toggle text-nowrap position-relative" type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false">
-            <i class="fa-regular fa-user text-greymasala me-1"></i>
+            <i class="fa-regular fa-user me-1"></i>
             {{ __('ui.profile')}}
             {{--
                         @if(\App\Models\Article::toBeRevisedCount() > 0)
@@ -27,12 +27,12 @@
         <ul class="dropdown-menu dropdown-menu-end">
             <li>
                 <a class="dropdown-item dropdown-style" href="#">
-                    <i class="fa-solid fa-carrot text-greymasala me-2"></i> {{ __('ui.favorites') }}
+                    <i class="fa-solid fa-carrot me-2"></i> {{ __('ui.favorites') }}
                 </a>
             </li>
             <li>
                 <a class="dropdown-item dropdown-style" href="#">
-                    <i class="fa-regular fa-comment-dots text-greymasala me-2"></i> {{ __('ui.messages') }}
+                    <i class="fa-regular fa-comment-dots me-2"></i> {{ __('ui.messages') }}
                 </a>
             </li>
             <li>
@@ -40,24 +40,24 @@
             </li>
             <li>
                 <a class="dropdown-item dropdown-style" href="{{ route('article.myArticles') }}">
-                    <i class="fa-solid fa-rectangle-list text-greymasala me-2"></i> {{ __('ui.myListings') }}
+                    <i class="fa-solid fa-rectangle-list me-2"></i> {{ __('ui.myListings') }}
                 </a>
             </li>
             <li>
                 <a class="dropdown-item dropdown-style" href="#">
-                    <i class="fa-solid fa-bag-shopping text-greymasala me-2"></i> {{ __('ui.myOrders') }}
+                    <i class="fa-solid fa-bag-shopping me-2"></i> {{ __('ui.myOrders') }}
                 </a>
             </li>
             <li>
                 <a class="dropdown-item dropdown-style" href="#">
-                    <i class="fa-solid fa-gear text-greymasala me-2"></i> {{ __('ui.settings') }}
+                    <i class="fa-solid fa-gear me-2"></i> {{ __('ui.settings') }}
                 </a>
             </li>
             @if(auth()->user()->is_revisor)
                 <li>
                     <a class="dropdown-item dropdown-style d-flex align-items-center"
                        href="{{ route('revisor.index') }}">
-                        <i class="fa-solid fa-user-check text-greymasala me-2"></i> {{ __('ui.reviews') }}
+                        <i class="fa-solid fa-user-check me-2"></i> {{ __('ui.reviews') }}
                         @if(Article::toBeRevisedCount())
                             <span class="small badge rounded-pill bg-danger text-white ms-1">
                             {{ Article::toBeRevisedCount() }}
@@ -73,7 +73,7 @@
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit" class="dropdown-item">
-                        <i class="fa-solid fa-sign-out-alt text-greymasala me-2"></i> Logout
+                        <i class="fa-solid fa-sign-out-alt me-2"></i> Logout
                     </button>
                 </form>
             </li>
@@ -87,17 +87,17 @@
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="{{ route('article.create') }}">
-                <i class="fa-solid fa-plus text-greymasala me-2"></i> {{ __('ui.createArticle')}}
+                <i class="fa-solid fa-plus me-2"></i> {{ __('ui.createArticle')}}
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="fa-solid fa-carrot text-greymasala me-2"></i> {{ __('ui.favorites') }}
+                <i class="fa-solid fa-carrot me-2"></i> {{ __('ui.favorites') }}
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="fa-regular fa-comment-dots text-greymasala me-2"></i> {{ __('ui.messages') }}
+                <i class="fa-regular fa-comment-dots me-2"></i> {{ __('ui.messages') }}
             </a>
         </li>
     </ul>
@@ -108,23 +108,23 @@
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="{{ route('article.myArticles') }}">
-                <i class="fa-solid fa-rectangle-list text-greymasala me-2"></i> {{ __('ui.myListings') }}
+                <i class="fa-solid fa-rectangle-list me-2"></i> {{ __('ui.myListings') }}
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="fa-solid fa-bag-shopping text-greymasala me-2"></i> {{ __('ui.myOrders') }}
+                <i class="fa-solid fa-bag-shopping me-2"></i> {{ __('ui.myOrders') }}
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="fa-solid fa-gear text-greymasala me-2"></i> {{ __('ui.settings') }}
+                <i class="fa-solid fa-gear me-2"></i> {{ __('ui.settings') }}
             </a>
         </li>
         @if(auth()->user()->is_revisor)
             <li class="nav-item">
                 <a class="nav-link d-flex align-items-center" href="{{ route('revisor.index') }}">
-                    <i class="fa-solid fa-user-check text-greymasala me-2"></i> {{ __('ui.reviews') }}
+                    <i class="fa-solid fa-user-check me-2"></i> {{ __('ui.reviews') }}
                     @if(Article::toBeRevisedCount())
                         <span class="small badge rounded-pill bg-danger text-white ms-1">
                             {{ Article::toBeRevisedCount() }}

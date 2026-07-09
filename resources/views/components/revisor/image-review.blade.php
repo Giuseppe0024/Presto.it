@@ -10,7 +10,7 @@
                      alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
             </div>
 
-            <x-article.google-labels :image="$image"/>
+            <x-revisor.image-analysis :image="$image"/>
         </div>
     @empty
         <div class="bg-body rounded-4 shadow-sm d-flex flex-column align-items-center justify-content-center gap-2 p-5">

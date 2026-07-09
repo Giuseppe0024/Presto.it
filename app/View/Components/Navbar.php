@@ -12,6 +12,7 @@ class Navbar extends Component
         'article.show',
         'article.index',
         'article.byCategory',
+        'article.search',
     ];
 
     public bool $showSearch;

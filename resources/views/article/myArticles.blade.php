@@ -17,11 +17,11 @@
         <div class="row g-4">
             @forelse ($articles as $article)
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <x-my-article-card :article="$article"/>
+                    <x-article.owner-card :article="$article"/>
                 </div>
             @empty
                 <div class="col-12">
-                    <x-empty-state>Non hai ancora pubblicato nessun annuncio.</x-empty-state>
+                    <x-ui.empty-state>Non hai ancora pubblicato nessun annuncio.</x-ui.empty-state>
                 </div>
             @endforelse
         </div>

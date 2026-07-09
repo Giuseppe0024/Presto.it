@@ -4,7 +4,7 @@
     <label for="{{ $name }}">{{ ucfirst($label) }}</label>
     <input type="{{ $type }}" name="{{ $name }}" id="{{ $name }}" {{ $attributes->merge(['class' => 'form-control']) }}>
     @if ($showError)
-        <x-input-error :field="$name"/>
+        <x-ui.input-error :field="$name"/>
     @endif
 </div>
 

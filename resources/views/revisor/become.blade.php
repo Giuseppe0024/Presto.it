@@ -26,7 +26,7 @@
                         </div>
 
                         <div>
-                            <x-form-field type="file" label="Allega il tuo curriculum" name="curriculum"
+                            <x-ui.form-field type="file" label="Allega il tuo curriculum" name="curriculum"
                                           accept="application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
                             <p class="small opacity-50 ps-1">File PDF o Word, max 1MB</p>
                         </div>

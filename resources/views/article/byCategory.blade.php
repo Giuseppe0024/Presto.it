@@ -6,21 +6,7 @@
             <p class="mb-0">Tutti gli annunci nella categoria {{ $category->name }}.</p>
         </div>
 
-        <div class="row g-4">
-            @forelse($articles as $article)
-                <div class="col-6 col-md-4 col-lg-3">
-                    <x-article-preview :article="$article" fluid/>
-                </div>
-            @empty
-                <div class="col-12">
-                    <x-empty-state>Non ci sono ancora annunci in questa categoria.</x-empty-state>
-                </div>
-            @endforelse
-        </div>
-
-        <div class="d-flex justify-content-center mt-5">
-            {{ $articles->links() }}
-        </div>
+        <x-article.grid :articles="$articles">Non ci sono ancora annunci in questa categoria.</x-article.grid>
 
     </section>
 </x-layouts.app>
