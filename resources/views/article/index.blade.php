@@ -9,7 +9,7 @@
         <div class="row g-4">
             @forelse($articles as $article)
                 <div class="col-6 col-md-4">
-                    <x-article-card :article="$article" fluid/>
+                    <x-article-preview :article="$article" fluid/>
                 </div>
             @empty
                 <div class="col-12">
