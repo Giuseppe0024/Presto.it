@@ -21,7 +21,7 @@
     <ul class="navbar-nav mb-3">
         <li class="nav-item">
             <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">
-                <i class="fa-solid fa-circle-question text-greymasala me-2"></i> {{ __('ui.howItWorks') }}
+                <i class="fa-solid fa-circle-question me-2"></i> {{ __('ui.howItWorks') }}
             </a>
         </li>
     </ul>
@@ -32,6 +32,6 @@
     <a class="btn btn-outline-success" href="{{ route('register') }}">{{ __('ui.signUp') }}</a>
 
     <a class="nav-link mt-3" href="{{ route('login') }}">
-        <i class="fa-solid fa-right-to-bracket text-greymasala me-2"></i> {{ __('ui.login') }}
+        <i class="fa-solid fa-right-to-bracket me-2"></i> {{ __('ui.login') }}
     </a>
 </div>

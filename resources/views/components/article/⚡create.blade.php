@@ -91,12 +91,12 @@ new class extends Component {
 
 ?>
 
-<div class="container my-5 p-4 p-md-5 card-login rounded-5 text-secondary">
+<div class="container my-5 p-4 p-md-5 card-login rounded-5">
 
 
     <div>
 
-        <h1 class="mb-4">{{ __('ui.createTitle') }}</h1>
+        <h1 class="mb-4 text-secondary">{{ __('ui.createTitle') }}</h1>
         <form class="row g-5 @if(!session()->has('success')) mb-5 @endif" wire:submit="store">
 
 
@@ -109,7 +109,7 @@ new class extends Component {
                 <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title"
                        placeholder="{{ __('ui.formTitlePlaceholder') }}"
                        wire:model.blur="title">
-                <x-input-error field="title"/>
+                <x-ui.input-error field="title"/>
 
 
                 <!-- categoria -->
@@ -122,7 +122,7 @@ new class extends Component {
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
-                <x-input-error field="category"/>
+                <x-ui.input-error field="category"/>
 
 
                 <!-- descrizione -->
@@ -133,7 +133,7 @@ new class extends Component {
                           name="description" rows="5"
                           placeholder="{{ __('ui.formDescriptionPlaceholder') }}"
                           wire:model.blur="description"></textarea>
-                <x-input-error field="description"/>
+                <x-ui.input-error field="description"/>
 
 
                 <label for="price" class="form-label mt-3">{{ __('ui.formPrice') }}</label>
@@ -141,13 +141,13 @@ new class extends Component {
                        id="price" name="price"
                        placeholder="{{ __('ui.formPricePlaceholder') }}"
                        wire:model.blur="price">
-                <x-input-error field="price"/>
+                <x-ui.input-error field="price"/>
 
                 <label for="city" class="form-label mt-3">{{ __('ui.formCity') }}</label>
                 <input type="text" class="form-control @error('city') is-invalid @enderror" id="city" name="city"
                        placeholder="{{ __('ui.formCityPlaceholder') }}"
                        wire:model.blur="city">
-                <x-input-error field="city"/>
+                <x-ui.input-error field="city"/>
 
 
                 <div class="mt-4">
@@ -204,13 +204,13 @@ new class extends Component {
 
                 <div wire:loading wire:target="temporary_images" class="small mt-2">{{ __('ui.formUploading') }}</div>
 
-                <x-input-error field="temporary_images.*"/>
-                <x-input-error field="images"/>
+                <x-ui.input-error field="temporary_images.*"/>
+                <x-ui.input-error field="images"/>
 
 
                 <button type="submit" class="btn btn-primary mt-3">{{ __('ui.formPublish') }}</button>
             </div>
         </form>
-        <x-alerts/>
+        <x-ui.alerts/>
     </div>
 </div>

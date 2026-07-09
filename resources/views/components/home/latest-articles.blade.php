@@ -20,10 +20,10 @@
         <div class="col-12 col-lg-9 py-3 overflow-auto">
             <div class="d-flex gap-4">
                 @forelse($articles as $article)
-                    <x-article-preview :article="$article"/>
+                    <x-article.card :article="$article"/>
                 @empty
                     <div>
-                        <x-empty-state fixed>{{ __('ui.noArticlesYet') }}</x-empty-state>
+                        <x-ui.empty-state fixed>{{ __('ui.noArticlesYet') }}</x-ui.empty-state>
                     </div>
                 @endforelse
             </div>

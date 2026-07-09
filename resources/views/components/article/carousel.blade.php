@@ -39,7 +39,11 @@
         @endif
     </div>
 @else
-    <div class="w-100 h-100 rounded-4 bg-body-secondary d-flex align-items-center justify-content-center p-5">
-        <i class="fa-solid fa-thumbtack-slash fs-5"></i>
+    <div class="hero-carousel">
+        <div class="ratio ratio-4x3 rounded-4 overflow-hidden bg-body-secondary">
+            <div class="d-flex align-items-center justify-content-center">
+                <i class="fa-solid fa-thumbtack-slash fs-5"></i>
+            </div>
+        </div>
     </div>
 @endif

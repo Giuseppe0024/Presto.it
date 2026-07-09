@@ -8,9 +8,9 @@
                     @csrf
                     <div class="d-flex flex-column gap-3">
 
-                        <x-form-field name="email" label="Email" type="email"/>
+                        <x-ui.form-field name="email" label="Email" type="email"/>
 
-                        <x-form-field name="password" label="Password" type="password"/>
+                        <x-ui.form-field name="password" label="Password" type="password"/>
 
                         <div class="mt-3 d-flex justify-content-between align-items-center">
                             <button type="submit" class="btn btn-primary btn-orange-accedi">Accedi</button>

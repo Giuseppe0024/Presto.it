@@ -9,13 +9,13 @@
                     @csrf
                     <div class="d-flex flex-column gap-3">
 
-                        <x-form-field name="name" label="Nome"/>
+                        <x-ui.form-field name="name" label="Nome"/>
 
-                        <x-form-field name="email" label="Email" type="email"/>
+                        <x-ui.form-field name="email" label="Email" type="email"/>
 
-                        <x-form-field name="password" label="Password" type="password"/>
+                        <x-ui.form-field name="password" label="Password" type="password"/>
 
-                        <x-form-field name="password_confirmation" label="Conferma Password" type="password" :show-error="false"/>
+                        <x-ui.form-field name="password_confirmation" label="Conferma Password" type="password" :show-error="false"/>
 
                         <div class="mt-3">
                             <button type="submit" class="btn btn-primary btn-orange-accedi">Registrati</button>

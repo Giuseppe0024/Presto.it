@@ -26,13 +26,11 @@
 p, label, button, li, a .dropdown-style {
   font-family: 'Manrope', sans-serif !important;
   font-size: 1rem;
-  color: var(--greymasala);
 }
 
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'DM Serif Display', serif;
-  color: var(--greymasala);
 }
 
 .text-greymasala {
@@ -103,10 +101,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .search-pill {
   background-color: var(--bs-body-bg);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.search-pill {
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+.search-pill-half {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .search-pill:focus-within {
@@ -114,7 +114,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 0.25rem var(--lightgreen) !important;
 }
 
-.search-pill .form-control:focus {
+.search-pill .form-control:focus,
+.search-pill .form-select:focus {
   border-color: transparent;
   box-shadow: none;
 }
@@ -227,7 +228,7 @@ i {
 
 .article-card-img {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
@@ -242,12 +243,27 @@ i {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 2.6em;
+}
+
+.article-card-title a {
   text-decoration: none;
 }
 
-.article-card:hover .article-card-title {
+.article-card:hover .article-card-title a {
   text-decoration: underline;
+}
+
+.article-card:has(a:hover:not(.stretched-link)) .article-card-title a {
+  text-decoration: none;
+}
+
+.article-card a:not(.stretched-link):hover {
+  text-decoration: underline !important;
+}
+
+.article-card .card-body a:not(.stretched-link) {
+  padding: 0.5rem;
+  margin: -0.5rem;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -255,6 +271,7 @@ i {
 }
 
 .navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active:hover,
 .navbar .navbar-nav .nav-link:focus,
 .navbar .navbar-nav .show > .nav-link {
   color: var(--stonegreen);
@@ -264,18 +281,23 @@ i {
   color: var(--greymasala);
 }
 
+.navbar .nav-link i,
+.dropdown-menu .dropdown-item i {
+  color: inherit;
+}
+
 /* CAROSELLO */
 
 .hero-carousel {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
 .hero-carousel-img {
   width: 100%;
   height: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 

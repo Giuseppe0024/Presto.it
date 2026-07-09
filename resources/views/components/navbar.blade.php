@@ -62,18 +62,18 @@
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false">
 
-                                <i class="fa-solid fa-earth-americas text-greymasala me-1"></i>
+                                <i class="fa-solid fa-earth-americas me-1"></i>
 
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end text-end" style="min-width: 0;">
                                 <li>
-                                    <x-navbar.flags lang="it"/>
+                                    <x-navbar.locale-flag lang="it"/>
                                 </li>
                                 <li>
-                                    <x-navbar.flags lang="uk"/>
+                                    <x-navbar.locale-flag lang="uk"/>
                                 </li>
                                 <li>
-                                    <x-navbar.flags lang="es"/>
+                                    <x-navbar.locale-flag lang="es"/>
                                 </li>
                             </ul>
                         </li>

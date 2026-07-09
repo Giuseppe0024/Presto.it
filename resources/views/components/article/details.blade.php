@@ -8,13 +8,7 @@
         <p class="fst-italic fw-bold fs-6">{{ $article->category->name }}</p>
     </div>
 
-
-    <!-- descrizione -->
-
-
     <p class="my-2">{{ $article->description }}</p>
-
-    {{--  delivery --}}
 
     <p class="mt-3">
         <span class="fw-bold">Disponibile alla consegna:</span>
@@ -24,8 +18,6 @@
             No
         @endif
     </p>
-
-    <!-- prezzo -->
 
     <p class="fw-bold text-primary fs-4 mt-3">{{ $article->price }} €</p>
 </div>
