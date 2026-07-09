@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         //    Seeding categorie fatto a migration, usare solo per aggiungere altre categorie se necessario in locale
         //        $this->call(CategoriesSeeder::class);
 
+        $this->call(UsersSeeder::class);
         $this->call(DemoArticlesSeeder::class);
     }
 }

@@ -4,7 +4,8 @@ namespace App\Jobs;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
-use Spatie\Image\Enums\CropPosition;
+use Spatie\Image\Enums\AlignPosition;
+use Spatie\Image\Enums\Fit;
 use Spatie\Image\Enums\ImageDriver;
 use Spatie\Image\Enums\Unit;
 use Spatie\Image\Image;
@@ -43,13 +44,21 @@ class ResizeImage implements ShouldQueue
         $srcPath = storage_path().'/app/public/'.$this->path.'/'.$this->fileName;
         $destPath = storage_path().'/app/public/'.$this->path."/crop_{$w}x{$h}_".$this->fileName;
 
-        $image = Image::useImageDriver(ImageDriver::Gd)->load($srcPath)
-            ->crop($w, $h, CropPosition::Center);
+        $canvas = Image::useImageDriver(ImageDriver::Gd)->load($srcPath)
+            ->background('#dad7ce')
+            ->fit(Fit::Crop, $w, $h)
+            ->blur(85);
+
+        $foreground = Image::useImageDriver(ImageDriver::Gd)->load($srcPath)
+            ->background('#dad7ce')
+            ->fit(Fit::Contain, $w, $h);
+
+        $canvas->insert($foreground, AlignPosition::Center);
 
         $watermarkPath = base_path('resources/img/watermark.png');
 
         if (file_exists($watermarkPath)) {
-            $image->watermark(
+            $canvas->watermark(
                 $watermarkPath,
                 paddingX: 5,
                 paddingY: 5,
@@ -59,6 +68,6 @@ class ResizeImage implements ShouldQueue
             );
         }
 
-        $image->save($destPath);
+        $canvas->save($destPath);
     }
 }
