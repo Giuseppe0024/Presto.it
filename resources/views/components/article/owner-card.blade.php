@@ -6,7 +6,10 @@
     <div class="card-body">
         <h5 class="card-title">{{ $article->title }}</h5>
         <p class="card-text">{{ $article->description }}</p>
-        <a href="#" class="btn btn-secondary">Modifica</a>
-        <a href="#" class="btn btn-primary">Elimina</a>
+
+        <div class="d-flex gap-4 ps-2">
+            <a href="#" class="btn btn-secondary">Modifica</a>
+            <a href="#" class="btn btn-primary">Elimina</a>
+        </div>
     </div>
 </div>
