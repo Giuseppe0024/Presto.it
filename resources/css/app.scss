@@ -5,6 +5,9 @@ $secondary: #668968;
 $secondary-bg-subtle: #e2e3e5;
 $body-color: #56514b;
 $emphasis-color: #56514b;
+$font-family-base: 'Manrope', sans-serif;
+$headings-font-family: 'DM Serif Display', serif;
+$navbar-brand-font-size: 2rem;
 
 @import "bootstrap/scss/bootstrap";
 
@@ -14,5 +17,10 @@ $emphasis-color: #56514b;
 
 html {
   scrollbar-width: thin;
-  scrollbar-gutter: stable;
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    scrollbar-gutter: stable;
+  }
 }

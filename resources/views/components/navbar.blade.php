@@ -22,7 +22,7 @@
                 data-bs-target="#userOffcanvas"
                 aria-controls="userOffcanvas"
                 aria-label="Apri il menu utente">
-            <i class="fa-regular fa-user fs-5"></i>
+            <i class="fa-regular fa-user fs-5 text-body"></i>
         </button>
 
         {{-- sinistra --}}

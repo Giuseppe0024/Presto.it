@@ -23,26 +23,11 @@
 }
 
 
-p, label, button, li, a .dropdown-style {
-  font-family: 'Manrope', sans-serif !important;
-  font-size: 1rem;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'DM Serif Display', serif;
-}
-
-.text-greymasala {
-  color: var(--greymasala);
-}
-
 /* CLASSI PERSONALIZZATE */
 
 
 .navbar-brand {
   font-family: 'DM Serif Display', serif;
-  font-size: 2rem !important;
 }
 
 .btn-primary {
@@ -79,8 +64,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-login {
   background-color: var(--lightbeige);
-  color: var(--greymasala);
-
 }
 
 .btn-orange-accedi {
@@ -144,20 +127,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: none !important;
 }
 
-.icon-mobile {
-  font-size: 1.4rem;
-  color: var(--greymasala);
-}
-
-
-i {
-  color: var(--greymasala);
-}
-
-.btn i {
-  color: inherit;
-}
-
 .image-uploader {
   max-width: 28rem;
 }
@@ -209,9 +178,8 @@ i {
 
 /* FOOTER */
 
-.footer-text {
+footer {
   color: var(--reflectivewhite);
-  margin-bottom: 0;
 }
 
 /* CARD */
@@ -227,9 +195,7 @@ i {
 }
 
 .article-card-img {
-  width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
 }
 
 .article-card:hover {
@@ -281,24 +247,14 @@ i {
   color: var(--greymasala);
 }
 
-.navbar .nav-link i,
-.dropdown-menu .dropdown-item i {
-  color: inherit;
-}
-
 /* CAROSELLO */
 
 .hero-carousel {
-  width: 100%;
   max-width: 400px;
-  margin: 0 auto;
 }
 
 .hero-carousel-img {
-  width: 100%;
-  height: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
 }
 
 .revisor-card {
