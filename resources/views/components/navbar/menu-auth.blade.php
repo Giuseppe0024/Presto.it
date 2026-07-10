@@ -104,7 +104,7 @@
 
     <hr class="my-3">
 
-    <h6 class="text-greymasala text-uppercase small fw-semibold mb-2"> {{ __('ui.profile')}} </h6>
+    <h6 class="text-body text-uppercase small fw-semibold mb-2"> {{ __('ui.profile')}} </h6>
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="{{ route('article.myArticles') }}">
