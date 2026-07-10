@@ -79,7 +79,7 @@ class RemoveFaces implements ShouldQueue
                 $image = SpatieImage::useImageDriver(ImageDriver::Gd)->load($src);
 
                 $image->watermark(
-                    base_path('resources/img/face.png'),
+                    base_path('resources/images/face.png'),
                     AlignPosition::TopLeft,
                     paddingX: $bounds[0][0],
                     paddingY: $bounds[0][1],
