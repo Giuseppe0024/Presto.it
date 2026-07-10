@@ -26,7 +26,6 @@
         @else
             <x-ui.empty-state>Non ci sono articoli da revisionare.</x-ui.empty-state>
         @endif
-
     </div>
 
 </x-layouts.app>
