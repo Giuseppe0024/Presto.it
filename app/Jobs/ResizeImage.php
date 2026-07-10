@@ -55,16 +55,16 @@ class ResizeImage implements ShouldQueue
 
         $canvas->insert($foreground, AlignPosition::Center);
 
-        $watermarkPath = base_path('resources/img/watermark.png');
+        $watermarkPath = base_path('resources/images/watermark.png');
 
         if (file_exists($watermarkPath)) {
             $canvas->watermark(
                 $watermarkPath,
-                paddingX: 5,
-                paddingY: 5,
+                paddingX: 3,
+                paddingY: 3,
                 paddingUnit: Unit::Percent,
-                width: 50,
-                height: 50
+                width: 80,
+                height: 80
             );
         }
 
