@@ -11,9 +11,10 @@
   /* colori di supporto */
 
   --lightgreen: #a7b89a;
+  --lightgreen2: #a7b89a3d;
   --lightbeige: #e9e1d3; /* card */
   --yellowmustard: #e2b447;
-  --salomonpink: #f2c7b1;
+  --salomonpink: #ffe1d3;
   --lightgrey: #dad7ce;
 
   /* hover */
@@ -247,6 +248,12 @@ footer {
   color: var(--greymasala);
 }
 
+.card-how {
+  background-color: var(--lightgreen2);
+  border: 2px solid var(--lightgreen);
+
+}
+  
 /* CAROSELLO */
 
 .hero-carousel {

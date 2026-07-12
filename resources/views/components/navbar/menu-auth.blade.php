@@ -3,6 +3,12 @@
 <ul class="navbar-nav d-none d-lg-flex align-items-lg-center">
 
     <li class="nav-item">
+        <a class="nav-link text-nowrap" href="{{ route('howItWorks') }}">
+            {{ __('ui.howItWorks')}}
+        </a>
+    </li>
+
+    <li class="nav-item">
         <a class="nav-link text-nowrap" href="{{ route('article.create') }}">
             <i class="fa-solid fa-plus me-1"></i>
             {{ __('ui.createArticle')}}

@@ -1,4 +1,4 @@
-<section class="container my-5">
+<section class="container py-4">
     <div class="row align-items-center">
 
         <div class="col-12 col-lg-3 mb-4 mb-lg-0 pe-lg-3 ">

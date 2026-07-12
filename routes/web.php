@@ -20,6 +20,9 @@ Route::get('/articoli', [ArticleController::class, 'index'])->name('article.inde
 Route::get('/articolo/{article}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/categoria/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
 
+// Come funziona
+Route::get('/come-funziona', [PublicController::class, 'howItWorks'])->name('howItWorks');
+
 /*
  *  CON MIDDLEWARE
  */

@@ -78,6 +78,23 @@ return [
     'viewAll' => 'View all',
     'noArticlesYet' => 'It seems there are no articles yet... Create the first one!',
 
+    // how it works
+
+    'howItWorks' => 'How it works',
+    'howItWorksDescription' => 'Simple, fast and sustainable',
+
+        // card how it works
+        'publish' => 'Publish in a few minutes',
+        'publishDescription' => 'Take some photos, describe the item, choose the price and publish your listing.',
+
+        'contactSeller' => 'Contact the seller',
+        'contactSellerDescription' => 'Ask questions, talk to the seller and agree on the purchase of the item.',
+        'conclude' => 'Conclude the exchange',
+        'concludeDescription' => 'Ship the item or meet in person and give new life to the item.',
+
+        'shipOrMeet' => 'Ship or meet in person',
+        'shipOrMeetDescription' => 'Ship the item or meet in person and give new life to the item.',
+
     // footer
     'footerDescription' => 'Buy and sell new or used items easily and quickly. Find deals near you and give new life to the items you no longer use.',
 
