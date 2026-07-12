@@ -9,7 +9,7 @@
 /.cursor/
 /.idea
 /.nova
-/.phpunit.cache`
+/.phpunit.cache
 /.vscode
 /.zed
 /auth.json
@@ -26,4 +26,4 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
-google_credential.json
+google*credential*.json
