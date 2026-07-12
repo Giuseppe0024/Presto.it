@@ -49,4 +49,9 @@ class PublicController extends Controller
 
         return redirect()->back();
     }
+
+    public function howItWorks()
+    {
+        return view('come-funziona');
+    }
 }

@@ -2,7 +2,7 @@
 <ul class="navbar-nav d-none d-lg-flex align-items-lg-center">
 
     <li class="nav-item">
-        <a class="nav-link text-nowrap {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">
+        <a class="nav-link text-nowrap {{ request()->routeIs('howItWorks') ? 'active' : '' }}" href="{{ route('howItWorks') }}">
             {{ __('ui.howItWorks') }}
         </a>
     </li>
@@ -11,16 +11,15 @@
         <a class="nav-link text-nowrap" href="{{ route('login') }}">{{ __('ui.login') }}</a>
     </li>
 
-    <li class="nav-item ms-lg-2">
-        <a class="btn btn-outline-success text-nowrap" href="{{ route('register') }}"> {{ __('ui.signUp') }} </a>
-    </li>
+{{-- rimosso button registrati --}}
+
 </ul>
 
 {{-- mobile --}}
 <div class="d-lg-none">
     <ul class="navbar-nav mb-3">
         <li class="nav-item">
-            <a class="nav-link {{ request()->routeIs('comefunziona') ? 'active' : '' }}" href="#">
+            <a class="nav-link {{ request()->routeIs('howItWorks') ? 'active' : '' }}" href="{{ route('howItWorks') }}">
                 <i class="fa-solid fa-circle-question me-2"></i> {{ __('ui.howItWorks') }}
             </a>
         </li>
@@ -28,8 +27,7 @@
 
     <hr class="my-3">
 
-
-    <a class="btn btn-outline-success" href="{{ route('register') }}">{{ __('ui.signUp') }}</a>
+{{-- rimosso button registrati --}}
 
     <a class="nav-link mt-3" href="{{ route('login') }}">
         <i class="fa-solid fa-right-to-bracket me-2"></i> {{ __('ui.login') }}
