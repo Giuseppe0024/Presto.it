@@ -41,12 +41,12 @@ class RemoveFaces implements ShouldQueue
 
         $src = storage_path('app/public/'.$i->path);
 
-        $image = file_get_contents($src);
+        $imageContent = file_get_contents($src);
         putenv('GOOGLE_APPLICATION_CREDENTIALS='.base_path('google_credential.json'));
 
         $googleVisionClient = new ImageAnnotatorClient;
         $google_image = new VisionImage([
-            'content' => $image,
+            'content' => $imageContent,
         ]);
 
         $googleFeature = new Feature;
@@ -64,7 +64,9 @@ class RemoveFaces implements ShouldQueue
 
         $faces = $response->getFaceAnnotations();
 
-        if ($faces) {
+        if (count($faces) > 0) {
+            $image = SpatieImage::useImageDriver(ImageDriver::Gd)->load($src);
+
             foreach ($faces as $face) {
                 $vertices = $face->getBoundingPoly()->getVertices();
                 $bounds = [];
@@ -72,25 +74,25 @@ class RemoveFaces implements ShouldQueue
                     $bounds[] = [$vertex->getX(), $vertex->getY()];
                 }
 
+                //                dd($bounds);
+
                 $w = $bounds[2][0] - $bounds[0][0];
                 $h = $bounds[2][1] - $bounds[0][1];
-
-                $image = SpatieImage::useImageDriver(ImageDriver::Gd)->load($src);
 
                 $image->watermark(
                     base_path('resources/images/face.png'),
                     AlignPosition::TopLeft,
                     paddingX: $bounds[0][0],
-                    paddingY: $bounds[0][1],
+                    paddingY: $bounds[0][1] - 60,
                     width: $w,
                     height: $h,
                     fit: Fit::Stretch
                 );
             }
-            $image->save($src);
-            $googleVisionClient->close();
 
+            $image->save($src);
         }
 
+        $googleVisionClient->close();
     }
 }

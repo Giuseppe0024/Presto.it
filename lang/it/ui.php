@@ -84,15 +84,15 @@ return
         'howItWorks' => 'Come funziona',
         'howItWorksDescription' => 'Semplice, veloce e sostenibile',
 
-            // card how it works
-            'publish' => 'Pubblica in pochi minuti',
-            'publishDescription' => 'Scatta qualche foto, descrivi l’articolo, scegli il prezzo e pubblica il tuo annuncio.',
+        // card how it works
+        'publish' => 'Pubblica in pochi minuti',
+        'publishDescription' => 'Scatta qualche foto, descrivi l’articolo, scegli il prezzo e pubblica il tuo annuncio.',
 
-            'contactSeller' => 'Contatta il venditore',
-            'contactSellerDescription' => 'Fai domande, parla con il venditore e accordati sull’acquisto dell’articolo.',
+        'contactSeller' => 'Contatta il venditore',
+        'contactSellerDescription' => 'Fai domande, parla con il venditore e accordati sull’acquisto dell’articolo.',
 
-            'shipOrMeet' => 'Concludi lo scambio',
-            'shipOrMeetDescription' => 'Spedisci l’articolo oppure incontratevi di persona e dai nuova vita all’articolo.',
+        'shipOrMeet' => 'Concludi lo scambio',
+        'shipOrMeetDescription' => 'Spedisci l’articolo oppure incontratevi di persona e dai nuova vita all’articolo.',
 
         // footer
         'footerDescription' => 'Compra e vendi articoli nuovi o usati in modo semplice e veloce. Trova occasioni vicino a te e dai nuova vita agli oggetti che non usi più.',
