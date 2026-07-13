@@ -58,6 +58,19 @@ return [
     'formPublish' => 'Publish',
     'formSuccess' => 'Listing created successfully',
 
+    // update-article form
+    'updateTitle' => 'Edit your listing',
+    'formUpdate' => 'Save changes',
+    'updateSuccess' => 'Listing updated successfully',
+    'formImagesRequired' => 'Upload at least one image',
+    'formImagesMax' => 'You can upload up to 6 images',
+
+    // delete article
+    'deleteTitle' => 'Delete listing',
+    'deleteConfirm' => 'Are you sure you want to delete the listing ":title"?',
+    'deleteSuccess' => 'Listing deleted successfully',
+    'cancel' => 'Cancel',
+
     // image upload
     'uploadDrag' => 'Drag images here or click to select them',
     'uploadMaxSize' => 'Max 2MB',

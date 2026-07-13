@@ -57,6 +57,19 @@ return [
     'formPublish' => 'Publicar',
     'formSuccess' => 'Anuncio creado correctamente',
 
+    // update-article form
+    'updateTitle' => 'Edita tu anuncio',
+    'formUpdate' => 'Guardar cambios',
+    'updateSuccess' => 'Anuncio actualizado correctamente',
+    'formImagesRequired' => 'Sube al menos una imagen',
+    'formImagesMax' => 'Puedes subir un máximo de 6 imágenes',
+
+    // delete article
+    'deleteTitle' => 'Eliminar anuncio',
+    'deleteConfirm' => '¿Seguro que quieres eliminar el anuncio ":title"?',
+    'deleteSuccess' => 'Anuncio eliminado correctamente',
+    'cancel' => 'Cancelar',
+
     // image upload
     'uploadDrag' => 'Arrastra aquí las imágenes o haz clic para seleccionarlas',
     'uploadMaxSize' => 'Máx 2MB',

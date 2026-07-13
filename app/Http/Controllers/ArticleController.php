@@ -4,12 +4,32 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
     public function create()
     {
         return view('article.create');
+    }
+
+    public function edit(Article $article)
+    {
+        abort_if($article->user_id !== auth()->id(), 403);
+
+        return view('article.update', [
+            'article' => $article,
+        ]);
+    }
+
+    public function destroy(Article $article)
+    {
+        abort_if($article->user_id !== auth()->id(), 403);
+
+        Storage::disk('public')->deleteDirectory("articles/{$article->id}");
+        $article->delete();
+
+        return redirect()->route('article.myArticles')->with('success', __('ui.deleteSuccess'));
     }
 
     public function myArticles()

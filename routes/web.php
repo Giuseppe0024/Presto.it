@@ -30,6 +30,8 @@ Route::get('/come-funziona', [PublicController::class, 'howItWorks'])->name('how
 // post-auth
 Route::middleware('auth')->group(function () {
     Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
+    Route::get('/modifica/articolo/{article}', [ArticleController::class, 'edit'])->name('article.edit');
+    Route::delete('/articolo/{article}', [ArticleController::class, 'destroy'])->name('article.destroy');
     Route::get('/i-miei-articoli', [ArticleController::class, 'myArticles'])->name('article.myArticles');
     Route::get('/revisor/become', [RevisorController::class, 'become'])->name('revisor.become');
     Route::post('/revisor/request', [RevisorController::class, 'becomeMail'])->name('revisor.becomeMail');
