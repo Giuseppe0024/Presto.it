@@ -14,6 +14,8 @@
             </a>
         </div>
 
+        <x-ui.alerts/>
+
         <div class="row g-4">
             @forelse ($articles as $article)
                 <div class="col-12 col-sm-6 col-lg-4">

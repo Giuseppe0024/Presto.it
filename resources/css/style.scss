@@ -224,11 +224,11 @@ footer {
   text-decoration: none;
 }
 
-.article-card a:not(.stretched-link):hover {
+.article-card a:not(.stretched-link):not(.btn):hover {
   text-decoration: underline !important;
 }
 
-.article-card .card-body a:not(.stretched-link) {
+.article-card .card-body a:not(.stretched-link):not(.btn) {
   padding: 0.5rem;
   margin: -0.5rem;
 }

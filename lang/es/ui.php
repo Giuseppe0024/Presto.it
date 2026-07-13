@@ -57,6 +57,19 @@ return [
     'formPublish' => 'Publicar',
     'formSuccess' => 'Anuncio creado correctamente',
 
+    // update-article form
+    'updateTitle' => 'Edita tu anuncio',
+    'formUpdate' => 'Guardar cambios',
+    'updateSuccess' => 'Anuncio actualizado correctamente',
+    'formImagesRequired' => 'Sube al menos una imagen',
+    'formImagesMax' => 'Puedes subir un máximo de 6 imágenes',
+
+    // delete article
+    'deleteTitle' => 'Eliminar anuncio',
+    'deleteConfirm' => '¿Seguro que quieres eliminar el anuncio ":title"?',
+    'deleteSuccess' => 'Anuncio eliminado correctamente',
+    'cancel' => 'Cancelar',
+
     // image upload
     'uploadDrag' => 'Arrastra aquí las imágenes o haz clic para seleccionarlas',
     'uploadMaxSize' => 'Máx 2MB',
@@ -82,15 +95,15 @@ return [
     'howItWorks' => 'Cómo funciona',
     'howItWorksDescription' => 'Simple, rápido y sostenible',
 
-        // card how it works
-        'publish' => 'Publicar en pocos minutos',
-        'publishDescription' => 'Toma algunas fotos, describe el artículo, elige el precio y publica tu anuncio.',
+    // card how it works
+    'publish' => 'Publicar en pocos minutos',
+    'publishDescription' => 'Toma algunas fotos, describe el artículo, elige el precio y publica tu anuncio.',
 
-        'contactSeller' => 'Contacta al vendedor',
-        'contactSellerDescription' => 'Pregunta, habla con el vendedor y acuerda la compra del artículo.',
+    'contactSeller' => 'Contacta al vendedor',
+    'contactSellerDescription' => 'Pregunta, habla con el vendedor y acuerda la compra del artículo.',
 
-        'shipOrMeet' => 'Envía o encuentra',
-        'shipOrMeetDescription' => 'Envía el artículo o reúnanse en persona y dale nueva vida al artículo.',
+    'shipOrMeet' => 'Envía o encuentra',
+    'shipOrMeetDescription' => 'Envía el artículo o reúnanse en persona y dale nueva vida al artículo.',
 
     // footer
     'footerDescription' => 'Compra y vende artículos nuevos o usados de manera fácil y rápida. Encuentra ofertas cerca de ti y da nueva vida a los artículos que ya no usas.',

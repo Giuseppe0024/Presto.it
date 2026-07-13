@@ -12,6 +12,7 @@
         </button>
 
         <a class="navbar-brand" href="{{ route('homepage') }}">
+            <img src="/img/Logo.svg" alt="" class="d-inline-block align-text-center" style="height: 30px;">
             <span class="text-secondary">Presto</span><span class="text-primary">.it</span>
         </a>
 

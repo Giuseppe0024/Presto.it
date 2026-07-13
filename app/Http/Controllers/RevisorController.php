@@ -12,17 +12,18 @@ class RevisorController extends Controller
 {
     public function index()
     {
-        // $article_to_check = Article::where('is_accepted', null)->where('user_id', '!=', auth()->id())->first();
-        $article_to_check = Article::where('is_accepted', null)->first();
+        $article_to_check = Article::whereNull('is_accepted')
+            ->when($this->restrictionsEnabled(), fn ($query) => $query->where('user_id', '!=', auth()->id()))
+            ->first();
 
         return view('revisor.index', compact('article_to_check'));
     }
 
     public function accept(Article $article)
     {
-        //        if ($article->user_id = auth()->id()) {
-        //            return redirect()->back()->with('error', "Non puoi approvare l'annuncio ".$article->title." perché ne sei l'autore");
-        //        }
+        if ($this->isOwnArticle($article)) {
+            return redirect()->back()->with('error', "Non puoi approvare l'annuncio ".$article->title.' perché ne sei l\'autore');
+        }
 
         $article->setAccepted(true);
 
@@ -31,13 +32,23 @@ class RevisorController extends Controller
 
     public function reject(Article $article)
     {
-        //        if ($article->user_id = auth()->id()) {
-        //            return redirect()->back()->with('error', "Non puoi rifiutare l'annuncio ".$article->title." perché ne sei l'autore");
-        //        }
+        if ($this->isOwnArticle($article)) {
+            return redirect()->back()->with('error', "Non puoi rifiutare l'annuncio ".$article->title.' perché ne sei l\'autore');
+        }
 
         $article->setAccepted(false);
 
         return redirect()->back()->with('message', "Hai rifiutato l'articolo ".$article->title);
+    }
+
+    private function restrictionsEnabled(): bool
+    {
+        return (bool) config('app.revisor_restrictions');
+    }
+
+    private function isOwnArticle(Article $article): bool
+    {
+        return $this->restrictionsEnabled() && (int) $article->user_id === (int) auth()->id();
     }
 
     public function become()

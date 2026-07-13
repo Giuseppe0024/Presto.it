@@ -58,6 +58,19 @@ return [
     'formPublish' => 'Publish',
     'formSuccess' => 'Listing created successfully',
 
+    // update-article form
+    'updateTitle' => 'Edit your listing',
+    'formUpdate' => 'Save changes',
+    'updateSuccess' => 'Listing updated successfully',
+    'formImagesRequired' => 'Upload at least one image',
+    'formImagesMax' => 'You can upload up to 6 images',
+
+    // delete article
+    'deleteTitle' => 'Delete listing',
+    'deleteConfirm' => 'Are you sure you want to delete the listing ":title"?',
+    'deleteSuccess' => 'Listing deleted successfully',
+    'cancel' => 'Cancel',
+
     // image upload
     'uploadDrag' => 'Drag images here or click to select them',
     'uploadMaxSize' => 'Max 2MB',
@@ -83,17 +96,17 @@ return [
     'howItWorks' => 'How it works',
     'howItWorksDescription' => 'Simple, fast and sustainable',
 
-        // card how it works
-        'publish' => 'Publish in a few minutes',
-        'publishDescription' => 'Take some photos, describe the item, choose the price and publish your listing.',
+    // card how it works
+    'publish' => 'Publish in a few minutes',
+    'publishDescription' => 'Take some photos, describe the item, choose the price and publish your listing.',
 
-        'contactSeller' => 'Contact the seller',
-        'contactSellerDescription' => 'Ask questions, talk to the seller and agree on the purchase of the item.',
-        'conclude' => 'Conclude the exchange',
-        'concludeDescription' => 'Ship the item or meet in person and give new life to the item.',
+    'contactSeller' => 'Contact the seller',
+    'contactSellerDescription' => 'Ask questions, talk to the seller and agree on the purchase of the item.',
+    'conclude' => 'Conclude the exchange',
+    'concludeDescription' => 'Ship the item or meet in person and give new life to the item.',
 
-        'shipOrMeet' => 'Ship or meet in person',
-        'shipOrMeetDescription' => 'Ship the item or meet in person and give new life to the item.',
+    'shipOrMeet' => 'Ship or meet in person',
+    'shipOrMeetDescription' => 'Ship the item or meet in person and give new life to the item.',
 
     // footer
     'footerDescription' => 'Buy and sell new or used items easily and quickly. Find deals near you and give new life to the items you no longer use.',

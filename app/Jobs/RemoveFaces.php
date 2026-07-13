@@ -11,11 +11,10 @@ use Google\Cloud\Vision\V1\Feature\Type;
 use Google\Cloud\Vision\V1\Image as VisionImage;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
-use Spatie\Image\Enums\ImageDriver;
 use Spatie\Image\Enums\AlignPosition;
 use Spatie\Image\Enums\Fit;
+use Spatie\Image\Enums\ImageDriver;
 use Spatie\Image\Image as SpatieImage;
-
 
 class RemoveFaces implements ShouldQueue
 {
@@ -69,7 +68,7 @@ class RemoveFaces implements ShouldQueue
             foreach ($faces as $face) {
                 $vertices = $face->getBoundingPoly()->getVertices();
                 $bounds = [];
-                foreach($vertices as $vertex){
+                foreach ($vertices as $vertex) {
                     $bounds[] = [$vertex->getX(), $vertex->getY()];
                 }
 
@@ -87,12 +86,11 @@ class RemoveFaces implements ShouldQueue
                     height: $h,
                     fit: Fit::Stretch
                 );
-            } 
+            }
             $image->save($src);
             $googleVisionClient->close();
-            
+
         }
 
-        
     }
 }
