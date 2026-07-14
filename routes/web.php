@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\FavoriteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/i-miei-articoli', [ArticleController::class, 'myArticles'])->name('article.myArticles');
     Route::get('/revisor/become', [RevisorController::class, 'become'])->name('revisor.become');
     Route::post('/revisor/request', [RevisorController::class, 'becomeMail'])->name('revisor.becomeMail');
+
+    // preferiti
+    Route::get('/i-miei-preferiti', [FavoriteController::class, 'index'])->name('favorites.index');
 
 });
 

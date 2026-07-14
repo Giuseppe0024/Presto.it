@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Laravel\Scout\Searchable;
 
 class Article extends Model
@@ -73,4 +74,16 @@ class Article extends Model
             'delivery_shipping' => 'boolean',
         ];
     }
+
+
+    /* 
+    Aggiungere articoli tra i preferiti di un utente
+    */
+    public function favoritedByUsers(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'article_user')
+            ->withTimestamps();
+    }
+
+
 }

@@ -267,3 +267,24 @@ footer {
 .revisor-card {
   background: var(--reflectivewhite);
 }
+
+// FAVORITE BUTTON
+
+.favorites--active {
+  background-color: var(--orange);
+}
+
+.favorites--active:hover {
+  background-color: var(--hover-orange);
+  color: var(--white);
+}
+
+.favorites--inactive {
+  background-color: var(--stonegreen);
+  color: var(--white);
+}
+
+.favorites--inactive:hover {
+  background-color: var(--hover-green);
+  color: var(--white);
+}

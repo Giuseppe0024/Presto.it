@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 #[Fillable(['name', 'email', 'password'])]
 #[Hidden(['password', 'remember_token'])]
@@ -31,8 +32,19 @@ class User extends Authenticatable
         ];
     }
 
+
+    /* 
+        Aggiungere articoli tra i preferiti di un utente
+    */
+
     public function articles(): HasMany
     {
         return $this->hasMany(Article::class);
+    }
+
+    public function favorites(): BelongsToMany
+    {
+        return $this->belongsToMany(Article::class, 'article_user')
+            ->withTimestamps();
     }
 }

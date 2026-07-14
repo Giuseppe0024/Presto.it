@@ -20,7 +20,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false">
             <i class="fa-regular fa-user me-1"></i>
-            {{ __('ui.profile')}}
+            {{ __('ui.profile')}} {{ auth()->user()->name }}
             {{--
                         @if(\App\Models\Article::toBeRevisedCount() > 0)
                             <span class="position-absolute top-0 start-100 badge translate-middle rounded-pill bg-danger text-white">
@@ -32,7 +32,7 @@
         </button>
         <ul class="dropdown-menu dropdown-menu-end">
             <li>
-                <a class="dropdown-item dropdown-style" href="#">
+                <a class="dropdown-item dropdown-style" href="{{ route('favorites.index') }}">
                     <i class="fa-solid fa-carrot me-2"></i> {{ __('ui.favorites') }}
                 </a>
             </li>

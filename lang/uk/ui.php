@@ -6,7 +6,7 @@ return [
     'allArticles' => 'All listings',
     'categories' => 'Categories',
     'createArticle' => 'Create listing',
-    'profile' => 'Profile',
+    'profile' => 'Hello, ',
     'browse' => 'Browse',
 
     // guest menu
@@ -74,6 +74,37 @@ return [
     // image upload
     'uploadDrag' => 'Drag images here or click to select them',
     'uploadMaxSize' => 'Max 2MB',
+
+    // How it works page
+    'howItWorksTitle' => 'How it works',
+    'howItWorksDescription' => 'Simple, fast and sustainable',
+    'howItWorksDetails' => 'Sell what you no longer use, find second-hand items, and get in touch directly with other users',
+
+    'sellOrBuyArticle' => 'Sell or buy an item',
+    'sellOrBuyArticleDetails_01' => 'Do you have something you no longer use? Take some photos,
+                            enter a clear description, choose the category,
+                            and indicate the price you want to sell it for.',
+    'sellOrBuyArticleDetails_02' => 'Are you looking for something? Browse the listings, check
+                            the categories, and discover the items posted by
+                            other users.',
+
+    'contactSeller' => 'Contact the seller',
+    'contactSellerDetails_01' => 'When you find an item you are interested in, contact
+                            the seller directly to ask for more
+                            information, check the item\'s condition,
+                            and agree on the price.',
+    'contactSellerDetails_02' => 'Payment methods that are difficult to verify are discouraged, and it is recommended not to share unnecessary personal information (such as phone number or password).',
+
+    'shipOrMeet' => 'Conclude the exchange',
+    'shipOrMeetDetails_01' => 'The buyer and seller can choose the delivery method: in person or shipping.',
+    'shipOrMeetDetails_02' => 'Alternatively, they can agree to meet in person in a public place and complete the exchange in person.',
+
+    'startNow' => 'Ready to get started?',
+    'startNowDescription' => 'Create your first article or discover the available items.',
+
+    'createYourFirstArticle' => 'Create your first article',
+    'exploreArticles' => 'Explore articles',
+
 
     // Home page
 

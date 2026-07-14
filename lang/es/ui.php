@@ -6,7 +6,7 @@ return [
     'allArticles' => 'Todos los anuncios',
     'categories' => 'Categorías',
     'createArticle' => 'Crear anuncio',
-    'profile' => 'Perfil',
+    'profile' => 'Hola, ',
     'browse' => 'Explorar',
 
     // guest menu
@@ -74,36 +74,67 @@ return [
     'uploadDrag' => 'Arrastra aquí las imágenes o haz clic para seleccionarlas',
     'uploadMaxSize' => 'Máx 2MB',
 
-    // Home page
-
-    // Hero
-
-    'heroTitle' => 'Encuentra ofertas.',
-    'heroSubtitle' => 'Dale nueva vida a tus cosas.',
-    'heroDescription' => 'Compra y vende en persona o con envío a toda España.',
-    'registerAndSell' => 'Regístrate y vende',
-
-    // latest articles
-
-    'latestArticles' => 'Descubre los últimos anuncios',
-    'browseLatestArticles' => 'Explora las ofertas más recientes publicadas en Presto.it.',
-    'viewAll' => 'Ver todos',
-    'noArticlesYet' => 'Parece que aún no hay anuncios... ¡Crea el primero!',
-
-    // how it works
-
+    // Cómo funciona
     'howItWorks' => 'Cómo funciona',
     'howItWorksDescription' => 'Simple, rápido y sostenible',
+    'howItWorksDetails' => 'Vende lo que ya no usas, encuentra artículos de segunda mano y ponte en contacto directamente con otros usuarios',
 
-    // card how it works
-    'publish' => 'Publicar en pocos minutos',
-    'publishDescription' => 'Toma algunas fotos, describe el artículo, elige el precio y publica tu anuncio.',
+    'sellOrBuyArticle' => 'Vende o compra un artículo',
+    'sellOrBuyArticleDetails_01' => '¿Tienes algo que ya no usas? Toma algunas fotos,
+                            introduce una descripción clara, elige la categoría
+                            e indica el precio al que quieres venderlo.',
+    'sellOrBuyArticleDetails_02' => '¿Estás buscando algo? Explora los anuncios, consulta
+                            las categorías y descubre los artículos publicados por
+                            otros usuarios.',
 
     'contactSeller' => 'Contacta al vendedor',
-    'contactSellerDescription' => 'Pregunta, habla con el vendedor y acuerda la compra del artículo.',
+    'contactSellerDetails_01' => 'Cuando encuentres un artículo que te interese, contacta
+                            directamente con el vendedor para pedir más
+                            información, verificar las condiciones del artículo
+                            y acordar el precio.',
+    'contactSellerDetails_02' => 'Se desaconsejan métodos de pago difíciles de verificar y se recomienda no compartir datos personales innecesarios (como el número de teléfono o la contraseña).',
 
-    'shipOrMeet' => 'Envía o encuentra',
-    'shipOrMeetDescription' => 'Envía el artículo o reúnanse en persona y dale nueva vida al artículo.',
+    'shipOrMeet' => 'Concluye el intercambio',
+    'shipOrMeetDetails_01' => 'El comprador y el vendedor pueden elegir el método de entrega: en persona o envío.',
+    'shipOrMeetDetails_02' => 'Alternativamente, pueden acordar encontrarse en persona en un lugar público y completar el intercambio en persona.',
+
+    'startNow' => '¿Listo para empezar?',
+    'startNowDescription' => 'Crea tu primer anuncio o descubre los artículos disponibles.',
+
+    'createYourFirstArticle' => 'Crea tu primer anuncio',
+    'exploreArticles' => 'Explora los anuncios',
+
+
+    // Home page
+
+        // Hero
+
+        'heroTitle' => 'Encuentra ofertas.',
+        'heroSubtitle' => 'Dale nueva vida a tus cosas.',
+        'heroDescription' => 'Compra y vende en persona o con envío a toda España.',
+        'registerAndSell' => 'Regístrate y vende',
+
+        // latest articles
+
+        'latestArticles' => 'Descubre los últimos anuncios',
+        'browseLatestArticles' => 'Explora las ofertas más recientes publicadas en Presto.it.',
+        'viewAll' => 'Ver todos',
+        'noArticlesYet' => 'Parece que aún no hay anuncios... ¡Crea el primero!',
+
+        // how it works
+
+        'howItWorks' => 'Cómo funciona',
+        'howItWorksDescription' => 'Simple, rápido y sostenible',
+
+        // card how it works
+        'publish' => 'Publicar en pocos minutos',
+        'publishDescription' => 'Toma algunas fotos, describe el artículo, elige el precio y publica tu anuncio.',
+
+        'contactSeller' => 'Contacta al vendedor',
+        'contactSellerDescription' => 'Pregunta, habla con el vendedor y acuerda la compra del artículo.',
+
+        'shipOrMeet' => 'Envía o encuentra',
+        'shipOrMeetDescription' => 'Envía el artículo o reúnanse en persona y dale nueva vida al artículo.',
 
     // footer
     'footerDescription' => 'Compra y vende artículos nuevos o usados de manera fácil y rápida. Encuentra ofertas cerca de ti y da nueva vida a los artículos que ya no usas.',

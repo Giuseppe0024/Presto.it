@@ -7,16 +7,15 @@
         {{-- Introduzione --}}
         <header class="text-center mb-5">
             <p class="text-primary fw-semibold mb-2">
-                Semplice, veloce e sostenibile
+                {{ __('ui.howItWorksDescription') }}
             </p>
 
             <h1 class="fw-bold mb-3">
-                Come funziona Presto.it?
+                {{ __('ui.howItWorks') }} Presto.it?
             </h1>
 
             <p class="text-muted mx-auto mb-0" style="max-width: 720px;">
-                Vendi ciò che non usi più, trova articoli di seconda mano
-                e mettiti direttamente in contatto con gli altri utenti.
+                {{ __('ui.howItWorksDetails') }}
             </p>
         </header>
 
@@ -39,19 +38,15 @@
                     <div class="col-12 col-lg-7 p-4 p-lg-5">
 
                         <h2 class="fw-bold mb-3">
-                            Vendi o acquista un articolo
+                            {{ __('ui.sellOrBuyArticle') }}
                         </h2>
 
                         <p class="text-muted">
-                            Hai qualcosa che non utilizzi più? Scatta alcune foto,
-                            inserisci una descrizione chiara, scegli la categoria
-                            e indica il prezzo a cui vuoi venderlo.
+                            {{__('ui.sellOrBuyArticleDetails_01')}}
                         </p>
 
                         <p class="text-muted mb-0">
-                            Stai cercando qualcosa? Esplora gli annunci, consulta
-                            le categorie e scopri gli articoli pubblicati dagli
-                            altri utenti.
+                            {{ __('ui.sellOrBuyArticleDetails_02') }}
                         </p>
                     </div>
 
@@ -73,20 +68,15 @@
 
                     <div class="col-12 col-lg-7 order-lg-1 p-4 p-lg-5">
                         <h2 class="fw-bold mb-3">
-                            Contatta il venditore
+                            {{ __('ui.contactSeller') }}
                         </h2>
 
                         <p class="text-muted">
-                            Quando trovi un articolo che ti interessa, contatta
-                            direttamente il venditore per chiedere ulteriori
-                            informazioni, verificare le condizioni dell’articolo
-                            e concordare il prezzo.
+                            {{ __('ui.contactSellerDetails_01') }}
                         </p>
 
                         <p class="text-muted mb-0">
-                            Acquirente e venditore possono poi scegliere il metodo di consegna: a mano o spedizione.
-
-                            Si sconsigliano metodi di pagamento difficili da verificare e si raccomanda di non condividere dati personali non necessari (come il numero di telefono o la password). 
+                            {{ __('ui.contactSellerDetails_02') }}
                             
                         </p>
                     </div>
@@ -110,7 +100,7 @@
                     <div class="col-12 col-lg-7 p-4 p-lg-5">
 
                         <h2 class="fw-bold mb-3">
-                            Spedisci o incontra
+                            {{ __('ui.shipOrMeet') }}
                         </h2>
 
                         <p class="text-muted">
@@ -133,11 +123,11 @@
 
         <section class="text-center mt-5">
             <h2 class="fw-bold mb-3">
-                Pronto per iniziare?
+                {{ __('ui.startNow') }}
             </h2>
 
             <p class="text-muted mb-4">
-                Crea il tuo primo annuncio oppure scopri gli articoli disponibili.
+                {{ __('ui.startNowDescription') }}
             </p>
 
             <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
@@ -147,7 +137,7 @@
                         class="btn btn-primary rounded-pill px-4 py-2 fw-semibold"
                     >
                         <i class="fa-solid fa-plus me-2"></i>
-                        Crea il tuo primo annuncio
+                        {{ __('ui.createYourFirstArticle') }}
                     </a>
                 @endauth
 
@@ -155,7 +145,7 @@
                     href="{{ route('article.index') }}"
                     class="btn btn-secondary rounded-pill px-4 py-2 fw-semibold"
                 >
-                    Esplora gli annunci
+                    {{ __('ui.exploreArticles') }}
                 </a>
             </div>
         </section>

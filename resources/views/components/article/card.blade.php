@@ -1,8 +1,13 @@
 @props(['article', 'fluid' => false])
 
 <div class="{{ $fluid ? 'h-100 w-100' : '' }}">
-    <div class="card article-card h-100 border-0 rounded-4 overflow-hidden {{ $fluid ? 'w-100' : 'article-card-fixed' }}">
+    <div class="card article-card position-relative h-100 border-0 rounded-4 overflow-hidden {{ $fluid ? 'w-100' : 'article-card-fixed' }}">
+
         <x-article.card-image :article="$article"/>
+        <livewire:favorite-button :article="$article"
+                                    :key="'favorite-button-' . $article->id"
+                                    class="position-absolute top-0 end-0 m-2 z-3"/>
+
         <div class="card-body d-flex flex-column">
             <div class="d-flex align-items-center gap-2 small text-body mb-1">
                 <a href="{{ route('article.search', ['city' => $article->city]) }}"

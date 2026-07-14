@@ -7,7 +7,7 @@ return
         'allArticles' => 'Tutti gli annunci',
         'categories' => 'Categorie',
         'createArticle' => 'Crea annuncio',
-        'profile' => 'Profilo',
+        'profile' => 'Ciao, ',
         'browse' => 'Sfoglia',
 
         // guest menu
@@ -76,36 +76,70 @@ return
         'uploadDrag' => 'Trascina qui le immagini o clicca per selezionarle',
         'uploadMaxSize' => 'Max 2MB',
 
-        // Home page
+        // Come funziona - page
 
-        // Hero
-
-        'heroTitle' => 'Trova occasioni.',
-        'heroSubtitle' => 'Dai nuova vita alle tue cose.',
-        'heroDescription' => 'Compra e vendi di persona o con spedizione in tutta Italia.',
-        'registerAndSell' => 'Registrati e vendi',
-
-        // latest articles
-
-        'latestArticles' => 'Scopri gli ultimi annunci',
-        'browseLatestArticles' => 'Sfoglia le occasioni più recenti pubblicate su Presto.it.',
-        'viewAll' => 'Vedi tutti',
-        'noArticlesYet' => 'Sembra non ci siano ancora annunci... Crea il primo!',
-
-        // how it works
-
-        'howItWorks' => 'Come funziona',
+        'howItWorksTitle' => 'Come funziona',
         'howItWorksDescription' => 'Semplice, veloce e sostenibile',
+        'howItWorksDetails' => 'Vendi ciò che non usi più, trova articoli di seconda mano e mettiti direttamente in contatto con gli altri utenti',
 
-        // card how it works
-        'publish' => 'Pubblica in pochi minuti',
-        'publishDescription' => 'Scatta qualche foto, descrivi l’articolo, scegli il prezzo e pubblica il tuo annuncio.',
+        'sellOrBuyArticle' => 'Vendi o acquista un articolo',
+        'sellOrBuyArticleDetails_01' => 'Hai qualcosa che non utilizzi più? Scatta alcune foto,
+                            inserisci una descrizione chiara, scegli la categoria
+                            e indica il prezzo a cui vuoi venderlo.',
+        'sellOrBuyArticleDetails_02' => 'Stai cercando qualcosa? Esplora gli annunci, consulta
+                            le categorie e scopri gli articoli pubblicati dagli
+                            altri utenti.',
 
         'contactSeller' => 'Contatta il venditore',
-        'contactSellerDescription' => 'Fai domande, parla con il venditore e accordati sull’acquisto dell’articolo.',
+        'contactSellerDetails_01' => 'Quando trovi un articolo che ti interessa, contatta
+                            direttamente il venditore per chiedere ulteriori
+                            informazioni, verificare le condizioni dell’articolo
+                            e concordare il prezzo.',
+        'contactSellerDetails_02' => 'Si sconsigliano metodi di pagamento difficili da verificare e si raccomanda di non condividere dati personali non necessari (come il numero di telefono o la password).',
 
         'shipOrMeet' => 'Concludi lo scambio',
-        'shipOrMeetDescription' => 'Spedisci l’articolo oppure incontratevi di persona e dai nuova vita all’articolo.',
+        'shipOrMeetDetails_01' => 'Acquirente e venditore possono poi scegliere il metodo di consegna: a mano o spedizione.',
+        'shipOrMeetDetails_02' => 'In alternativa, potete accordarvi per incontrarvi di
+                            persona in un luogo pubblico e completare lo scambio
+                            di persona.',
+
+        'startNow' => 'Pronto per iniziare?',
+        'startNowDescription' => 'Crea il tuo primo annuncio oppure scopri gli articoli disponibili.',
+
+        'createYourFirstArticle' => 'Crea il tuo primo annuncio',
+        'exploreArticles' => 'Esplora gli annunci',
+        
+
+        // Home page
+
+            // Hero
+
+            'heroTitle' => 'Trova occasioni.',
+            'heroSubtitle' => 'Dai nuova vita alle tue cose.',
+            'heroDescription' => 'Compra e vendi di persona o con spedizione in tutta Italia.',
+            'registerAndSell' => 'Registrati e vendi',
+
+            // latest articles
+
+            'latestArticles' => 'Scopri gli ultimi annunci',
+            'browseLatestArticles' => 'Sfoglia le occasioni più recenti pubblicate su Presto.it.',
+            'viewAll' => 'Vedi tutti',
+            'noArticlesYet' => 'Sembra non ci siano ancora annunci... Crea il primo!',
+
+            // how it works
+
+            'howItWorks' => 'Come funziona',
+            'howItWorksDescription' => 'Semplice, veloce e sostenibile',
+
+            // card how it works
+            'publish' => 'Pubblica in pochi minuti',
+            'publishDescription' => 'Scatta qualche foto, descrivi l’articolo, scegli il prezzo e pubblica il tuo annuncio.',
+
+            'contactSeller' => 'Contatta il venditore',
+            'contactSellerDescription' => 'Fai domande, parla con il venditore e accordati sull’acquisto dell’articolo.',
+
+            'shipOrMeet' => 'Concludi lo scambio',
+            'shipOrMeetDescription' => 'Spedisci l’articolo oppure incontratevi di persona e dai nuova vita all’articolo.',
 
         // footer
         'footerDescription' => 'Compra e vendi articoli nuovi o usati in modo semplice e veloce. Trova occasioni vicino a te e dai nuova vita agli oggetti che non usi più.',
