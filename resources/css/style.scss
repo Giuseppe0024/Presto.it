@@ -270,21 +270,24 @@ footer {
 
 // FAVORITE BUTTON
 
-.favorites--active {
-  background-color: var(--orange);
-}
-
-.favorites--active:hover {
-  background-color: var(--hover-orange);
-  color: var(--white);
-}
-
 .favorites--inactive {
-  background-color: var(--stonegreen);
-  color: var(--white);
+  color: var(--orange);
 }
 
 .favorites--inactive:hover {
-  background-color: var(--hover-green);
-  color: var(--white);
+  color: var(--hover-orange);
+}
+
+
+.favorites--active {
+  color: var(--stonegreen);
+}
+
+.favorites--active:hover {
+  
+  color: var(--hover-green);
+}
+
+.favorite-button {
+  transition: color 0.2s ease, background-color 0.2s ease;
 }

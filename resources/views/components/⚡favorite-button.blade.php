@@ -59,9 +59,9 @@ new class extends Component
 <div>
     <button 
         wire:click="toggleFavorite" 
-        class="btn favorite-button {{ $isFavorite ? 'favorites--active' : 'favorites--inactive' }} position-absolute top-0 end-0 m-2 z-3 p-2 rounded-circle border-0 shadow-sm"
+        class="btn favorite-button bg-white {{ $isFavorite ? 'favorites--active' : 'favorites--inactive' }} position-absolute top-0 end-0 m-2 z-3 p-2 rounded-circle border-0 shadow-sm"
         aria-label="{{ $isFavorite ? 'Rimuovi dai preferiti' : 'Aggiungi ai preferiti' }}"
         >
-        <i class="fa-solid fa-carrot text-white{{ $isFavorite ? '' : '-circle' }}"></i>
+        <i class="fa-solid fa-carrot {{ $isFavorite ? '' : '-circle' }}"></i>
     </button>
 </div>
