@@ -64,33 +64,35 @@ class RemoveFaces implements ShouldQueue
 
         $faces = $response->getFaceAnnotations();
 
-        if ($faces) {
-            foreach ($faces as $face) {
-                $vertices = $face->getBoundingPoly()->getVertices();
-                $bounds = [];
-                foreach ($vertices as $vertex) {
-                    $bounds[] = [$vertex->getX(), $vertex->getY()];
-                }
+        $googleVisionClient->close();
 
-                $w = $bounds[2][0] - $bounds[0][0];
-                $h = $bounds[2][1] - $bounds[0][1];
-
-                $image = SpatieImage::useImageDriver(ImageDriver::Gd)->load($src);
-
-                $image->watermark(
-                    base_path('resources/images/face.png'),
-                    AlignPosition::TopLeft,
-                    paddingX: $bounds[0][0],
-                    paddingY: $bounds[0][1],
-                    width: $w,
-                    height: $h,
-                    fit: Fit::Stretch
-                );
-            }
-            $image->save($src);
-            $googleVisionClient->close();
-
+        if (count($faces) === 0) {
+            return;
         }
 
+        $editedImage = SpatieImage::useImageDriver(ImageDriver::Gd)->load($src);
+
+        foreach ($faces as $face) {
+            $vertices = $face->getBoundingPoly()->getVertices();
+            $bounds = [];
+            foreach ($vertices as $vertex) {
+                $bounds[] = [$vertex->getX(), $vertex->getY()];
+            }
+
+            $w = $bounds[2][0] - $bounds[0][0];
+            $h = $bounds[2][1] - $bounds[0][1];
+
+            $editedImage->watermark(
+                base_path('resources/images/face.png'),
+                AlignPosition::TopLeft,
+                paddingX: $bounds[0][0],
+                paddingY: $bounds[0][1],
+                width: $w,
+                height: $h,
+                fit: Fit::Stretch
+            );
+        }
+
+        $editedImage->save($src);
     }
 }

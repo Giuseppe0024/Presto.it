@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
-use App\Http\Controllers\FavoriteController;
 use Illuminate\Support\Facades\Route;
 
 /*

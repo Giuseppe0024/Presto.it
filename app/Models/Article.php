@@ -75,8 +75,7 @@ class Article extends Model
         ];
     }
 
-
-    /* 
+    /*
     Aggiungere articoli tra i preferiti di un utente
     */
     public function favoritedByUsers(): BelongsToMany
@@ -84,6 +83,4 @@ class Article extends Model
         return $this->belongsToMany(User::class, 'article_user')
             ->withTimestamps();
     }
-
-
 }
