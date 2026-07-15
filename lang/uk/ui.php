@@ -160,4 +160,8 @@ return [
 
     'contacts' => 'Contacts',
 
+    // accept-reject
+    'accept' => 'Accept',
+    'reject' => 'Reject'
+
 ];

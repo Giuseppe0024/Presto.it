@@ -157,4 +157,8 @@ return [
     'feedback' => 'Comentarios',
 
     'contacts' => 'Contactos',
+
+    // accept-reject
+    'accept' => 'Acepta',
+    'reject' => 'Rechaza'
 ];

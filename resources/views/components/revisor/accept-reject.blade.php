@@ -2,8 +2,8 @@
     <form action="{{ route('revisor.reject', $article) }}" method="POST">
         @csrf
         @method('PATCH')
-        <button class="btn btn-outline-primary px-4">
-            <i class="fa-solid fa-xmark me-2"></i>Rifiuta
+        <button class="btn btn-primary px-4">
+            <i class="fa-solid fa-xmark me-2"></i>{{ __('ui.reject') }}
         </button>
     </form>
 
@@ -11,7 +11,7 @@
         @csrf
         @method('PATCH')
         <button class="btn btn-secondary px-4">
-            <i class="fa-solid fa-check me-2"></i>Accetta
+            <i class="fa-solid fa-check me-2"></i>{{ __('ui.accept')}}
         </button>
     </form>
 </div>

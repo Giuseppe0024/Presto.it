@@ -162,4 +162,8 @@ return
 
         'contacts' => 'Contatti',
 
+        // accept-reject
+        'accept' => 'Accetta',
+        'reject' => 'Rifiuta'
+
     ];
