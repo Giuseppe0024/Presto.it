@@ -939,5 +939,4 @@ class DemoArticlesSeeder extends Seeder
             ResizeImage::dispatchSync($image->path, 400, 300);
         }
     }
-
 }
