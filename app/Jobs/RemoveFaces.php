@@ -20,6 +20,8 @@ class RemoveFaces implements ShouldQueue
 {
     use Queueable;
 
+    protected const FACE_OFFSET_RATIO = 0.13;
+
     /**
      * Create a new job instance.
      */
@@ -86,7 +88,7 @@ class RemoveFaces implements ShouldQueue
                 base_path('resources/images/face.png'),
                 AlignPosition::TopLeft,
                 paddingX: $bounds[0][0],
-                paddingY: $bounds[0][1],
+                paddingY: (int) round($bounds[0][1] - $h * self::FACE_OFFSET_RATIO),
                 width: $w,
                 height: $h,
                 fit: Fit::Stretch
