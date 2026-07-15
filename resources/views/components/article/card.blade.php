@@ -4,8 +4,10 @@
     <div class="card article-card position-relative h-100 border-0 rounded-4 overflow-hidden {{ $fluid ? 'w-100' : 'article-card-fixed' }}">
 
         <x-article.card-image :article="$article"/>
-        <livewire:favorite-button :article="$article"
-                                    :key="'favorite-button-' . $article->id"
+        <livewire:favorite-button
+                                    :article="$article"
+                                    variant="card"
+                                    :key="'favorite-card-' . $article->id"
                                     class="position-absolute top-0 end-0 m-2 z-3"/>
 
         <div class="card-body d-flex flex-column">

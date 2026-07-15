@@ -11,6 +11,14 @@
         <a class="nav-link text-nowrap" href="{{ route('login') }}">{{ __('ui.login') }}</a>
     </li>
 
+    <li>
+        <span class="nav-link text-nowrap">|</span>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-nowrap" href="{{ route('register') }}">{{ __('ui.signUp') }}</a>
+    </li>
+
 {{-- rimosso button registrati --}}
 
 </ul>

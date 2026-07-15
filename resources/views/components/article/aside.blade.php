@@ -33,13 +33,12 @@
             Contatta il venditore
         </a>
 
-        <button
-            type="button"
-            class="btn btn-secondary rounded-pill fw-semibold"
-        >
-            <i class="fa-solid fa-carrot me-2"></i>
-            Aggiungi ai preferiti
-        </button>
+        <livewire:favorite-button
+            :article="$article"
+            variant="aside"
+            :key="'favorite-aside-'.$article->id"/>
+
+            
     </div>
 
     <hr class="my-4">

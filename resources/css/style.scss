@@ -271,23 +271,33 @@ footer {
 // FAVORITE BUTTON
 
 .favorites--inactive {
-  color: var(--orange);
-}
-
-.favorites--inactive:hover {
-  color: var(--hover-orange);
+  i {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--orange);
+  }
 }
 
 
 .favorites--active {
-  color: var(--stonegreen);
+  i {
+    color: var(--orange);
+    -webkit-text-stroke: 0.5px var(--orange); 
+  }
 }
 
-.favorites--active:hover {
-  
-  color: var(--hover-green);
+
+.favorite-button-aside--active,
+.favorite-button-aside--active:hover,
+.favorite-button-aside--active:focus {
+  background-color: var(--stonegreen) !important;
+  color: var(--reflectivewhite) !important;
+  border: 1px solid var(--stonegreen) !important;
 }
 
-.favorite-button {
-  transition: color 0.2s ease, background-color 0.2s ease;
+.favorite-button-aside--inactive,
+.favorite-button-aside--inactive:hover,
+.favorite-button-aside--inactive:focus {
+  background-color: var(--reflectivewhite) !important;
+  color: var(--stonegreen) !important;
+  border: 1px solid var(--reflectivewhite) !important;
 }

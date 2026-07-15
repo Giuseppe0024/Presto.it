@@ -10,9 +10,13 @@ new class extends Component
 
     public bool $isFavorite = false;
 
-    public function mount(Article $article): void
+    public string $variant = 'aside';
+
+    public function mount(Article $article, string $variant = 'aside'): void
     {
         $this->article = $article;
+        $this->variant = $variant;
+
         $this->checkIfFavorite();
     }
 
@@ -56,12 +60,41 @@ new class extends Component
 
 ?>
 
-<div>
-    <button 
-        wire:click="toggleFavorite" 
-        class="btn favorite-button bg-white {{ $isFavorite ? 'favorites--active' : 'favorites--inactive' }} position-absolute top-0 end-0 m-2 z-3 p-2 rounded-circle border-0 shadow-sm"
-        aria-label="{{ $isFavorite ? 'Rimuovi dai preferiti' : 'Aggiungi ai preferiti' }}"
-        >
-        <i class="fa-solid fa-carrot {{ $isFavorite ? '' : '-circle' }}"></i>
-    </button>
+<div class=" {{ $variant === 'aside' ? 'd-grid' : '' }}">
+    @if ($variant === 'aside')
+
+        <button
+            type="button"
+            wire:click="toggleFavorite"
+            class="btn favorite-button-aside rounded-pill fw-semibold
+                {{ $isFavorite ? 'favorite-button-aside--active' : 'favorite-button-aside--inactive' }}"
+            aria-label="{{ $isFavorite 
+                        ? 'favorite-button-aside--active' 
+                        : 'favorite-button-aside--inactive' }}">
+            
+            <i class="fa-solid fa-carrot me-2"></i>
+
+            {{ $isFavorite
+                ? 'Rimuovi dai preferiti'
+                : 'Aggiungi ai preferiti' }}
+
+        </button>
+
+    @else
+
+        <button
+            type="button"
+            wire:click="toggleFavorite"
+            class="btn favorite-button bg-white
+                {{ $isFavorite ? 'favorites--active' : 'favorites--inactive' }}
+                position-absolute top-0 end-0 m-2 z-3 p-2
+                rounded-circle border-0 shadow-sm"
+            aria-label="{{ $isFavorite ? 'Rimuovi dai preferiti' : 'Aggiungi ai preferiti' }}">
+
+            <i class="fa-solid fa-carrot"></i>
+
+        </button>
+
+    @endif
 </div>
+
