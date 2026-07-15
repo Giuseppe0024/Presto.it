@@ -5,7 +5,7 @@
                 <i class="fa-solid fa-location-dot"></i>{{ $article->city }}
             </p>
             <p>|</p>
-            <p class="fst-italic fw-bold fs-6">{{ $article->category->name }}</p>
+            <p class="fst-italic fw-bold fs-6">{{ __("ui.{$article->category->name}") }}</p>
         </div>
 
         <p class="my-2">{{ $article->description }}</p>

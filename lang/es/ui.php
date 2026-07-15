@@ -27,6 +27,11 @@ return [
     'italy' => 'Toda Italia',
     'search' => 'Buscar',
 
+    // all listings
+    'browseAllDealsPublishedOnPresto.it.' => 'Explora todas las ofertas en Presto.it',
+    'noArticles' => 'Parece que todavía no hay anuncios... ¡Sé el primero en crear uno!',
+
+    // categories
     'allCategories' => 'Todas las categorias',
     'Elettronica' => 'Electrónica',
     'Abbigliamento' => 'Ropa',

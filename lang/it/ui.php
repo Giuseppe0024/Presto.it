@@ -28,7 +28,11 @@ return
         'italy' => 'Tutta Italia',
         'search' => 'Cerca',
 
-        // categorie
+        // all listings
+        'browseAllDealsPublishedOnPresto.it.' => 'Sfoglia tutte le occasioni pubblicate su Presto.it.',
+        'noArticles' => 'Sembra non ci siano ancora annunci... Crea il primo!',
+
+        // categories
         'allCategories' => 'Tutte le categorie',
         'Elettronica' => 'Elettronica',
         'Abbigliamento' => 'Abbigliamento',

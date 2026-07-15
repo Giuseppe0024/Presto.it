@@ -14,7 +14,7 @@
                    class="text-truncate text-decoration-none text-body position-relative z-2">{{ $article->city }}</a>
                 <span>|</span>
                 <a href="{{ route('article.byCategory', $article->category) }}"
-                   class="fst-italic fw-bold text-decoration-none text-body position-relative z-2 flex-shrink-0">{{ $article->category->name }}</a>
+                   class="fst-italic fw-bold text-decoration-none text-body position-relative z-2 flex-shrink-0">{{ __("ui.{$article->category->name}") }}</a>
             </div>
             <h5 class="card-title article-card-title">
                 <a href="{{ route('article.show', $article) }}"

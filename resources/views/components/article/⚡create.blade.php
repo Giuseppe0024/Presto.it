@@ -125,7 +125,7 @@ new class extends Component {
                         wire:model.blur="category">
                     <option value="" selected disabled>{{ __('ui.formCategoryPlaceholder') }}</option>
                     @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        <option value="{{ $category->id }}">{{ __("ui.{$category->name}") }}</option>
                     @endforeach
                 </select>
                 <x-ui.input-error field="category"/>

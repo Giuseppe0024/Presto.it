@@ -27,6 +27,10 @@ return [
     'italy' => 'All of Italy',
     'search' => 'Search',
 
+    // all listings
+    'browseAllDealsPublishedOnPresto.it.' => 'Browse all deals on Presto.it.',
+    'noArticles' => 'It looks like there are no listings yet... Be the first to create one!',
+
     // categories
     'allCategories' => 'All categories',
     'Elettronica' => 'Electronics',
