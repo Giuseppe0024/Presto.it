@@ -75,8 +75,8 @@ new class extends Component
             <i class="fa-solid fa-carrot me-2"></i>
 
             {{ $isFavorite
-                ? 'Rimuovi dai preferiti'
-                : 'Aggiungi ai preferiti' }}
+                ? __('ui.removeFromFavorites')
+                : __('ui.addToFavorites') }} 
 
         </button>
 
@@ -85,10 +85,9 @@ new class extends Component
         <button
             type="button"
             wire:click="toggleFavorite"
-            class="btn favorite-button bg-white
+            class="btn favorite-button bg-white fs-6 rounded-circle
                 {{ $isFavorite ? 'favorites--active' : 'favorites--inactive' }}
-                position-absolute top-0 end-0 m-2 z-3 p-2
-                rounded-circle border-0 shadow-sm"
+                position-absolute top-0 end-0 m-2 z-3 p-1 border-0 shadow-sm"
             aria-label="{{ $isFavorite ? 'Rimuovi dai preferiti' : 'Aggiungi ai preferiti' }}">
 
             <i class="fa-solid fa-carrot"></i>

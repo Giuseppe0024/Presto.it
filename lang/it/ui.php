@@ -114,6 +114,7 @@ return
 
         'createYourFirstArticle' => 'Crea il tuo primo annuncio',
         'exploreArticles' => 'Esplora gli annunci',
+        
 
         // Home page
 
@@ -166,5 +167,52 @@ return
         // accept-reject
         'accept' => 'Accetta',
         'reject' => 'Rifiuta',
+
+
+        // article show - article aside
+        'publishedBy' => 'Pubblicato da',
+        'soldBy' => 'Venduto da',
+        'contactTheSeller' => 'Contatta il venditore',
+        'delivery' => 'Consegna',
+        'availableForShipping' => 'Disponibile per la spedizione',
+        'availableForDelivery' => 'Disponibile alla consegna',
+        'localPickupOnly' => 'Solo consegna a mano',
+        'shopSafely' => 'Acquista in sicurezza',
+        'doNotSendAdvancePaymentsOutsideThePlatform' => 'Non inviare pagamenti anticipati fuori dalla piattaforma. In caso di consegna a mano, incontra il venditore in un luogo pubblico.',
+        'addToFavorites' => 'Aggiungi ai preferiti',
+        'removeFromFavorites' => 'Rimuovi dai preferiti',
+        'yes' => 'Si',
+        'no' => 'No',
+        'noArticlesToReview' => 'Non ci sono articoli da revisionare',
+
+        // my listings
+        'myListings' => 'I miei annunci',
+        'manageListings' => 'Gestisci gli annunci che hai pubblicato su Presto.it',
+        'newListing' => 'Nuovo annuncio',
+        'listingAccepted' => 'Annuncio Accettato',
+        'listingRejected' => 'Annuncio Rifiutato',
+        'noListingsYet' => 'Non hai ancora pubblicato nessun annuncio.',
+
+        // status-badge
+        'listingUnderReview' => 'Annuncio in stato di verifica',
+        'listingRejected' => 'Annuncio rifiutato',
+        'listingOnline' => 'Annuncio online',
+
+        // owner card
+        'edit' => 'Modifica',
+        'delete' => 'Elimina',
+
+        // contatta venditore
+
+        'contactTheSeller' => 'Contatta il venditore',
+        'to' => 'Contatta: ',
+        'subject' => 'Oggetto',
+        'subjectPlaceholder' => 'Es: Sono interessato, vorrei chiedere ulteriori informazioni',
+        'message' => 'Messaggio',
+        'messagePlaceholder' => 'Scrivi il tuo messaggio qui...',
+        'send' => 'Invia',
+        'messageSent' => 'Messaggio inviato con successo',
+        'messageSentDetail' => 'Il tuo messaggio arriverà Presto al venditore.',
+
 
     ];

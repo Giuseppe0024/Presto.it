@@ -10,7 +10,7 @@
 
         <div>
             <p class="text-muted mb-1 small">
-                Venduto da
+                {{ __('ui.soldBy') }}
             </p>
 
             <h5 class="fw-bold mb-1">
@@ -24,14 +24,28 @@
         </div>
     </div>
 
+    {{-- Contatta venditore --}}
+
     <div class="d-grid gap-2">
-        <a
-            href="#"
+    @auth
+        <button
+            type="button"
             class="btn btn-primary rounded-pill fw-semibold"
-        >
+            data-bs-toggle="modal"
+            data-bs-target="#contactSellerModal-{{ $article->id }}">
+
             <i class="fa-solid fa-message me-2"></i>
-            Contatta il venditore
+            {{ __('ui.contactTheSeller') }}
+
+        </button>
+    @else
+        <a
+            href="{{ route('login') }}"
+            class="btn btn-primary rounded-pill fw-semibold">
+            <i class="fa-solid fa-message me-2"></i>
+            {{ __('ui.contactTheSeller') }}
         </a>
+    @endauth
 
         <livewire:favorite-button
             :article="$article"
@@ -46,14 +60,14 @@
     <div class="mb-4">
         <p class="fw-bold mb-2">
             <i class="fa-solid fa-truck me-2"></i>
-            Consegna
+            {{ __('ui.delivery') }}
         </p>
 
         <p class="text-muted mb-0">
             @if ($article->delivery_shipping)
-                Disponibile per la spedizione
+                {{ __('ui.availableForShipping') }}
             @else
-                Solo consegna a mano
+                {{ __('ui.localPickupOnly') }}
             @endif
         </p>
     </div>
@@ -61,12 +75,13 @@
     <div class="bg-light rounded-3 p-3">
         <p class="fw-bold small mb-1">
             <i class="fa-solid fa-shield-halved me-1"></i>
-            Acquista in sicurezza
+            {{ __('ui.shopSafely') }}
         </p>
 
         <p class="text-muted small mb-0">
-            Non inviare pagamenti anticipati fuori dalla piattaforma.
-            In caso di consegna a mano, incontra il venditore in un luogo pubblico.
+            {{__('ui.doNotSendAdvancePaymentsOutsideThePlatform')}}
         </p>
     </div>
 </div>
+
+<x-article.contatta :article="$article"/>

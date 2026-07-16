@@ -164,5 +164,52 @@ return [
     // accept-reject
     'accept' => 'Accept',
     'reject' => 'Reject',
+<<<<<<< HEAD
+
+    // article show - article aside
+    'publishedBy' => 'Published by',
+    'soldBy' => 'Sold by',
+    'contactTheSeller' => 'Contact the seller',
+    'delivery' => 'Delivery',
+    'availableForShipping' => 'Available for shipping',
+    'availableForDelivery' => 'Available for delivery',
+    'localPickupOnly' => 'Local pickup only',
+    'shopSafely' => 'Shop safely',
+    'doNotSendAdvancePaymentsOutsideThePlatform' => 'Do not send advance payments outside the platform. If meeting in person, meet the seller in a public place.',
+    'addToFavorites' => 'Add to favorites',
+    'removeFromFavorites' => 'Remove from favorites',
+    'yes' => 'Yes',
+    'no' => 'No',
+    'noArticlesToReview' => 'There are no articles to review',
+
+    // my Listings
+    'myListings' => 'My listings',
+    'manageListings' => 'Manage the listings you have published on Presto.it',
+    'newListing' => 'New listing',
+    'listingAccepted' => 'Listing accepted',
+    'listingRejected' => 'Listing rejected',
+    'noListingsYet' => 'You have not published any listings yet.',
+
+    // status-badge
+    'listingUnderReview' => 'Listing under review',
+    'listingRejected' => 'Listing rejected',
+    'listingOnline' => 'Listing online',
+
+    // owner card
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+
+    // contatta venditore
+    'contactTheSeller' => 'Contact the seller',
+    'to' => 'To: ',
+    'subject' => 'Subject',
+    'subjectPlaceholder' => 'E.g.: I am interested, I would like to ask for more information',
+    'message' => 'Message',
+    'messagePlaceholder' => 'Write your message here...',
+    'send' => 'Send',
+    'messageSent' => 'Message sent successfully',
+    'messageSentDetail' => 'Your message has been successfully sent to the seller.',
+=======
+>>>>>>> a07445d (fix(edit articles): add revision flow after edit)
 
 ];

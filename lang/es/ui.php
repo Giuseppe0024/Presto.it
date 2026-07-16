@@ -162,4 +162,52 @@ return [
     // accept-reject
     'accept' => 'Acepta',
     'reject' => 'Rechaza',
+<<<<<<< HEAD
+
+    // article show - article aside
+    'publishedBy' => 'Publicado por',
+    'soldBy' => 'Vendido por',
+    'contactTheSeller' => 'Contactar con el vendedor',
+    'delivery' => 'Entrega',
+    'availableForShipping' => 'Disponible para envío',
+    'availableForDelivery' => 'Disponible para entrega',
+    'localPickupOnly' => 'Solo entrega en mano',
+    'shopSafely' => 'Compra de forma segura',
+    'doNotSendAdvancePaymentsOutsideThePlatform' => 'No envíes pagos por adelantado fuera de la plataforma. Si la entrega es en mano, reúnete con el vendedor en un lugar público.',
+    'addToFavorites' => 'Añadir a favoritos',
+    'removeFromFavorites' => 'Quitar de favoritos',
+    'yes' => 'Sí',
+    'no' => 'No',
+    'noArticlesToReview' => 'No hay artículos que revisar',
+
+    // my listings
+    'myListings' => 'Mis anuncios',
+    'manageListings' => 'Gestiona los anuncios que has publicado en Presto.it',
+    'newListing' => 'Nuevo anuncio',
+    'listingAccepted' => 'Anuncio aceptado',
+    'listingRejected' => 'Anuncio rechazado',
+    'noListingsYet' => 'Todavía no has publicado ningún anuncio.',
+
+    // status-badge
+    'listingUnderReview' => 'Anuncio en revisión',
+    'listingRejected' => 'Anuncio rechazado',
+    'listingOnline' => 'Anuncio en línea',
+
+    // owner card
+    'edit' => 'Modificar',
+    'delete' => 'Eliminar',
+
+    // contatta venditore
+    'contactTheSeller' => 'Contacta al vendedor',
+    'to' => 'Contacta: ',
+    'subject' => 'Asunto',
+    'subjectPlaceholder' => 'Ej: Estoy interesado, me gustaría pedir más información',
+    'message' => 'Mensaje',
+    'messagePlaceholder' => 'Escribe tu mensaje aquí...',
+    'send' => 'Enviar',
+    'messageSent' => 'Mensaje enviado con éxito',
+    'messageSentDetail' => 'Tu mensaje ha sido enviado correctamente al vendedor.',
+    ];
+=======
 ];
+>>>>>>> a07445d (fix(edit articles): add revision flow after edit)

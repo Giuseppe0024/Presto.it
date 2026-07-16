@@ -9,6 +9,15 @@
 
                 <div class="p-4 p-md-5 card-login rounded-5 w-100 h-100">
 
+
+                    <div class="text-center">
+                        <!-- <p class="d-inline">{{ __('ui.publishedBy')}}</p> -->
+
+                       <!--  <address class="fw-bolder d-inline">
+                            {{ $article->user->name }}
+                        </address> -->
+                    </div>
+
                     <div class="row g-5 mt-1">
 
                         <div

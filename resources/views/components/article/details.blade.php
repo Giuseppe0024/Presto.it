@@ -11,11 +11,11 @@
         <p class="my-2">{{ $article->description }}</p>
 
         <p class="mt-3">
-            <span class="fw-bold">Disponibile alla consegna:</span>
+            <span class="fw-bold">{{ __('ui.availableForDelivery') }}:</span>
             @if($article->delivery_shipping)
-                Sì
+                {{ __('ui.yes')}}
             @else
-                No
+                {{ __('ui.no')}}
             @endif
         </p>
 
