@@ -205,5 +205,7 @@ return [
     'message' => 'Message',
     'messagePlaceholder' => 'Write your message here...',
     'send' => 'Send',
+    'messageSent' => 'Message sent successfully',
+    'messageSentDetail' => 'Your message has been successfully sent to the seller.',
 
 ];

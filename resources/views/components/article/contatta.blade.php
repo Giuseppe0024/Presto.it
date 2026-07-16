@@ -29,6 +29,8 @@
                     </p>
                 </div>
 
+                {{-- Pulsante di chiusura della modale --}}
+
                 <button
                     type="button"
                     class="btn-close contact-close-button"
@@ -38,7 +40,7 @@
             </div>
 
             
-            <form id="contactSellerForm-{{ $article->id }}">
+            <div id="contactSellerForm-{{ $article->id }}">
 
             
                 <div class="modal-body">
@@ -52,7 +54,7 @@
 
                         <input
                             type="text"
-                            class="form-control rounded-pill border-2 border-secondary"
+                            class="form-control rounded-pill"
                             id="subject-{{ $article->id }}"
                             name="subject"
                             placeholder="{{ __('ui.subjectPlaceholder') }}"
@@ -67,7 +69,7 @@
                         </label>
 
                         <textarea
-                            class="form-control rounded-3 border-2 border-secondary"
+                            class="form-control rounded-3"
                             id="message-{{ $article->id }}"
                             name="message"
                             rows="5"
@@ -87,19 +89,19 @@
                     </button>
 
                     <button
-                        type="submit"
-                        class="btn btn-secondary rounded-pill px-4 fw-semibold">
+                        type="button"
+                        class="btn btn-secondary rounded-pill px-4 fw-semibold"
+                        onclick="simulaInvioContatta('{{ $article->id }}')">
                         {{ __('ui.send') }}
                     </button>
 
                 </div>
 
-            </form>
+            </div>
 
-        
             <div
                 class="modal-body d-none"
-                id="contactSellerSuccess-{{ $article->id }}" >
+                id="contactSellerSuccess-{{ $article->id }}">
                 <div class="text-center py-4">
                     <i class="fa-solid fa-circle-check text-success fs-1 mb-3"></i>
 
@@ -116,3 +118,21 @@
         </div>
     </div>
 </div>
+
+<script>
+function simulaInvioContatta(articleId) {
+    document.getElementById('contactSellerForm-' + articleId).classList.add('d-none');
+    document.getElementById('contactSellerSuccess-' + articleId).classList.remove('d-none');
+
+    var modalEl = document.getElementById('contactSellerModal-' + articleId);
+    setTimeout(function () {
+        bootstrap.Modal.getInstance(modalEl).hide();
+    }, 2000);
+
+    modalEl.addEventListener('hidden.bs.modal', function () {
+        document.getElementById('contactSellerForm-' + articleId).classList.remove('d-none');
+        document.getElementById('contactSellerSuccess-' + articleId).classList.add('d-none');
+    }, { once: true });
+}
+</script>
+

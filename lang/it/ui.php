@@ -208,6 +208,8 @@ return
         'message' => 'Messaggio',
         'messagePlaceholder' => 'Scrivi il tuo messaggio qui...',
         'send' => 'Invia',
+        'messageSent' => 'Messaggio inviato con successo',
+        'messageSentDetail' => 'Il tuo messaggio arriverà Presto al venditore.',
 
 
     ];

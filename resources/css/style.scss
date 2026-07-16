@@ -271,6 +271,7 @@ footer {
 // FAVORITE BUTTON
 
 .favorites--inactive {
+  border-radius: 50%;
   i {
     color: transparent;
     -webkit-text-stroke: 1.5px var(--orange);
@@ -279,6 +280,7 @@ footer {
 
 
 .favorites--active {
+  border-radius: 50%;
   i {
     color: var(--orange);
     -webkit-text-stroke: 0.5px var(--orange); 

@@ -203,4 +203,6 @@ return [
     'message' => 'Mensaje',
     'messagePlaceholder' => 'Escribe tu mensaje aquí...',
     'send' => 'Enviar',
+    'messageSent' => 'Mensaje enviado con éxito',
+    'messageSentDetail' => 'Tu mensaje ha sido enviado correctamente al vendedor.',
     ];

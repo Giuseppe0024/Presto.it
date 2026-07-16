@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/revisor/become', [RevisorController::class, 'become'])->name('revisor.become');
     Route::post('/revisor/request', [RevisorController::class, 'becomeMail'])->name('revisor.becomeMail');
 
-    // preferiti
+// preferiti
     Route::get('/i-miei-preferiti', [FavoriteController::class, 'index'])->name('favorites.index');
 
 });
