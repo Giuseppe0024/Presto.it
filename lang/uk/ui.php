@@ -164,7 +164,6 @@ return [
     // accept-reject
     'accept' => 'Accept',
     'reject' => 'Reject',
-<<<<<<< HEAD
 
     // article show - article aside
     'publishedBy' => 'Published by',
@@ -209,7 +208,5 @@ return [
     'send' => 'Send',
     'messageSent' => 'Message sent successfully',
     'messageSentDetail' => 'Your message has been successfully sent to the seller.',
-=======
->>>>>>> a07445d (fix(edit articles): add revision flow after edit)
 
 ];

@@ -23,3 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
         button.textContent = 'Invio in corso...';
     });
 });
+
+function simulaInvioContatta(articleId) {
+    document.getElementById('contactSellerForm-' + articleId).classList.add('d-none');
+    document.getElementById('contactSellerSuccess-' + articleId).classList.remove('d-none');
+
+    var modalEl = document.getElementById('contactSellerModal-' + articleId);
+    setTimeout(function () {
+        bootstrap.Modal.getInstance(modalEl).hide();
+    }, 2000);
+
+    modalEl.addEventListener('hidden.bs.modal', function () {
+        document.getElementById('contactSellerForm-' + articleId).classList.remove('d-none');
+        document.getElementById('contactSellerSuccess-' + articleId).classList.add('d-none');
+    }, {once: true});
+}

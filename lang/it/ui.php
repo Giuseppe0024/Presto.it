@@ -114,7 +114,6 @@ return
 
         'createYourFirstArticle' => 'Crea il tuo primo annuncio',
         'exploreArticles' => 'Esplora gli annunci',
-        
 
         // Home page
 
@@ -168,7 +167,6 @@ return
         'accept' => 'Accetta',
         'reject' => 'Rifiuta',
 
-
         // article show - article aside
         'publishedBy' => 'Pubblicato da',
         'soldBy' => 'Venduto da',
@@ -213,6 +211,5 @@ return
         'send' => 'Invia',
         'messageSent' => 'Messaggio inviato con successo',
         'messageSentDetail' => 'Il tuo messaggio arriverà Presto al venditore.',
-
 
     ];
