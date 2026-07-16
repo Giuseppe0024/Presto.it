@@ -207,4 +207,9 @@ return [
     'send' => 'Enviar',
     'messageSent' => 'Mensaje enviado con éxito',
     'messageSentDetail' => 'Tu mensaje ha sido enviado correctamente al vendedor.',
+
+    // favorites 
+    'myFavorites' => 'Mis favoritos',
+    'hereYouCanFindAllSavedListings' => 'Aquí encontrarás todos los anuncios que has guardado.',
+    'noFavoriteListingsYet' => 'Todavía no has añadido ningún anuncio a tus favoritos.',
 ];

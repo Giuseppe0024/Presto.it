@@ -3,10 +3,10 @@
 
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
-                <h1>I miei preferiti</h1>
+                <h1>{{ __('ui.myFavorites')}}</h1>
 
                 <p class="mb-0">
-                    Qui trovi tutti gli annunci che hai salvato.
+                    {{ __('ui.hereYouCanFindAllSavedListings')}}
                 </p>
             </div>
         </div>
@@ -24,7 +24,7 @@
             @empty
                 <div class="col-12">
                     <x-ui.empty-state>
-                        Non hai ancora aggiunto nessun annuncio ai preferiti.
+                        {{ __('ui.noFavoriteListingsYet')}}
                     </x-ui.empty-state>
                 </div>
             @endforelse
