@@ -248,6 +248,12 @@ footer {
   color: var(--greymasala);
 }
 
+.locale-dropdown {
+  --bs-dropdown-min-width: 0;
+  --bs-dropdown-padding-y: 0.25rem;
+  --bs-dropdown-item-padding-x: 0.5rem;
+}
+
 .card-how {
   background-color: var(--lightgreen2);
   border: 2px solid var(--lightgreen);

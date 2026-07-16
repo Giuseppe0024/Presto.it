@@ -2,6 +2,8 @@
 
 return [
 
+    'localeLabel' => 'ES',
+
     'hello' => 'Hola',
     'allArticles' => 'Todos los anuncios',
     'categories' => 'Categorías',

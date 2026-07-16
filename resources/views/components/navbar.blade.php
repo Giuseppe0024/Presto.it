@@ -64,18 +64,18 @@
                                     aria-expanded="false">
 
                                 <i class="fa-solid fa-earth-americas me-1"></i>
-                                <span>{{ strtoupper(app()->getLocale()) }}</span>
+                                <span>{{ trans('ui.localeLabel') }}</span>
 
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end text-center">
+                            <ul class="dropdown-menu dropdown-menu-end locale-dropdown">
                                 <li>
-                                    <x-navbar.locale-flag lang="it"/> IT
+                                    <x-navbar.locale-flag lang="it"/>
                                 </li>
                                 <li>
-                                    <x-navbar.locale-flag lang="uk"/> EN
+                                    <x-navbar.locale-flag lang="en" flag="uk"/>
                                 </li>
                                 <li>
-                                    <x-navbar.locale-flag lang="es"/> ES
+                                    <x-navbar.locale-flag lang="es"/>
                                 </li>
                             </ul>
                         </li>

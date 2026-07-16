@@ -3,6 +3,8 @@
 return
     [
 
+        'localeLabel' => 'IT',
+
         'hello' => 'Ciao',
         'allArticles' => 'Tutti gli annunci',
         'categories' => 'Categorie',
