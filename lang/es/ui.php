@@ -1,9 +1,10 @@
 <?php
 
 return [
-
+    // locale
     'localeLabel' => 'ES',
 
+    // general
     'hello' => 'Hola',
     'allArticles' => 'Todos los anuncios',
     'categories' => 'Categorías',
@@ -20,12 +21,12 @@ return [
     'favorites' => 'Favoritos',
     'messages' => 'Mensajes',
     'myListings' => 'Mis anuncios',
-    'myOrders' => 'Mis pedidos',
-    'settings' => 'Ajustes',
-    'reviews' => 'Reseñas',
+    'myOrders' => 'Pedidos',
+    'settings' => 'Configuración',
+    'reviews' => 'Moderación',
 
     // searchbar
-    'whatAreYouLookingFor' => 'Qué estás buscando?',
+    'whatAreYouLookingFor' => '¿Qué estás buscando?',
     'italy' => 'Toda Italia',
     'search' => 'Buscar',
 
@@ -34,7 +35,8 @@ return [
     'noArticles' => 'Parece que todavía no hay anuncios... ¡Sé el primero en crear uno!',
 
     // categories
-    'allCategories' => 'Todas las categorias',
+    'allCategories' => 'Todas las categorías',
+
     'Elettronica' => 'Electrónica',
     'Abbigliamento' => 'Ropa',
     'Salute e Bellezza' => 'Salud y Belleza',
@@ -48,6 +50,7 @@ return [
 
     // create-article form
     'createTitle' => 'Crea tu anuncio',
+
     'formTitle' => 'Título',
     'formTitlePlaceholder' => 'Introduce el título',
     'formCity' => 'Ciudad',
@@ -68,7 +71,7 @@ return [
     'updateTitle' => 'Edita tu anuncio',
     'formUpdate' => 'Guardar cambios',
     'updateSuccess' => 'Anuncio actualizado correctamente',
-    'revisionSubmitted' => 'Cambios enviados. El anuncio permanece online en su versión actual hasta que un revisor los apruebe.',
+    'revisionSubmitted' => 'Cambios enviados. El anuncio permanece online en su versión actual hasta que un moderador los apruebe.',
     'revisionChanged' => 'Los cambios se han modificado mientras los revisabas: vuelve a comprobarlos.',
     'formImagesRequired' => 'Sube al menos una imagen',
     'formImagesMax' => 'Puedes subir un máximo de 6 imágenes',
@@ -83,24 +86,17 @@ return [
     'uploadDrag' => 'Arrastra aquí las imágenes o haz clic para seleccionarlas',
     'uploadMaxSize' => 'Máx 2MB',
 
-    // Cómo funciona
-    'howItWorks' => 'Cómo funciona',
+    // how it works - page
+    'howItWorksTitle' => 'Cómo funciona',
     'howItWorksDescription' => 'Simple, rápido y sostenible',
     'howItWorksDetails' => 'Vende lo que ya no usas, encuentra artículos de segunda mano y ponte en contacto directamente con otros usuarios',
 
     'sellOrBuyArticle' => 'Vende o compra un artículo',
-    'sellOrBuyArticleDetails_01' => '¿Tienes algo que ya no usas? Toma algunas fotos,
-                            introduce una descripción clara, elige la categoría
-                            e indica el precio al que quieres venderlo.',
-    'sellOrBuyArticleDetails_02' => '¿Estás buscando algo? Explora los anuncios, consulta
-                            las categorías y descubre los artículos publicados por
-                            otros usuarios.',
+    'sellOrBuyArticleDetails_01' => '¿Tienes algo que ya no usas? Toma algunas fotos, introduce una descripción clara, elige la categoría e indica el precio al que quieres venderlo.',
+    'sellOrBuyArticleDetails_02' => '¿Estás buscando algo? Explora los anuncios, consulta las categorías y descubre los artículos publicados por otros usuarios.',
 
     'contactSeller' => 'Contacta al vendedor',
-    'contactSellerDetails_01' => 'Cuando encuentres un artículo que te interese, contacta
-                            directamente con el vendedor para pedir más
-                            información, verificar las condiciones del artículo
-                            y acordar el precio.',
+    'contactSellerDetails_01' => 'Cuando encuentres un artículo que te interese, contacta directamente con el vendedor para pedir más información, verificar las condiciones del artículo y acordar el precio.',
     'contactSellerDetails_02' => 'Se desaconsejan métodos de pago difíciles de verificar y se recomienda no compartir datos personales innecesarios (como el número de teléfono o la contraseña).',
 
     'shipOrMeet' => 'Concluye el intercambio',
@@ -109,39 +105,25 @@ return [
 
     'startNow' => '¿Listo para empezar?',
     'startNowDescription' => 'Crea tu primer anuncio o descubre los artículos disponibles.',
-
     'createYourFirstArticle' => 'Crea tu primer anuncio',
     'exploreArticles' => 'Explora los anuncios',
 
-    // Home page
-
-    // Hero
-
+    // home - hero
     'heroTitle' => 'Encuentra ofertas.',
     'heroSubtitle' => 'Dale nueva vida a tus cosas.',
     'heroDescription' => 'Compra y vende en persona o con envío a todo el mundo.',
     'registerAndSell' => 'Regístrate y vende',
 
-    // latest articles
-
+    // home - latest articles
     'latestArticles' => 'Descubre los últimos anuncios',
     'browseLatestArticles' => 'Explora las ofertas más recientes publicadas en Presto.it.',
     'viewAll' => 'Ver todos',
     'noArticlesYet' => 'Parece que aún no hay anuncios... ¡Crea el primero!',
 
-    // how it works
-
-    'howItWorks' => 'Cómo funciona',
-    'howItWorksDescription' => 'Simple, rápido y sostenible',
-
-    // card how it works
+    // home - card how it works
     'publish' => 'Publicar en pocos minutos',
     'publishDescription' => 'Toma algunas fotos, describe el artículo, elige el precio y publica tu anuncio.',
-
-    'contactSeller' => 'Contacta al vendedor',
     'contactSellerDescription' => 'Pregunta, habla con el vendedor y acuerda la compra del artículo.',
-
-    'shipOrMeet' => 'Envía o encuentra',
     'shipOrMeetDescription' => 'Envía el artículo o reúnanse en persona y dale nueva vida al artículo.',
 
     // footer
@@ -150,12 +132,11 @@ return [
     'support' => 'Asistencia',
     'help' => 'Ayuda',
     'contactUs' => 'Contáctanos',
-    'terms' => 'Términos y Condiciones',
+    'terms' => 'Términos y condiciones',
     'privacy' => 'Privacidad',
 
     'usefulLinks' => 'Enlaces útiles',
-    'becomeRevisor' => 'Conviértete en Revisor',
-    'settings' => 'Configuración',
+    'becomeRevisor' => 'Conviértete en moderador',
     'orders' => 'Pedidos',
     'feedback' => 'Comentarios',
 
@@ -168,7 +149,7 @@ return [
     // article show - article aside
     'publishedBy' => 'Publicado por',
     'soldBy' => 'Vendido por',
-    'contactTheSeller' => 'Contactar con el vendedor',
+    'contactTheSeller' => 'Contacta al vendedor',
     'delivery' => 'Entrega',
     'availableForShipping' => 'Disponible para envío',
     'availableForDelivery' => 'Disponible para entrega',
@@ -179,14 +160,12 @@ return [
     'removeFromFavorites' => 'Quitar de favoritos',
     'yes' => 'Sí',
     'no' => 'No',
-    'noArticlesToReview' => 'No hay artículos que revisar',
+    'noArticlesToReview' => 'No hay anuncios que moderar',
 
     // my listings
-    'myListings' => 'Mis anuncios',
     'manageListings' => 'Gestiona los anuncios que has publicado en Presto.it',
     'newListing' => 'Nuevo anuncio',
     'listingAccepted' => 'Anuncio aceptado',
-    'listingRejected' => 'Anuncio rechazado',
     'noListingsYet' => 'Todavía no has publicado ningún anuncio.',
 
     // status-badge
@@ -199,14 +178,14 @@ return [
     'edit' => 'Modificar',
     'delete' => 'Eliminar',
 
-    // contatta venditore
-    'contactTheSeller' => 'Contacta al vendedor',
+    // contact seller
     'to' => 'Contacta: ',
     'subject' => 'Asunto',
     'subjectPlaceholder' => 'Ej: Estoy interesado, me gustaría pedir más información',
     'message' => 'Mensaje',
     'messagePlaceholder' => 'Escribe tu mensaje aquí...',
     'send' => 'Enviar',
+    'close' => 'Cerrar',
     'messageSent' => 'Mensaje enviado con éxito',
     'messageSentDetail' => 'Tu mensaje ha sido enviado correctamente al vendedor.',
 
@@ -215,17 +194,15 @@ return [
     'hereYouCanFindAllSavedListings' => 'Aquí encontrarás todos los anuncios que has guardado.',
     'noFavoriteListingsYet' => 'Todavía no has añadido ningún anuncio a tus favoritos.',
 
-    // registrati
+    // register
     'Register' => 'Regístrate',
     'EnterYourDetails' => 'Introduce tus datos',
     'Name' => 'Nombre',
     'Email' => 'Correo electrónico',
     'Password' => 'Contraseña',
-    'ConfirmPassword' => 'Confirmar Contraseña',
+    'ConfirmPassword' => 'Confirmar contraseña',
 
     // login
     'Login' => 'Iniciar sesión',
     'DontHaveAccount' => '¿No tienes una cuenta?',
-    'Email' => 'Correo electrónico',
-    'Password' => 'Contraseña',
 ];
