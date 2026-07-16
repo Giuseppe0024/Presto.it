@@ -121,7 +121,7 @@ return
 
         'heroTitle' => 'Trova occasioni.',
         'heroSubtitle' => 'Dai nuova vita alle tue cose.',
-        'heroDescription' => 'Compra e vendi di persona o con spedizione in tutta Italia.',
+        'heroDescription' => 'Compra e vendi di persona o con spedizione in tutto il mondo.',
         'registerAndSell' => 'Registrati e vendi',
 
         // latest articles

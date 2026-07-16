@@ -117,7 +117,7 @@ return [
 
     'heroTitle' => 'Encuentra ofertas.',
     'heroSubtitle' => 'Dale nueva vida a tus cosas.',
-    'heroDescription' => 'Compra y vende en persona o con envío a toda España.',
+    'heroDescription' => 'Compra y vende en persona o con envío a todo el mundo.',
     'registerAndSell' => 'Regístrate y vende',
 
     // latest articles

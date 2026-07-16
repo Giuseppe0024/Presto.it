@@ -117,7 +117,7 @@ return [
 
     'heroTitle' => 'Find deals.',
     'heroSubtitle' => 'Give new life to your things.',
-    'heroDescription' => 'Buy and sell in person or with shipping across the UK.',
+    'heroDescription' => 'Buy and sell in person or with worldwide shipping.',
     'registerAndSell' => 'Register and sell',
 
     // latest articles
