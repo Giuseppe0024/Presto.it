@@ -217,4 +217,18 @@ return [
     'hereYouCanFindAllSavedListings' => 'Here you can find all the listings you have saved.',
     'noFavoriteListingsYet' => "You haven't added any listings to your favorites yet.",
 
+    // registrati
+    'Register' => 'Register',
+    'EnterYourDetails' => 'Enter your details',
+    'Name' => 'Name',
+    'Email' => 'Email',
+    'Password' => 'Password',
+    'ConfirmPassword' => 'Confirm Password',
+
+    // login
+    'Login' => 'Login',
+    'DontHaveAccount' => "Don't have an account?",
+    'Email' => 'Email',
+    'Password' => 'Password',
+
 ];

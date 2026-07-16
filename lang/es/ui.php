@@ -214,4 +214,18 @@ return [
     'myFavorites' => 'Mis favoritos',
     'hereYouCanFindAllSavedListings' => 'Aquí encontrarás todos los anuncios que has guardado.',
     'noFavoriteListingsYet' => 'Todavía no has añadido ningún anuncio a tus favoritos.',
+
+    // registrati
+    'Register' => 'Regístrate',
+    'EnterYourDetails' => 'Introduce tus datos',
+    'Name' => 'Nombre',
+    'Email' => 'Correo electrónico',
+    'Password' => 'Contraseña',
+    'ConfirmPassword' => 'Confirmar Contraseña',
+
+    // login
+    'Login' => 'Iniciar sesión',
+    'DontHaveAccount' => '¿No tienes una cuenta?',
+    'Email' => 'Correo electrónico',
+    'Password' => 'Contraseña', 
 ];

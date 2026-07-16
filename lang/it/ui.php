@@ -220,4 +220,21 @@ return
         'hereYouCanFindAllSavedListings' => 'Qui trovi tutti gli annunci che hai salvato.',
         'noFavoriteListingsYet' => 'Non hai ancora aggiunto nessun annuncio ai preferiti.',
 
+        // registrati
+        'Register' => 'Registrati',
+        'EnterYourDetails' => 'Inserisci i tuoi dati',
+        'Name' => 'Nome',
+        'Email' => 'Email',
+        'Password' => 'Password',
+        'ConfirmPassword' => 'Conferma Password',
+
+        // login
+        'Login' => 'Accedi',
+        'Email' => 'Email',
+        'DontHaveAccount' => 'Non hai un account?',
+        'Password' => 'Password',
+        
+        
+
+
     ];
