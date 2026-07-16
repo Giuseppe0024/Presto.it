@@ -194,4 +194,13 @@ return [
     // owner card
     'edit' => 'Modificar',
     'delete' => 'Eliminar',
+
+    // contatta venditore
+    'contactTheSeller' => 'Contacta al vendedor',
+    'to' => 'Contacta: ',
+    'subject' => 'Asunto',
+    'subjectPlaceholder' => 'Ej: Estoy interesado, me gustaría pedir más información',
+    'message' => 'Mensaje',
+    'messagePlaceholder' => 'Escribe tu mensaje aquí...',
+    'send' => 'Enviar',
     ];

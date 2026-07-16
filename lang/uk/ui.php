@@ -197,4 +197,13 @@ return [
     'edit' => 'Edit',
     'delete' => 'Delete',
 
+    // contatta venditore
+    'contactTheSeller' => 'Contact the seller',
+    'to' => 'To: ',
+    'subject' => 'Subject',
+    'subjectPlaceholder' => 'E.g.: I am interested, I would like to ask for more information',
+    'message' => 'Message',
+    'messagePlaceholder' => 'Write your message here...',
+    'send' => 'Send',
+
 ];

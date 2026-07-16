@@ -199,5 +199,15 @@ return
         'edit' => 'Modifica',
         'delete' => 'Elimina',
 
+        // contatta venditore
+
+        'contactTheSeller' => 'Contatta il venditore',
+        'to' => 'Contatta: ',
+        'subject' => 'Oggetto',
+        'subjectPlaceholder' => 'Es: Sono interessato, vorrei chiedere ulteriori informazioni',
+        'message' => 'Messaggio',
+        'messagePlaceholder' => 'Scrivi il tuo messaggio qui...',
+        'send' => 'Invia',
+
 
     ];

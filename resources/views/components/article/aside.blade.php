@@ -24,14 +24,28 @@
         </div>
     </div>
 
+    {{-- Contatta venditore --}}
+
     <div class="d-grid gap-2">
-        <a
-            href="#"
+    @auth
+        <button
+            type="button"
             class="btn btn-primary rounded-pill fw-semibold"
-        >
+            data-bs-toggle="modal"
+            data-bs-target="#contactSellerModal-{{ $article->id }}">
+
+            <i class="fa-solid fa-message me-2"></i>
+            {{ __('ui.contactTheSeller') }}
+
+        </button>
+    @else
+        <a
+            href="{{ route('login') }}"
+            class="btn btn-primary rounded-pill fw-semibold">
             <i class="fa-solid fa-message me-2"></i>
             {{ __('ui.contactTheSeller') }}
         </a>
+    @endauth
 
         <livewire:favorite-button
             :article="$article"
@@ -69,3 +83,5 @@
         </p>
     </div>
 </div>
+
+<x-article.contatta :article="$article"/>
