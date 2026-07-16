@@ -21,6 +21,14 @@ class Image extends Model
         return $this->belongsTo(Article::class);
     }
 
+    public function deleteWithFiles(): void
+    {
+        Storage::disk('public')->delete($this->path);
+        Storage::disk('public')->delete(dirname($this->path).'/crop_400x300_'.basename($this->path));
+
+        $this->delete();
+    }
+
     public function getUrl($w = null, $h = null)
     {
         return self::getUrlByFilePath($this->path, $w, $h);

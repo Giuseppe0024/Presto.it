@@ -5,10 +5,10 @@
 
         <x-article.card-image :article="$article"/>
         <livewire:favorite-button
-                                    :article="$article"
-                                    variant="card"
-                                    :key="'favorite-card-' . $article->id"
-                                    class="position-absolute top-0 end-0 m-2 z-3"/>
+                :article="$article"
+                variant="card"
+                :key="'favorite-card-' . $article->id"
+                class="position-absolute top-0 end-0 m-2 z-3 favorite-button"/>
 
         <div class="card-body d-flex flex-column">
             <div class="d-flex align-items-center gap-2 small text-body mb-1">

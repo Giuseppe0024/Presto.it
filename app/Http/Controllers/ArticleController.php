@@ -34,18 +34,16 @@ class ArticleController extends Controller
 
     public function myArticles()
     {
-        $articles = auth()->user()->articles()->with(['category', 'images'])->latest()->get();
+        $articles = auth()->user()->articles()->with(['category', 'images', 'revision'])->latest()->get();
 
         return view('article.myArticles', [
             'articles' => $articles,
         ]);
     }
 
-    public function show(int $article)
+    public function show(Article $article)
     {
-        Article::findOrFail($article)::where('is_accepted', true);
-
-        $article = Article::find($article);
+        abort_if($article->is_accepted !== true && $article->user_id !== auth()->id(), 404);
 
         return view('article.show', [
             'article' => $article,

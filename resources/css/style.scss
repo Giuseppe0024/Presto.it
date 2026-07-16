@@ -253,7 +253,7 @@ footer {
   border: 2px solid var(--lightgreen);
 
 }
-  
+
 /* CAROSELLO */
 
 .hero-carousel {
@@ -270,6 +270,12 @@ footer {
 
 // FAVORITE BUTTON
 
+.favorite-button {
+  height: 40px;
+  width: 40px;
+  transform: scale(0.9);
+}
+
 .favorites--inactive {
   i {
     color: transparent;
@@ -281,7 +287,7 @@ footer {
 .favorites--active {
   i {
     color: var(--orange);
-    -webkit-text-stroke: 0.5px var(--orange); 
+    -webkit-text-stroke: 0.5px var(--orange);
   }
 }
 

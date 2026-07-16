@@ -47,6 +47,8 @@ Route::middleware('isRevisor')->group(function () {
     Route::get('revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
     Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('revisor.accept');
     Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('revisor.reject');
+    Route::patch('/revisione/{revision}/accept', [RevisorController::class, 'acceptRevision'])->name('revisor.acceptRevision');
+    Route::patch('/revisione/{revision}/reject', [RevisorController::class, 'rejectRevision'])->name('revisor.rejectRevision');
 });
 
 // solo admin

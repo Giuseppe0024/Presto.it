@@ -2,13 +2,14 @@
 
 use App\Jobs\GoogleVisionLabelImage;
 use App\Models\Article;
+use App\Models\Image;
 use Livewire\Component;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use App\Jobs\ResizeImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use App\Jobs\RemoveFaces;
@@ -49,19 +50,26 @@ new class extends Component {
     {
         abort_if($article->user_id !== Auth::id(), 403);
 
+        /*
+        Se c'è già una revisione in attesa il form riparte da quella, altrimenti
+        l'utente non vedrebbe le proprie modifiche e le annullerebbe risalvando.
+        */
+        $source = $article->revision ?? $article;
+
         $this->article = $article;
-        $this->title = $article->title;
-        $this->description = $article->description;
-        $this->city = $article->city;
-        $this->price = $article->price;
-        $this->category = (string) $article->category_id;
-        $this->delivery_shipping = (bool) $article->delivery_shipping;
+        $this->title = $source->title;
+        $this->description = $source->description;
+        $this->city = $source->city;
+        $this->price = $source->price;
+        $this->category = (string) $source->category_id;
+        $this->delivery_shipping = (bool) $source->delivery_shipping;
+        $this->images_to_delete = $article->revision?->images_to_delete ?? [];
     }
 
     #[Computed]
     public function existingImages()
     {
-        return $this->article->images()->whereNotIn('id', $this->images_to_delete)->get();
+        return $this->article->allImages()->whereNotIn('id', $this->images_to_delete)->get();
     }
 
     public function updatedTemporaryImages(): void
@@ -86,7 +94,7 @@ new class extends Component {
 
     public function removeExistingImage($imageId): void
     {
-        if ($this->article->images()->where('id', $imageId)->exists()) {
+        if ($this->article->allImages()->where('id', $imageId)->exists()) {
             $this->images_to_delete[] = $imageId;
         }
     }
@@ -107,6 +115,56 @@ new class extends Component {
             return;
         }
 
+        /*
+        Un annuncio online non viene toccato: le modifiche diventano una revisione
+        che resta invisibile al pubblico finché un revisore non la approva.
+        */
+        if ($this->article->is_accepted === true) {
+            $this->submitRevision();
+
+            redirect()->route('article.myArticles')->with('success', __('ui.revisionSubmitted'));
+
+            return;
+        }
+
+        $this->updateArticle();
+
+        redirect()->route('article.myArticles')->with('success', __('ui.updateSuccess'));
+    }
+
+    private function submitRevision(): void
+    {
+        $pendingToDelete = $this->article->allImages()
+            ->whereIn('id', $this->images_to_delete)
+            ->whereNotNull('revision_id')
+            ->get();
+
+        $liveToDelete = $this->article->images()
+            ->whereIn('id', $this->images_to_delete)
+            ->pluck('id')
+            ->all();
+
+        $revision = $this->article->revision()->updateOrCreate([], [
+            'title' => $this->title,
+            'city' => $this->city,
+            'description' => $this->description,
+            'price' => $this->price,
+            'delivery_shipping' => $this->delivery_shipping,
+            'category_id' => $this->category,
+            'images_to_delete' => $liveToDelete,
+            'token' => Str::random(40),
+        ]);
+
+        /* Le immagini pendenti scartate non sono mai state online: si eliminano subito. */
+        foreach ($pendingToDelete as $image) {
+            $image->deleteWithFiles();
+        }
+
+        $this->storeImages($revision->id);
+    }
+
+    private function updateArticle(): void
+    {
         $this->article->update([
             'title' => $this->title,
             'city' => $this->city,
@@ -117,28 +175,34 @@ new class extends Component {
         ]);
 
         foreach ($this->article->images()->whereIn('id', $this->images_to_delete)->get() as $image) {
-            Storage::disk('public')->delete($image->path);
-            Storage::disk('public')->delete(dirname($image->path) . '/crop_400x300_' . basename($image->path));
-            $image->delete();
+            $image->deleteWithFiles();
         }
 
-        if (count($this->images) > 0) {
-            foreach ($this->images as $image) {
-                $newFileName = "articles/{$this->article->id}";
-                $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public'),]);
-
-                GoogleVisionSafeSearch::withChain([
-                    new GoogleVisionLabelImage($newImage->id),
-                    new RemoveFaces($newImage->id),
-                    new ResizeImage($newImage->path, 400, 300),
-                ])->dispatch($newImage->id);
-            }
-            File::deleteDirectory(storage_path('app/livewire-tmp'));
-        }
+        $this->storeImages(null);
 
         $this->article->setAccepted(null);
+    }
 
-        redirect()->route('article.myArticles')->with('success', __('ui.updateSuccess'));
+    private function storeImages(?int $revisionId): void
+    {
+        if (count($this->images) === 0) {
+            return;
+        }
+
+        foreach ($this->images as $image) {
+            $newImage = new Image(['path' => $image->store("articles/{$this->article->id}", 'public')]);
+            $newImage->article_id = $this->article->id;
+            $newImage->revision_id = $revisionId;
+            $newImage->save();
+
+            GoogleVisionSafeSearch::withChain([
+                new GoogleVisionLabelImage($newImage->id),
+                new RemoveFaces($newImage->id),
+                new ResizeImage($newImage->path, 400, 300),
+            ])->dispatch($newImage->id);
+        }
+
+        File::deleteDirectory(storage_path('app/livewire-tmp'));
     }
 };
 
