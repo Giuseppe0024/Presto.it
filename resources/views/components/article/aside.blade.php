@@ -17,10 +17,11 @@
                 {{ $article->user->name }}
             </h5>
 
-            <p class="text-muted mb-0">
+            <a href="{{ route('article.search', ['city' => $article->city]) }}"
+               class="text-muted text-decoration-none d-inline-block">
                 <i class="fa-solid fa-location-dot me-1"></i>
                 {{ $article->city }}
-            </p>
+            </a>
         </div>
     </div>
 

@@ -27,7 +27,7 @@
                         </div>
 
                         <div class="col-12 col-md-6">
-                            <x-article.details :article="$article"/>
+                            <x-article.details :article="$article" :show-meta="false"/>
                         </div>
 
                     </div>
