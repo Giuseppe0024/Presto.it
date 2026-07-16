@@ -191,6 +191,7 @@ return [
     'listingUnderReview' => 'Anuncio en revisión',
     'listingRejected' => 'Anuncio rechazado',
     'listingOnline' => 'Anuncio en línea',
+    'onlinePendingReviewEdit' => 'En línea — edición pendiente de revisión',
 
     // owner card
     'edit' => 'Modificar',

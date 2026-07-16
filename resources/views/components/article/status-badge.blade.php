@@ -10,7 +10,7 @@
     </div>
 @elseif($article->hasPendingRevision())
     <div class="card-header d-flex justify-content-center border-0">
-        <p class="bg-warning-subtle px-3 py-2 mb-0 rounded-2">Online — modifica in attesa di revisione</p>
+        <p class="bg-warning-subtle px-3 py-2 mb-0 rounded-2">{{ __('ui.onlinePendingReviewEdit')}}</p>
     </div>
 @else
     <div class="card-header d-flex justify-content-center border-0">

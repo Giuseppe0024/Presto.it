@@ -193,6 +193,7 @@ return [
     'listingUnderReview' => 'Listing under review',
     'listingRejected' => 'Listing rejected',
     'listingOnline' => 'Listing online',
+    'onlinePendingReviewEdit' => 'Online — edit pending review',
 
     // owner card
     'edit' => 'Edit',

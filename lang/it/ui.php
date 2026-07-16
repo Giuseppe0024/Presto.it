@@ -195,6 +195,7 @@ return
         'listingUnderReview' => 'Annuncio in stato di verifica',
         'listingRejected' => 'Annuncio rifiutato',
         'listingOnline' => 'Annuncio online',
+        'onlinePendingReviewEdit' => 'Online — modifica in attesa di revisione',
 
         // owner card
         'edit' => 'Modifica',
