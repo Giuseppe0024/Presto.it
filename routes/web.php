@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/revisor/become', [RevisorController::class, 'become'])->name('revisor.become');
     Route::post('/revisor/request', [RevisorController::class, 'becomeMail'])->name('revisor.becomeMail');
 
-// preferiti
+    // preferiti
     Route::get('/i-miei-preferiti', [FavoriteController::class, 'index'])->name('favorites.index');
 
 });
@@ -47,6 +47,8 @@ Route::middleware('isRevisor')->group(function () {
     Route::get('revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
     Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('revisor.accept');
     Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('revisor.reject');
+    Route::patch('/revisione/{revision}/accept', [RevisorController::class, 'acceptRevision'])->name('revisor.acceptRevision');
+    Route::patch('/revisione/{revision}/reject', [RevisorController::class, 'rejectRevision'])->name('revisor.rejectRevision');
 });
 
 // solo admin

@@ -66,6 +66,8 @@ return [
     'updateTitle' => 'Edita tu anuncio',
     'formUpdate' => 'Guardar cambios',
     'updateSuccess' => 'Anuncio actualizado correctamente',
+    'revisionSubmitted' => 'Cambios enviados. El anuncio permanece online en su versión actual hasta que un revisor los apruebe.',
+    'revisionChanged' => 'Los cambios se han modificado mientras los revisabas: vuelve a comprobarlos.',
     'formImagesRequired' => 'Sube al menos una imagen',
     'formImagesMax' => 'Puedes subir un máximo de 6 imágenes',
 
@@ -109,37 +111,36 @@ return [
     'createYourFirstArticle' => 'Crea tu primer anuncio',
     'exploreArticles' => 'Explora los anuncios',
 
-
     // Home page
 
-        // Hero
+    // Hero
 
-        'heroTitle' => 'Encuentra ofertas.',
-        'heroSubtitle' => 'Dale nueva vida a tus cosas.',
-        'heroDescription' => 'Compra y vende en persona o con envío a toda España.',
-        'registerAndSell' => 'Regístrate y vende',
+    'heroTitle' => 'Encuentra ofertas.',
+    'heroSubtitle' => 'Dale nueva vida a tus cosas.',
+    'heroDescription' => 'Compra y vende en persona o con envío a toda España.',
+    'registerAndSell' => 'Regístrate y vende',
 
-        // latest articles
+    // latest articles
 
-        'latestArticles' => 'Descubre los últimos anuncios',
-        'browseLatestArticles' => 'Explora las ofertas más recientes publicadas en Presto.it.',
-        'viewAll' => 'Ver todos',
-        'noArticlesYet' => 'Parece que aún no hay anuncios... ¡Crea el primero!',
+    'latestArticles' => 'Descubre los últimos anuncios',
+    'browseLatestArticles' => 'Explora las ofertas más recientes publicadas en Presto.it.',
+    'viewAll' => 'Ver todos',
+    'noArticlesYet' => 'Parece que aún no hay anuncios... ¡Crea el primero!',
 
-        // how it works
+    // how it works
 
-        'howItWorks' => 'Cómo funciona',
-        'howItWorksDescription' => 'Simple, rápido y sostenible',
+    'howItWorks' => 'Cómo funciona',
+    'howItWorksDescription' => 'Simple, rápido y sostenible',
 
-        // card how it works
-        'publish' => 'Publicar en pocos minutos',
-        'publishDescription' => 'Toma algunas fotos, describe el artículo, elige el precio y publica tu anuncio.',
+    // card how it works
+    'publish' => 'Publicar en pocos minutos',
+    'publishDescription' => 'Toma algunas fotos, describe el artículo, elige el precio y publica tu anuncio.',
 
-        'contactSeller' => 'Contacta al vendedor',
-        'contactSellerDescription' => 'Pregunta, habla con el vendedor y acuerda la compra del artículo.',
+    'contactSeller' => 'Contacta al vendedor',
+    'contactSellerDescription' => 'Pregunta, habla con el vendedor y acuerda la compra del artículo.',
 
-        'shipOrMeet' => 'Envía o encuentra',
-        'shipOrMeetDescription' => 'Envía el artículo o reúnanse en persona y dale nueva vida al artículo.',
+    'shipOrMeet' => 'Envía o encuentra',
+    'shipOrMeetDescription' => 'Envía el artículo o reúnanse en persona y dale nueva vida al artículo.',
 
     // footer
     'footerDescription' => 'Compra y vende artículos nuevos o usados de manera fácil y rápida. Encuentra ofertas cerca de ti y da nueva vida a los artículos que ya no usas.',
@@ -161,6 +162,7 @@ return [
     // accept-reject
     'accept' => 'Acepta',
     'reject' => 'Rechaza',
+<<<<<<< HEAD
 
     // article show - article aside
     'publishedBy' => 'Publicado por',
@@ -206,3 +208,6 @@ return [
     'messageSent' => 'Mensaje enviado con éxito',
     'messageSentDetail' => 'Tu mensaje ha sido enviado correctamente al vendedor.',
     ];
+=======
+];
+>>>>>>> a07445d (fix(edit articles): add revision flow after edit)

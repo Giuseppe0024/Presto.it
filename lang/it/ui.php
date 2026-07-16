@@ -67,6 +67,8 @@ return
         'updateTitle' => 'Modifica il tuo annuncio',
         'formUpdate' => 'Salva modifiche',
         'updateSuccess' => 'Annuncio aggiornato correttamente',
+        'revisionSubmitted' => 'Modifiche inviate. L\'annuncio resta online nella versione attuale finché un revisore non le approva.',
+        'revisionChanged' => 'Le modifiche sono cambiate mentre le stavi revisionando: controllale di nuovo.',
         'formImagesRequired' => 'Carica almeno un\'immagine',
         'formImagesMax' => 'Puoi caricare al massimo 6 immagini',
 
@@ -112,38 +114,37 @@ return
 
         'createYourFirstArticle' => 'Crea il tuo primo annuncio',
         'exploreArticles' => 'Esplora gli annunci',
-        
 
         // Home page
 
-            // Hero
+        // Hero
 
-            'heroTitle' => 'Trova occasioni.',
-            'heroSubtitle' => 'Dai nuova vita alle tue cose.',
-            'heroDescription' => 'Compra e vendi di persona o con spedizione in tutta Italia.',
-            'registerAndSell' => 'Registrati e vendi',
+        'heroTitle' => 'Trova occasioni.',
+        'heroSubtitle' => 'Dai nuova vita alle tue cose.',
+        'heroDescription' => 'Compra e vendi di persona o con spedizione in tutta Italia.',
+        'registerAndSell' => 'Registrati e vendi',
 
-            // latest articles
+        // latest articles
 
-            'latestArticles' => 'Scopri gli ultimi annunci',
-            'browseLatestArticles' => 'Sfoglia le occasioni più recenti pubblicate su Presto.it.',
-            'viewAll' => 'Vedi tutti',
-            'noArticlesYet' => 'Sembra non ci siano ancora annunci... Crea il primo!',
+        'latestArticles' => 'Scopri gli ultimi annunci',
+        'browseLatestArticles' => 'Sfoglia le occasioni più recenti pubblicate su Presto.it.',
+        'viewAll' => 'Vedi tutti',
+        'noArticlesYet' => 'Sembra non ci siano ancora annunci... Crea il primo!',
 
-            // how it works
+        // how it works
 
-            'howItWorks' => 'Come funziona',
-            'howItWorksDescription' => 'Semplice, veloce e sostenibile',
+        'howItWorks' => 'Come funziona',
+        'howItWorksDescription' => 'Semplice, veloce e sostenibile',
 
-            // card how it works
-            'publish' => 'Pubblica in pochi minuti',
-            'publishDescription' => 'Scatta qualche foto, descrivi l’articolo, scegli il prezzo e pubblica il tuo annuncio.',
+        // card how it works
+        'publish' => 'Pubblica in pochi minuti',
+        'publishDescription' => 'Scatta qualche foto, descrivi l’articolo, scegli il prezzo e pubblica il tuo annuncio.',
 
-            'contactSeller' => 'Contatta il venditore',
-            'contactSellerDescription' => 'Fai domande, parla con il venditore e accordati sull’acquisto dell’articolo.',
+        'contactSeller' => 'Contatta il venditore',
+        'contactSellerDescription' => 'Fai domande, parla con il venditore e accordati sull’acquisto dell’articolo.',
 
-            'shipOrMeet' => 'Concludi lo scambio',
-            'shipOrMeetDescription' => 'Spedisci l’articolo oppure incontratevi di persona e dai nuova vita all’articolo.',
+        'shipOrMeet' => 'Concludi lo scambio',
+        'shipOrMeetDescription' => 'Spedisci l’articolo oppure incontratevi di persona e dai nuova vita all’articolo.',
 
         // footer
         'footerDescription' => 'Compra e vendi articoli nuovi o usati in modo semplice e veloce. Trova occasioni vicino a te e dai nuova vita agli oggetti che non usi più.',
@@ -165,6 +166,7 @@ return
         // accept-reject
         'accept' => 'Accetta',
         'reject' => 'Rifiuta',
+<<<<<<< HEAD
 
         // article show - article aside
         'publishedBy' => 'Pubblicato da',
@@ -211,5 +213,7 @@ return
         'messageSent' => 'Messaggio inviato con successo',
         'messageSentDetail' => 'Il tuo messaggio arriverà Presto al venditore.',
 
+=======
+>>>>>>> a07445d (fix(edit articles): add revision flow after edit)
 
     ];

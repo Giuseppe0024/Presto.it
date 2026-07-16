@@ -66,6 +66,8 @@ return [
     'updateTitle' => 'Edit your listing',
     'formUpdate' => 'Save changes',
     'updateSuccess' => 'Listing updated successfully',
+    'revisionSubmitted' => 'Changes submitted. The listing stays online in its current version until a revisor approves them.',
+    'revisionChanged' => 'The changes were modified while you were reviewing them: please check them again.',
     'formImagesRequired' => 'Upload at least one image',
     'formImagesMax' => 'You can upload up to 6 images',
 
@@ -108,7 +110,6 @@ return [
 
     'createYourFirstArticle' => 'Create your first article',
     'exploreArticles' => 'Explore articles',
-
 
     // Home page
 
@@ -163,6 +164,7 @@ return [
     // accept-reject
     'accept' => 'Accept',
     'reject' => 'Reject',
+<<<<<<< HEAD
 
     // article show - article aside
     'publishedBy' => 'Published by',
@@ -207,5 +209,7 @@ return [
     'send' => 'Send',
     'messageSent' => 'Message sent successfully',
     'messageSentDetail' => 'Your message has been successfully sent to the seller.',
+=======
+>>>>>>> a07445d (fix(edit articles): add revision flow after edit)
 
 ];

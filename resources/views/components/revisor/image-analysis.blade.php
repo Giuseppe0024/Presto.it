@@ -1,6 +1,6 @@
 <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
     @forelse($image->labels ?? [] as $label)
-        <span class="badge rounded-pill text-bg-secondary">#{{ $label }}</span>
+        <span class="badge rounded-pill bg-dark">#{{ $label }}</span>
     @empty
         <span class="badge rounded-pill text-bg-light">Nessuna etichetta</span>
     @endforelse

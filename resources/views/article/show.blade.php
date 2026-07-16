@@ -9,6 +9,7 @@
 
                 <div class="p-4 p-md-5 card-login rounded-5 w-100 h-100">
 
+<<<<<<< HEAD
                     <div class="text-center">
                         <!-- <p class="d-inline">{{ __('ui.publishedBy')}}</p> -->
 
@@ -17,10 +18,12 @@
                         </address> -->
                     </div>
 
+=======
+>>>>>>> a07445d (fix(edit articles): add revision flow after edit)
                     <div class="row g-5 mt-1">
 
                         <div
-                            class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start align-items-md-center"
+                                class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start align-items-md-center"
                         >
                             <x-article.carousel :article="$article"/>
                         </div>
