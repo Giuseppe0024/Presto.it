@@ -233,8 +233,5 @@ return
         'Email' => 'Email',
         'DontHaveAccount' => 'Non hai un account?',
         'Password' => 'Password',
-        
-        
-
 
     ];

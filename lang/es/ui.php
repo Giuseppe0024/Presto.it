@@ -227,5 +227,5 @@ return [
     'Login' => 'Iniciar sesión',
     'DontHaveAccount' => '¿No tienes una cuenta?',
     'Email' => 'Correo electrónico',
-    'Password' => 'Contraseña', 
+    'Password' => 'Contraseña',
 ];
