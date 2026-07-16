@@ -8,9 +8,9 @@
         <p class="card-text">{{ $article->description }}</p>
 
         <div class="d-flex gap-4">
-            <a href="{{ route('article.edit', $article) }}" class="btn btn-secondary">Modifica</a>
+            <a href="{{ route('article.edit', $article) }}" class="btn btn-secondary">{{ __('ui.edit')}}</a>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#delete-article-{{ $article->id }}">Elimina
+                    data-bs-target="#delete-article-{{ $article->id }}">{{ __('ui.delete')}}
             </button>
         </div>
     </div>

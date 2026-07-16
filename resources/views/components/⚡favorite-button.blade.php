@@ -75,8 +75,8 @@ new class extends Component
             <i class="fa-solid fa-carrot me-2"></i>
 
             {{ $isFavorite
-                ? 'Rimuovi dai preferiti'
-                : 'Aggiungi ai preferiti' }}
+                ? __('ui.removeFromFavorites')
+                : __('ui.addToFavorites') }} 
 
         </button>
 

@@ -9,7 +9,7 @@
 
             <div class="my-5 p-4 p-md-5 card-login rounded-5">
                 <p class="text-center mb-4">
-                    Pubblicato da <span class="fw-bolder">{{ $article_to_check->user->name }}</span>
+                    {{ __('ui.publishedBy')}} <span class="fw-bolder">{{ $article_to_check->user->name }}</span>
                 </p>
 
                 <div class="row g-4 g-lg-5 justify-content-center">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         @else
-            <x-ui.empty-state>Non ci sono articoli da revisionare.</x-ui.empty-state>
+            <x-ui.empty-state>{{ __('ui.noArticlesToReview')}}</x-ui.empty-state>
         @endif
     </div>
 

@@ -3,14 +3,14 @@
 
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
-                <h1>I miei annunci</h1>
+                <h1>{{ __('ui.myListings') }}</h1>
                 <p class=" mb-0">
-                    Gestisci gli annunci che hai pubblicato su Presto.it
+                    {{ __('ui.manageListings') }}
                 </p>
             </div>
 
             <a href="{{ route('article.create') }}" class="btn btn-primary rounded-pill px-4">
-                + Nuovo annuncio
+                + {{ __('ui.newListing') }}
             </a>
         </div>
 
@@ -23,7 +23,7 @@
                 </div>
             @empty
                 <div class="col-12">
-                    <x-ui.empty-state>Non hai ancora pubblicato nessun annuncio.</x-ui.empty-state>
+                    <x-ui.empty-state>{{ __('ui.noListingsYet') }}</x-ui.empty-state>
                 </div>
             @endforelse
         </div>

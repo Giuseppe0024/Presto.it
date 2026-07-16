@@ -2,14 +2,14 @@
 
 @if($article->is_accepted === null)
     <div class="card-header d-flex justify-content-center border-0">
-        <p class="bg-info-subtle px-3 py-2 mb-0 rounded-2">Annuncio in stato di verifica</p>
+        <p class="bg-info-subtle px-3 py-2 mb-0 rounded-2">{{ __('ui.listingUnderReview')}}</p>
     </div>
 @elseif($article->is_accepted === 0)
     <div class="card-header d-flex justify-content-center border-0">
-        <p class="bg-primary-subtle px-3 py-2 mb-0 rounded-2">Annuncio rifiutato</p>
+        <p class="bg-primary-subtle px-3 py-2 mb-0 rounded-2">{{ __('ui.listingRejected')}}</p>
     </div>
 @elseif($article->is_accepted === 1)
     <div class="card-header d-flex justify-content-center border-0">
-        <p class="bg-success-subtle px-3 py-2 mb-0 rounded-2">Annuncio online</p>
+        <p class="bg-success-subtle px-3 py-2 mb-0 rounded-2"> {{ __('ui.listingOnline')}}</p>
     </div>
 @endif
