@@ -210,7 +210,7 @@ return [
     'messageSent' => 'Message sent successfully',
     'messageSentDetail' => 'Your message has been successfully sent to the seller.',
 
-    // favorites 
+    // favorites
     'myFavorites' => 'My Favorites',
     'hereYouCanFindAllSavedListings' => 'Here you can find all the listings you have saved.',
     'noFavoriteListingsYet' => "You haven't added any listings to your favorites yet.",

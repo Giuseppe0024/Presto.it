@@ -97,7 +97,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('favorites.index') }}">
                 <i class="fa-solid fa-carrot me-2"></i> {{ __('ui.favorites') }}
             </a>
         </li>

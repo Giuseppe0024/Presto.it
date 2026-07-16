@@ -213,7 +213,7 @@ return
         'messageSent' => 'Messaggio inviato con successo',
         'messageSentDetail' => 'Il tuo messaggio arriverà Presto al venditore.',
 
-        // favorites 
+        // favorites
         'myFavorites' => 'I miei preferiti',
         'hereYouCanFindAllSavedListings' => 'Qui trovi tutti gli annunci che hai salvato.',
         'noFavoriteListingsYet' => 'Non hai ancora aggiunto nessun annuncio ai preferiti.',
