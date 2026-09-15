@@ -1,3 +1,33 @@
+# Presto.it
+
+**Presto.it** è un marketplace online per la compravendita di articoli usati tra privati, ispirato a piattaforme come Subito.it e Vinted. Gli utenti possono pubblicare annunci con foto e descrizione, sfogliare gli articoli per categoria o tramite ricerca, gestire i propri annunci (modifica/eliminazione) e navigare il sito in più lingue.
+
+## 👥 Team
+
+Progetto sviluppato in team di 3 persone durante un percorso formativo (Hackademy):
+
+- **Giuseppe Berardi**
+- **Matteo Amoroso**
+- **Cristina Fioroni**
+
+## 🛠️ Stack tecnico
+
+- **Backend:** Laravel (PHP)
+- **Frontend:** Blade components, Bootstrap (con Sass)
+- **Interattività:** Livewire (es. form di creazione articoli con validazione live)
+- **Autenticazione:** Laravel Fortify
+- **Gestione immagini:** Spatie Image, con resize asincrono tramite Laravel Queues
+- **Multilingua:** sistema i18n con middleware dedicato per lo switch di lingua
+
+## ✨ Funzionalità principali
+
+- Registrazione e login utenti
+- Pubblicazione, modifica ed eliminazione annunci
+- Navigazione per categoria e ricerca articoli
+- Homepage con annunci in evidenza/più recenti
+- Interfaccia multilingua (IT/EN/ES)
+- Resize automatico delle immagini in coda, per non rallentare l'inserimento annunci
+
 # Componenti Blade
 
 Piccola guida ai componenti del progetto, così da poter gestire la grafica in maniera unificata.
